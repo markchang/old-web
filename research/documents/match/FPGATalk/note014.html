@@ -1,0 +1,42 @@
+
+<HTML>
+
+<HEAD>
+
+<meta name="GENERATOR" content="Microsoft Internet Assistant for PowerPoint 97">
+</HEAD>
+
+<BODY     >
+
+
+  <FONT size=4><STRONG> Notes: </STRONG> </FONT>
+  <HR SIZE=3>
+  <P> <UL>
+On board local memory is organized into two banks.  Each bank is 512K x 8 SRAMs  Each bank can be accessed from either the PCI interface or the RPU. Mode 1-PCI to 32 bit RAM
+</UL><UL>
+Single or Burst 32-bit read or write to local memory from the PCI.  One address to both banks of memory.
+</UL><UL>
+Mode 2-PCI to RPU, RPU to 32 bit RAM
+</UL><UL>
+32-bit read or write to local memory from RPU
+</UL><UL>
+One address to both banks of memory
+</UL><UL>
+Concurrent PCI and local memory accesses
+</UL><UL>
+Can reconfigure logic in RPU while still processing data from local memories
+</UL><UL>
+Can store data into RPU registers and access data from local memories
+</UL><UL>
+Mode 3a & 3b PCI & RPU to 16 bit RAM
+</UL><UL>
+One bank of memory can be filled by the PCI interface and the other bank can be read from the RPU so that: Real time image processing
+</UL><UL>
+Mode 4 16 bit RAM to RPU to 16 bit RAM
+</UL><UL>
+Read or Write both banks simultaneously, 2 addresses, only communication to RPU through interrupts
+</UL> </P> 
+
+
+</BODY>
+</HTML>

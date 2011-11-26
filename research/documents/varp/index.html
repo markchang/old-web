@@ -1,0 +1,91 @@
+<html><!-- #BeginTemplate "/Templates/index.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>variable precision analysis</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#EEEEEE">
+  <tr bgcolor="#CCCCCC" bordercolor="#000000"> 
+    <td> 
+      <p align="right">Mark L. Chang</p>
+      <p align="right">::[ <a href="../../index.html">start</a> | <a href="../index.html">research</a> 
+        | <a href="../../personal/index.html">personal</a> | <a href="../../contact/index.html">contact</a> 
+        ]::</p>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" bordercolor="#000000">
+    <td><img src="../../images/spacer.gif" width="1" height="1"><br></td>
+  </tr>
+</table> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="120" bgcolor="#EEEEEE" valign="top"><!-- #BeginEditable "nav" -->
+      <p><a href="../index.html">research</a>::</p>
+      <p>current</p>
+      <!-- #EndEditable --></td>
+    <td width="1" bgcolor="#333366"><img src="../../images/spacer.gif" width="1" height="1"></td>
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="8">
+        <tr> 
+          <td><!-- #BeginEditable "body" --> 
+            <p>My current research is devoted to variable precision analysis. 
+              In particular, researching tool development in order to aid designers 
+              in performing precision analysis on algorithmic code in order to 
+              efficiently make design-time tradeoff decisions.</p>
+            <p>We envision a tool that would:<br>
+              <ol>
+                <li>Allow the user to specify bit-widths at various input stages 
+                  and intermediate stages</li>
+                <li>Propagate any precision information automatically throughout 
+                  the system</li>
+                <li>Aide the user in performing simulations to deduce bit widths, 
+                  perform error analysis, and to quantify precision tradeoffs</li>
+                <li>Perform data-analysis on representative data samples to hint 
+                  to the user possible points of improvement</li>
+                <li>Suggest to the user possible contraint opportunities that 
+                  maximize performance gain (either area, power, or speed)</li>
+              </ol>
+              <p>This tool is being developed in C++ and Java. As this work falls 
+                under the MATCH project, the front-end of the tool utilizes MATLAB 
+                as the source language. Utilizing the MATCH compiler, the tool 
+                compiles to an intermediate representation that is further parsed 
+                with a Java-based tool.</p>
+            <p></p>
+            <p>The current state of the tool is as follows:</p>
+            <p>
+              <ul>
+                <li>Performs MATLAB to Intermediate representation</li>
+                <li>Allows for user-supplied variable and operator constraints</li>
+                <li>Performs constraint propagation</li>
+                <li>Generates MATLAB code for simulation</li>
+                <li>Provides routines to simulate truncation and overflow errors 
+                  in the MATLAB environment</li>
+                <li>Provides routines to gather precision information from sample 
+                  data sets</li>
+              </ul>
+              <p>This tool is currently being actively worked upon.</p>
+            <p></p>
+            <!-- #EndEditable --> </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#333399">
+  <tr bgcolor="#333366"> 
+    <td><img src="../../images/spacer.gif" width="1" height="1"><br>
+    </td>
+  </tr>
+  <tr bgcolor="#CCCCCC"> 
+    <td> 
+      <p align="right">::[ <a href="../../index.html">start</a> | <a href="../index.html">research</a> 
+        | <a href="../../personal/index.html">personal</a> | <a href="../../contact/index.html">contact</a> 
+        ]::</p>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

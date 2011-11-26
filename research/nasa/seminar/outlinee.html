@@ -1,0 +1,274 @@
+<HTML>
+<BODY >
+
+<P></P><A HREF="JavaScript:parent.ItemClicked(1, 0)"> Adaptive Computing for NASA Applications </A><br><UL>
+Mark L. Chang
+</UL><UL>
+Northwestern University ECE Department
+</UL><UL>
+ACME Labs
+</UL><UL>
+18 November, 1998</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(2, 0)"> Background </A><br><UL>
+<LI>(1991) Initiative by NASA to study Earth as an environmental system—Earth Science Enterprise (ESE)
+</UL><UL>
+<LI>(1999) Launch of the first Earth Observation System (EOS) satellite, the AM-1</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(3, 0)"> The Data Flow </A><br><UL>
+<LI>EOS divides telemetry processing into five levels with the following flow:</UL></P>
+<P><UL>
+Receiver</UL></P>
+<P><UL>
+Level 0</UL></P>
+<P><UL>
+L1</UL></P>
+<P><UL>
+L4</UL></P>
+<P><UL>
+L2</UL></P>
+<P><UL>
+L3</UL></P>
+<P><UL>
+Instrument 1</UL></P>
+<P><UL>
+Instrument 2</UL></P>
+<P><UL>
+Instrument 3</UL></P>
+<P><UL>
+Instrument n</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(4, 0)"> The Processing Problem </A><br><UL>
+<LI>I/O intensive
+<UL>
+<LI>EOS AM-1 satellite averages ~918 Gbytes of data per day
+<LI>Current NASA-supported data holdings total ~125,000 Gbytes
+</UL></UL><UL>
+<LI>Processing intensive
+<UL>
+<LI>Average processing load ~12,000 MFLOPs per day</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(5, 0)"> The Expensive Solution </A><br><UL>
+<LI>Several Distributed Active Archive Centers (DAACs) around the country
+<UL>
+<LI>Distributed, so each DAAC gets only a subset of all the data
+<LI>Utilize many high-end compute engines to process the data
+</UL></UL><UL>
+<LI>Full-custom VLSI for Level 0 processing</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(6, 0)"> Motivation for Adaptive </A><br><UL>
+<LI>Level 1 processing is instrument dependent.  ASICs not cost-effective
+</UL><UL>
+<LI>Level 2 and up data products involve many different algorithms.  Could use same adaptive compute engine to accelerate many algorithms
+</UL><UL>
+<LI>Algorithms are very mutable
+</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(7, 0)"> MODIS </A><br><UL>
+<LI>Moderate Resolution Imaging Spectroradiometer
+</UL><UL>
+<LI>Accounts for over half of the average daily data and processing load
+</UL><UL>
+<LI>Scans at three resolutions and 36 bands @ 12 bits of sensitivity
+<UL>
+<LI>250m, 500m, 1000m
+<LI>0.4?m - 14.4?m</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(8, 0)"> Level 1: Calibration </A><br><UL>
+<LI>Digital counts need to be scaled by some calibration factors that are determined by
+<UL>
+<LI>Temperature
+<LI>Instrument Degradation
+<LI>Damage
+<LI>Orbit changes
+</UL></UL><UL>
+<LI>Applied to every “granule” of data off-line</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(9, 0)"> Level 1B Calibration </A><br>
+<P></P><A HREF="JavaScript:parent.ItemClicked(10, 0)"> L1B Data Flow </A><br>
+<P></P><A HREF="JavaScript:parent.ItemClicked(11, 0)"> Effective Digital Counts </A><br><UL>
+<LI>Correct digital numbers for A/D nonlinearity
+</UL><UL>
+<LI>Filter and average zero radiance offset
+</UL><UL>
+<LI>Correct for focal plane temperature effects 
+</UL><UL>
+<LI>Correct for scan angle effects</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(12, 0)"> Effective Digital Counts </A><br><UL>
+<LI>Apply to the digital numbers (DN) to get effective digital counts, DN*
+</UL><UL>
+<LI>
+</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(13, 0)"> Calculate Radiance & Reflectance </A><br><UL>
+<LI>Use the correct digital counts in calculations of radiance and reflectance</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(14, 0)"> The Loop </A><br><UL>
+for R = 1 to #resolutions
+</UL><UL>
+  for B = 1 to #bands
+</UL><UL>
+    for D = 1 to #detectors per band(B)
+</UL><UL>
+      for F = 1 to #frames
+</UL><UL>
+	  Calculate DN*
+</UL><UL>
+	  Calculate Radiances & Reflectances</UL></P>
+<P><UL>
+<LI>
+</UL><UL>
+<LI>
+</UL><UL>
+<LI>
+</UL><UL>
+<LI>
+</UL><UL>
+<LI>
+</UL><UL>
+<LI>Use an FPGA-based coprocessor board to accelerate innermost loop</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(15, 0)"> Hardware </A><br><UL>
+<LI>Host
+<UL>
+<LI>SGI Origin 200
+<UL>
+<LI>180MHz R10000
+<LI>128MB RAM
+<LI>Identical to the DAAC configuration
+</UL></UL></UL><UL>
+<LI>FPGA Co-Processor
+<UL>
+<LI>Annapolis Wildforce PCI
+<UL>
+<LI>Five Xilinx 4036EX</UL></UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(16, 0)"> Results </A><br><UL>
+<LI>Software only
+<UL>
+<LI>16.51 seconds
+</UL></UL><UL>
+<LI>Software + FPGA Co-Processor
+<UL>
+<LI>1.78 seconds
+</UL></UL><UL>
+<LI>Speedup
+<UL>
+<LI>9.28x</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(17, 0)"> Level 2: Cloud Mask </A><br><UL>
+<LI>For each pixel, provide a confidence flag that indicates how certain we are that a pixel is clear (not covered by a cloud)
+</UL><UL>
+<LI>Restrictions
+<UL>
+<LI>Near real-time
+<LI>Low output data volume
+<LI>Simplicity</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(18, 0)"> Approach: Spectral Analysis </A><br>
+<P></P><A HREF="JavaScript:parent.ItemClicked(19, 0)"> Approach </A><br><UL>
+<LI>Per pixel:
+<UL>
+<LI>Choose appropriate tests to perform
+<LI>Run threshold tests to determine if the pixel is clear [11] or clouded [00]
+<LI>Group similar tests together into one of five domains
+<LI>Determine final cloud mask, Q, from results of each group
+</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(20, 0)"> Approach </A><br><UL>
+<LI>To determine final cloud mask
+<UL>
+<LI>Minimum confidence is determined for each group:
+<LI>
+<LI>Final mask result is the product of the results from each group:</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(21, 0)"> Approach (cont’d) </A><br><UL>
+<LI>Per pixel
+<UL>
+<LI>If final confidence level is still uncertain (0.05 &#060 Q &#060 0.95), use spatial uniformity tests on 3-by-3 pixel regions
+<LI>Check for temporal consistency
+<LI>Update final cloud mask confidence</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(22, 0)"> Applicability for FPGAs </A><br><UL>
+<LI>Simple threshold tests
+</UL><UL>
+<LI>Threshold values do not change
+</UL><UL>
+<LI>Can perform threshold tests in parallel
+</UL><UL>
+<LI>Can operate on multiple pixels in parallel
+</UL><UL>
+<LI>Easy to add new tests if needed
+</UL><UL>
+<LI>Easy to change threshold constants if needed</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(23, 0)"> Sample Results </A><br>
+<P></P><A HREF="JavaScript:parent.ItemClicked(24, 0)"> Level 3: Multi-spectral Image Classification </A><br><UL>
+<LI>Want to classify a multi-spectral image in order to make it more useful for analysis by humans
+<UL>
+<LI>Used to determine type of terrain being represented
+<LI>Similar to data compression
+<LI>Similar to clustering analysis</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(25, 0)"> PNN Algorithm </A><br><UL>
+<LI>Use a Probabilistic Neural Network (PNN) classifier
+<UL>
+<LI>Given an input image pixel represented as a vector
+<LI>Compare against sets of training vectors (weights) which are known to belong to a certain class (water, forest, urban, etc.)</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(26, 0)"> PNN Calculation </A><br><UL>
+<LI>For each class, we derive a probability that the pixel belongs to that particular class
+</UL><UL>
+<LI>
+</UL><UL>
+<LI>
+</UL><UL>
+<LI>
+</UL><UL>
+<LI>The highest value indicates which class the pixel most likely belongs to</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(27, 0)"> PNN Illustration </A><br>
+<P></P><A HREF="JavaScript:parent.ItemClicked(28, 0)"> FPGA Mapping </A><br><UL>
+<LI>Put the entire PNN calculation onto the FPGA
+<UL>
+<LI>Load training data into local memories
+<LI>Load training data constants into memories
+<LI>Use lookup tables to perform the exponentiation
+</UL></UL><UL>
+<LI>If enough space, work on multiple pixels in parallel</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(29, 0)"> Hardware </A><br><UL>
+<LI>Host
+<UL>
+<LI>Pentium PC (166MHz)
+</UL></UL><UL>
+<LI>FPGA Co-Processor
+<UL>
+<LI>GigaOperations Spectrum System G-900
+<UL>
+<LI>(2) X213 Modules
+<UL>
+<LI>Each equivalent to Xilinx 4013E (13,000 gates)
+</UL><LI>128Kbytes of SRAM</UL></UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(30, 0)"> PNN FPGA Data Flow </A><br>
+<P></P><A HREF="JavaScript:parent.ItemClicked(31, 0)"> Results </A><br>
+<P></P><A HREF="JavaScript:parent.ItemClicked(32, 0)"> Why work with NASA? </A><br><UL>
+<LI>Most of NASA’s holdings are not classified or sensitive
+<UL>
+<LI>Easy to get cooperation from scientists and engineers
+<LI>Easy to get data sets and code samples
+</UL></UL><UL>
+<LI>Plethora of algorithms and problems to choose from</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(33, 0)"> Conclusions </A><br><UL>
+<LI>EOS will provide the scientific community with lots of data to process
+<UL>
+<LI>Need faster and cheaper solutions
+<LI>Very interested in Adaptive Computing
+</UL></UL><UL>
+<LI>NASA has started an initiative to investigate Adaptive Computing, and they would love some help
+</UL></P>
+<P>
+</BODY>

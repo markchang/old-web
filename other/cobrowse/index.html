@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/neat.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>CoBrowse</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../../css/neat.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="main">
+  <div id="menu">
+    <h1>Mark L. Chang </h1>
+    <p>
+	&#149; <a href="../../index.html">Home</a> <br>
+    &#149; <a href="../../research.html">Research</a> <br>
+    &#149; <a href="../../teaching.html">Teaching</a> <br>
+    &#149; <a href="../../other">Other</a></p>
+    <p>Our Labs <br>
+      &#149; <a href="http://acl.olin.edu/">Advanced Computing Lab</a>* <br>
+    &#149; <a href="http://embedded.olin.edu">Embedded Computing Lab</a></p>
+    <p>* Olin internal </p>
+  </div>
+  <a href="http://www.olin.edu"><img src="../../images/fwolin_small_nt.png" width="200" height="24" hspace="10" vspace="10" border="0" align="right"></a>
+  <!-- InstanceBeginEditable name="MainBody" --> 
+  <h1>CoBrowse</h1> 
+  <p><br> 
+    <img src="cobrowseb.png" width="100" height="100" align="right"><em>cobrowse<br> 
+    copyright (c) 2005 mark l. chang</em></p> 
+  <p><a href="cobrowse-0.16.xpi">cobrowse-0.16.xpi</a><br> 
+  <em>save as, then drag into your browser window to install </em> </p> 
+  <ul>
+    <li><a href="https://addons.mozilla.org/extensions/moreinfo.php?id=1469">Official Mozilla Update site</a> </li>
+    <li>      <a href="faq.html">FAQ</a>  </li>
+  </ul>
+  <p>This extension was designed to work with the 1.0+ series of Firefox. It is released under the GNU Public License. <br> 
+    <br> 
+    Essentially, this extension is a collaborative web browser. &quot;Collaborative&quot; is a bit of a stretch, so we should actually think of it in a leader/follower sense. With cobrowse installed, one user can start a &quot;server&quot; that will accept incoming connections (currently on port 5000) from folks that have chosen to connect via &quot;client mode&quot;. <br> 
+    The server browser then sends every web page navigation change to every client. It even works when changing tabs!<br> 
+    <br> 
+    This code borrows heavily from these resources:</p> 
+  <ul> 
+    <li> <a href="http://ted.mielczarek.org/code/mozilla/gmaplive/">Google Maps Live!</a> - I borrowed a lot of the client/server model code from here</li> 
+    <li> <a href="http://www.borngeek.com/firefox/tutorial/">Firefox toolbar tutorial</a> - Just awesome. Thanks!</li> 
+    <li><a href="http://roachfiend.com/archives/2004/12/08/how-to-create-firefox-extensions/">Roachfiend's &quot;how to create firefox extensions&quot; tutorial</a> - I got my first template/bundle here! Thanks!</li> 
+    <li><a href="http://www.xulplanet.com/">XUL Planet</a> - The reference you need.</li> 
+    <li><a href="http://www.firefoxdeveloper.com/archives/2005/07/12/nsiwebprogresslistener/"> FirefoxDeveloper.com</a> - Guide to using the nsIWebProgressListener interface.
+  </ul> 
+  <p>CHANGELOG</p>
+  <table width="90%"  border="0" align="center">
+    <tr>
+      <td>04-dec-2005: 0.16 </td>
+      <td>added firefox 1.5 support. no functional changes. </td>
+    </tr>
+    <tr>
+      <td>14-nov-2005: 0.15 </td>
+      <td>changed the update mechanism to point at addons.mozilla.org instead of this site. this was done at the request of the addons.mozilla.org team, as they would like all updates to be served from their hosts. </td>
+    </tr>
+    <tr>
+      <td>13-nov-2005: 0.14</td>
+      <td>added connected client count to server, added &quot;copy hostname to clipboard&quot; button to make it easy to send your hostname over aim or something to your buddies</td>
+    </tr>
+    <tr>
+      <td>12-nov-2005: 0.13</td>
+      <td>oh, so sad. i messed up the packaging into xpi badly. fixed, so you get a new version number. you may have to manually uninstall the previous versions. I'm very sorry. Will teach me to test more</td>
+    </tr>
+    <tr>
+      <td>12-nov-2005: 0.12</td>
+      <td>fixed version number issues. no added functionality</td>
+    </tr>
+    <tr>
+      <td>11-nov-2005: 0.11</td>
+      <td>same-day update -- added updating capability</td>
+    </tr>
+    <tr>
+      <td>11-nov-2005: 0.1</td>
+      <td>first release</td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p>TODO</p> 
+  <ul> 
+    <li> actual real error handling :)</li> 
+    <li> make preferences work</li> 
+    <li> user-selectable ports</li> 
+  </ul> 
+  <!-- InstanceEndEditable --></div>
+<br>
+</body>
+<!-- InstanceEnd --></html>

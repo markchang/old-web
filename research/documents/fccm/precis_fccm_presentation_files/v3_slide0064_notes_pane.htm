@@ -1,0 +1,126 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<link id=Main-File rel=Main-File href="../precis_fccm_presentation.htm">
+<link rel=Preview href=preview.wmf>
+
+<script>
+<!--
+if( window.name != "PPTNts" )
+  parent.location.href = "../precis_fccm_presentation.htm";
+//-->
+</script>
+</head>
+
+<body bgcolor=black text=white>
+
+<table border=0 width="100%">
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><font face="Times New Roman" size=3>Propagation
+  engine:</font><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><font face="Times New Roman" size=3><span
+  style='mso-tab-count:1'>   </span>How do my variables and operations
+  influence each other? In other words, how does my algorithm’s datapath grow
+  and contract during the execution of the program?</font><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><font face="Times New Roman" size=3><span
+  style='mso-tab-count:1'>   </span>In manual precision analysis, such as in
+  some of the hand mappings we’ve done in the past, in order to know how many
+  bits of precision we need to allocate to an operation, we analyze the data
+  flow up through that point and beyond.</font><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><font face="Times New Roman" size=3>Range finding /
+  Data profiling:</font><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><font face="Times New Roman" size=3><span
+  style='mso-tab-count:1'>   </span>While the first step tells us how our data
+  path may grow and contract purely from the operations done, the actual
+  utilization of the data path may vary wildly from these bounds. Another way
+  to gain insight into an algorithm is to run the algorithm and record the
+  range of values that pass through variables and operators. While this is
+  data-set dependent, it is beneficial in that it pinpoints areas where
+  optimization beyond the ‘provable’ bounds of precision may yield benefits
+  under acceptable error constraints.</font><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><font face="Times New Roman" size=3>Simulation:</font><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><font face="Times New Roman" size=3><span
+  style='mso-tab-count:1'>   </span>Now that we’ve determined the provable and
+  run-time precision requirements of our algorithm and representative data
+  sets, we can constrain variables and operators to a fixed precision and
+  simulate the effects of that fixed-precision on the quality of our results.
+  In this simulation, we find out how sensitive our algorithm is to variations
+  in precision, and whether or not the precision choices we made will yield
+  acceptable results.</font><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><font face="Times New Roman" size=3>User guidance /
+  slack analysis:</font><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><font face="Times New Roman" size=3><span
+  style='mso-tab-count:1'>   </span>Given that we have nodes in our data path
+  that we want to constrain to some fixed-precision, which nodes do I
+  concentrate on first during my manual precision optimization?</font><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><font face="Times New Roman" size=3><span
+  style='mso-tab-count:1'>   </span>This usually is an iterative process.
+  Developers can implement a non-optimal data path and iteratively constrain
+  parts of the system to meet a constraint, such as getting the design to fit
+  in a particular area constraint.</font><br>
+  </td>
+ </tr>
+</table>
+
+</body>
+
+</html>

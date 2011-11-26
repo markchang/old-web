@@ -1,0 +1,209 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<link id=Main-File rel=Main-File
+href="../Flexible%20Instruction%20Processors.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Flexible Instruction Processors</title>
+<meta name=Description content="27-May-03: Implementation: AES">
+<link rel=Stylesheet href="master04_stylesheet.css">
+<![if !ppt]>
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:76% !important;}
+-->
+</style>
+<script src=script.js></script><script><!--
+gId="slide0014.htm"
+if( !IsNts() ) Redirect( "PPTSld", gId );
+//-->
+</script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><script for=window event=onload><!--
+if( !IsSldOrNts() ) return;
+if( MakeNotesVis() ) return;
+LoadSld( gId );
+MakeSldVis(0);
+//-->
+</script><![endif]><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="27"/>
+</o:shapelayout>
+</head>
+
+<body lang=EN-US style='margin:0px;background-color:black'
+onclick="DocumentOnClick()" onresize="_RSW()" onkeypress="_KPH()">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:755px;height:566px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#FFFFFF,#40458C,#B7C1EB,#660066,#ECD882,#B2B2B2,#6F89F7,#CFDBFD"
+ masterhref="master04.xml">
+ <p:shaperange href="master04.xml#_x0000_s3073"/><![if !ppt]><p:shaperange
+  href="master04.xml#_x0000_s3074"/><![if !vml]><img border=0
+ v:shapes="_x0000_s3074,_x0000_s3077,_x0000_s3078,_x0000_s3079,_x0000_s3080,_x0000_s3081,_x0000_s3082,_x0000_s3083,_x0000_s3084,_x0000_s3085,_x0000_s3086,_x0000_s3087,_x0000_s3088,_x0000_s3089,_x0000_s3090,_x0000_s3091,_x0000_s3092,_x0000_s3093,_x0000_s3094,_x0000_s3095,_x0000_s3096,_x0000_s3097,_x0000_s3098,_x0000_s3100,_x0000_s3101,_x0000_s3102,_x0000_s3103,_x0000_s3104,_x0000_s3105,_x0000_s3106,_x0000_s3107,_x0000_s3108,_x0000_s3109,_x0000_s3110,_x0000_s3111,_x0000_s3112,_x0000_s3113,_x0000_s3114,_x0000_s3115,_x0000_s3116,_x0000_s3117,_x0000_s3118,_x0000_s3119,_x0000_s3120,_x0000_s3121,_x0000_s3122,_x0000_s3123,_x0000_s3124,_x0000_s3125,_x0000_s3126,_x0000_s3127,_x0000_s3128,_x0000_s3129,_x0000_s3130,_x0000_s3132,_x0000_s3133,_x0000_s3134"
+ src="master04_image014.gif" style='position:absolute;top:-.17%;left:-.13%;
+ width:100.39%;height:100.53%'><![endif]><p:shaperange
+  href="master04.xml#_x0000_s3137"/>
+ <div v:shape="_x0000_s3137" class=O style='position:absolute;top:93.99%;
+ left:8.47%;width:18.94%;height:3.35%'><span style='font-family:Tahoma;
+ font-size:58%;mso-field-code:meta0'>October 1, 2002</span><span
+ style='font-family:Tahoma;font-size:58%;mso-special-format:lastCR;display:
+ none'>&#13;</span></div>
+ <p:shaperange href="master04.xml#_x0000_s3138"/><p:shaperange
+  href="master04.xml#_x0000_s3139"/>
+ <div v:shape="_x0000_s3139" class=O>
+ <div style='text-align:right;position:absolute;top:93.99%;left:72.71%;
+ width:18.94%;height:3.35%'><span style='font-family:Tahoma;font-size:58%;
+ mso-field-code:meta16'>14</span><span style='font-family:Tahoma;font-size:
+ 58%;mso-special-format:lastCR;display:none'>&#13;</span></div>
+ </div>
+ <![endif]><p:shaperange href="master04.xml#_x0000_m3135"/><v:shape id="_x0000_s27650"
+  type="#_x0000_m3135" style='position:absolute;left:48pt;top:24pt;width:612pt;
+  height:90pt' o:userdrawn="f">
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="title"/></v:shape><v:shapetype id="_x0000_t202"
+  coordsize="21600,21600" o:spt="202" path="m0,0l0,21600,21600,21600,21600,0xe">
+  <v:stroke joinstyle="miter"/>
+  <v:path gradientshapeok="t" o:connecttype="rect"/>
+ </v:shapetype><v:shape id="_x0000_s27651" type="#_x0000_t202" style='position:absolute;
+  left:100.75pt;top:134.625pt;width:556.75pt;height:208.5pt;mso-wrap-style:none;
+  v-text-anchor:top-baseline' filled="f" fillcolor="#ecd882 [4]" stroked="f"
+  strokecolor="#40458c [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="#b7c1eb [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:shape>
+ <div v:shape="_x0000_s27650" class=T style='position:absolute;top:12.36%;
+ left:7.68%;width:83.04%;height:8.12%'>Implementation: AES</div>
+ <div v:shape="_x0000_s27651" class=O>
+ <div style='position:absolute;top:25.61%;left:14.96%;width:90.46%;height:5.47%'><span
+ style='font-family:Tahoma'>Device<span style='mso-tab-count:2;width:11.34%'> </span>Cycles/Block<span
+ style='mso-tab-count:1;width:1.95%'> </span>Slices/BRAM<span style='mso-tab-count:
+ 1;width:2.16%'> </span>Mbps/MHz&#13;</span></div>
+ <div style='position:absolute;top:30.91%;left:14.96%;width:75.49%;height:5.47%'><span
+ style='font-family:Tahoma;display:none'>&#13;</span></div>
+ <div style='position:absolute;top:36.21%;left:14.96%;width:77.74%;height:5.47%'><span
+ style='font-family:Tahoma'>Software<span style='mso-tab-count:1;width:8.97%'> </span>340<span
+ style='mso-tab-count:2;width:18.69%'> </span>N/A<span style='mso-tab-count:
+ 2;width:18.66%'> </span>0.4&#13;</span></div>
+ <div style='position:absolute;top:41.51%;left:14.96%;width:77.74%;height:5.47%'><span
+ style='font-family:Tahoma'>FIP (I)<span style='mso-tab-count:2;width:13.26%'> </span>99<span
+ style='mso-tab-count:2;width:21.03%'> </span>1770/2<span style='mso-tab-count:
+ 1;width:12.37%'> </span>1.3&#13;</span></div>
+ <div style='position:absolute;top:46.81%;left:14.96%;width:75.49%;height:5.47%'><span
+ style='font-family:Tahoma'>FIP (II)<span style='mso-tab-count:1;width:12.0%'> </span>32<span
+ style='mso-tab-count:2;width:21.66%'> </span>1393/10<span style='mso-tab-count:
+ 1;width:10.32%'> </span>4&#13;</span></div>
+ <div style='position:absolute;top:52.12%;left:14.96%;width:79.86%;height:5.47%'><span
+ style='font-family:Tahoma'>Hardware I<span style='mso-tab-count:1;width:4.34%'>
+ </span>11<span style='mso-tab-count:2;width:20.47%'> </span>460/10<span
+ style='mso-tab-count:1;width:12.04%'> </span>11.5&#13;</span></div>
+ <div style='position:absolute;top:57.42%;left:14.96%;width:82.11%;height:5.47%'><span
+ style='font-family:Tahoma'>Hardware II<span style='mso-tab-count:1;width:2.7%'>
+ </span>1<span style='mso-tab-count:2;width:22.13%'> </span>2679/82<span
+ style='mso-tab-count:1;width:9.49%'> </span>129.6</span></div>
+ </div>
+ <v:line id="_x0000_s27653" style='position:absolute;mso-wrap-style:none'
+  from="108pt,180pt" to="9in,180pt" strokecolor="#40458c [1]">
+  <v:shadow color="#b7c1eb [2]"/>
+ </v:line><![if !vml]><img border=0 v:shapes="_x0000_s27653"
+ src="slide0014_image031.gif" style='position:absolute;top:33.21%;left:14.96%;
+ width:75.36%;height:.53%'><![endif]><v:line id="_x0000_s27654" style='position:absolute;
+  mso-wrap-style:none' from="240pt,2in" to="240pt,336pt" strokecolor="#40458c [1]">
+  <v:shadow color="#b7c1eb [2]"/>
+ </v:line><![if !vml]><img border=0 v:shapes="_x0000_s27654"
+ src="slide0014_image032.gif" style='position:absolute;top:26.5%;left:33.24%;
+ width:.39%;height:36.04%'><![endif]><v:line id="_x0000_s27655" style='position:absolute;
+  mso-wrap-style:none' from="390pt,2in" to="390pt,336pt" strokecolor="#40458c [1]">
+  <v:shadow color="#b7c1eb [2]"/>
+ </v:line><![if !vml]><img border=0 v:shapes="_x0000_s27655"
+ src="slide0014_image033.gif" style='position:absolute;top:26.5%;left:54.03%;
+ width:.39%;height:36.04%'><![endif]><v:line id="_x0000_s27656" style='position:absolute;
+  mso-wrap-style:none' from="534pt,2in" to="534pt,336pt" strokecolor="#40458c [1]">
+  <v:shadow color="#b7c1eb [2]"/>
+ </v:line><v:shape id="_x0000_s27657" type="#_x0000_t202" style='position:absolute;
+  left:102pt;top:366pt;width:471.125pt;height:122.25pt;mso-wrap-style:none;
+  v-text-anchor:top-baseline' filled="f" fillcolor="#ecd882 [4]" stroked="f"
+  strokecolor="#40458c [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="#b7c1eb [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s27656"
+ src="slide0014_image034.gif" style='position:absolute;top:26.5%;left:74.03%;
+ width:.39%;height:36.04%'><![endif]>
+ <div v:shape="_x0000_s27657" class=O>
+ <div style='position:absolute;top:68.37%;left:15.23%;width:76.29%;height:5.47%'><span
+ style='font-family:Tahoma'>FIP (I) direct implementation of transforms&#13;</span></div>
+ <div style='position:absolute;top:73.67%;left:15.23%;width:64.37%;height:5.47%'><span
+ style='font-family:Tahoma'>FIP (II) table-lookups for transforms&#13;</span></div>
+ <div style='position:absolute;top:78.97%;left:15.23%;width:63.57%;height:5.47%'><span
+ style='font-family:Tahoma'>Hardware I Spartan II 100-6&#13;</span></div>
+ <div style='position:absolute;top:84.45%;left:15.23%;width:63.57%;height:5.47%'><span
+ style='font-family:Tahoma'>Hardware II Virtex-E 812-8</span></div>
+ </div>
+</p:slide></div>
+
+<![if !ppt]>
+
+<div id=NotesObj style='display:none'>
+
+<table style='color:white' border=0 width="100%">
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><font face="Times New Roman" size=3>Software: C/C++
+  on PIII-933MHz, 350Mbps</font><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><font face="Times New Roman" size=3>FIP I: 51.7Mbps</font><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><font face="Times New Roman" size=3>FIP II: 160Mbps</font><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><font face="Times New Roman" size=3>Hardware I:
+  0.52Gbps (45MHz)</font><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><font face="Times New Roman" size=3>Hardware II:
+  7Gbps (54MHz)</font><br>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<![endif]>
+</body>
+
+</html>

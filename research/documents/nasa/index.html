@@ -1,0 +1,262 @@
+<html><!-- #BeginTemplate "/Templates/index.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>research - nasa</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#EEEEEE">
+  <tr bgcolor="#CCCCCC" bordercolor="#000000"> 
+    <td> 
+      <p align="right">Mark L. Chang</p>
+      <p align="right">::[ <a href="../../index.html">start</a> | <a href="../index.html">research</a> 
+        | <a href="../../personal/index.html">personal</a> | <a href="../../contact/index.html">contact</a> 
+        ]::</p>
+    </td>
+  </tr>
+  <tr bgcolor="#333366" bordercolor="#000000">
+    <td><img src="../../images/spacer.gif" width="1" height="1"><br></td>
+  </tr>
+</table> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="120" bgcolor="#EEEEEE" valign="top"><!-- #BeginEditable "nav" -->
+      <p><a href="../index.html">research</a>::</p>
+      <p><a href="pnn/">pnn</a></p>
+      <!-- #EndEditable --></td>
+    <td width="1" bgcolor="#333366"><img src="../../images/spacer.gif" width="1" height="1"></td>
+    <td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="8">
+        <tr> 
+          <td><!-- #BeginEditable "body" --> 
+            <h2>Hybrid Systems On a Chip:<br>
+              Applying adaptive computing strategies to NASA applications</h2>
+            <h2>Overview </h2>
+            <p> Today's adaptive computing engines consist mostly of plug-in accelerator 
+              cards that are designed only to complement an existing "host" computer. 
+              While great gains in performance have already been established with 
+              these co-processor-like cards, there still is an issue of an I/O 
+              bottleneck. Ideally, as we approach a billion transistors on a single 
+              die, we will need to come up with new ways to take advantage of 
+              this space. One interesting way that my adviser, <a
+      href="http://www.ece.nwu.edu/~hauck/" target="_top">Prof. Scott Hauck</a>, 
+              and others have proposed, is to utilize that extra space by combining 
+              RISC, FPGA, and DSP resources onto one single substrate. This would 
+              dramatically increase the inter-resource communication bandwidth, 
+              allowing for hardware and software designs that are not feasible 
+              today. In order to investigate this architecture, we need to have 
+              some large heterogeneous applications. This is where NASA researchers 
+              can support our efforts. 
+            <h3>Adaptive Computing and NASA</h3>
+            <table align="center" border="5">
+              <tr align="center"> 
+                <td><a href="http://www.nasa.gov" target="_top"><img
+	      src="images/NASAlogo.gif" border="none"></a></td>
+                <td><a href="http://www.gsfc.nasa.gov" target="_top"><img
+	      src="images/GSFClogo.gif" border="none"></a></td>
+                <td><a href="http://modarch.gsfc.nasa.gov/" target="_top"><img
+	      src="images/MODIS_globe.gif" border="none"></a></td>
+                <td><a href="http://modarch.gsfc.nasa.gov/EOS-AM/"
+	    target="_top"><img src="images/eosam_logo.gif"
+	      border="none"></a></td>
+              </tr>
+              <tr align="center"> 
+                <td bgcolor="#00FFFF">NASA</td>
+                <td bgcolor="#00FFFF">Goddard</td>
+                <td bgcolor="#00FFFF">MODIS</td>
+                <td bgcolor="#00FFFF">EOS-AM1</td>
+              </tr>
+            </table>
+            <br clear="all">
+            <h4>Background</h4>
+            <p> In 1991, NASA initiated a program to study Earth as an environmental 
+              system. This program is called Earth Science Enterprise (ESE). 
+            <p> The flagship of the ESE program will be the launch of the first 
+              Earth Observation System (EOS) satellite, the EOS-AM1. The design 
+              of the EOS spacecraft allows it to house five different instruments 
+              capable of collecting and transmitting an average of 918 Giga-bytes 
+              of data <i>per day</i>. This far surpasses the data rates of any 
+              previous NASA satellites. So much, in fact, that NASA is looking 
+              to adaptive computing as a cheap alternative to super- and parallel-computers 
+              to help digest this massive processing workload. 
+            <p> In order to further my own research, I am investigating these 
+              NASA algorithms and applications. The intuition is that these applications 
+              will serve as sort of benchmarks to help determine the overall architecture 
+              of a future hybrid processor. A second result of this research will 
+              be in the development of "driver" applications for the proposed 
+              <a
+      href="http://www.ece.nwu.edu/cpdc/Match/Match.html"
+      target="_top">MATCH Compiler</a>, a MATLAB to heterogeneous embedded systems 
+              compiler. These applications will serve as the basis for a MATLAB 
+              version to exercise and test the results of this compiler. 
+            <p> To this end, I am collaborating with researchers at the <a
+      href="http://fpga.gsfc.nasa.gov/" target="_top">ASDP Group</a> (Adaptive 
+              Scientific Data Processing) at <a
+      href="http://www.gsfc.nasa.gov/" target="_top">NASA Goddard Spaceflight 
+              Center</a>. This research is supported both by <a
+      href="http://www.darpa.mil/ito/" target="_top">DARPA</a> and funding directed 
+              at the <a
+      href="http://www.ece.nwu.edu/cpdc/Match/Match.html"
+      target="_top">MATCH</a> project, here at Northwestern. 
+            <p> For a more detailed overview of the ESE program and the processing 
+              problem that the EOS-AM1 spacecraft poses, please view my presentation: 
+              <a
+      href="http://www.ece.nwu.edu/~mchang/nasa/Seminar/index.html"
+      target="_top">Adaptive Computing for NASA Applications</a>. 
+            <hr>
+            <h4>Multispectral Image Classification</h4>
+            One of the key algorithms that scientists will use to evaluate MODIS 
+            (one of the instruments on board the EOS-AM1 spacecraft) data will 
+            be some form of multispectral image classification. This algorithm 
+            can be viewed as a form of compression of data that takes raw data 
+            that is not usable by humans, and mapping it into several classes 
+            that can be analyzed by humans. In this way, it is similar to clustering 
+            analysis in its reduction of the data set. Ultimately, in the example 
+            that I am working with, it is used to determine terrain in an image. 
+            <p> The algorithm takes in a raw image of several spectral bands and 
+              turns them into human-usable classified versions. The image on the 
+              left is the raw data, and the image on the right is the processed 
+              result. Click for a larger image. 
+            <p> 
+            <table align="center" border="5">
+              <tr> 
+                <td> <a href="images/pnnraw.gif"><img src="images/pnnraw_small.gif"
+		border="none"></a></td>
+                <td> ===></td>
+                <td> <a href="images/pnnoutput.gif"><img
+		src="images/pnnoutput_small.gif" border="none"></a></td>
+              </tr>
+              <tr bgcolor="00ffff" align="center"> 
+                <td>Raw image</td>
+                <td></td>
+                <td>Processed image</td>
+              </tr>
+            </table>
+            <p> The different colors in the processed image represent different 
+              styles of terrain, such as barren, urban, fields, forest, tundra, 
+              etc. 
+            <p> Simply, the algorithm compares the input pixel vector (a composite 
+              vector of all spectral bands) with a set of training vectors that 
+              have been previously defined as belonging to certain terrain class. 
+              The algorithm finds the probability density function based upon 
+              the weighted sum of mean square distances between the input vector 
+              and the training vectors within each class. The class with the highest 
+              value (highest probability) is the class the input pixel vector 
+              is assigned to. 
+            <p> A typical image frame consists of 512 x 512 pixels, each pixel 
+              being more than 40 bits deep. Each of these vectors is compared 
+              to, again, typically five to ten different classes, each with 400-1000 
+              "training vectors". Thus, for each frame, there is a lot of computation 
+              required. Multiply this over time, and there is an immense amount 
+              of calculation. 
+            <p> This large load of simple calculations and loops is nearly ideal 
+              for an adaptive computing computational engine. In a perfect world, 
+              simply adding more hardware resources increases the parallelism 
+              and the performance of our algorithm, once it is mapped to the hardware 
+              efficiently. 
+            <p> Currently, I have a working C-based version of the algorithm, 
+              dubbed <code>"PNN"</code>, which stands for <i>Probabilistic Neural 
+              Network</i>, the theoretical model on which this algorithm is based. 
+              Additionally, I have completed several hardware implementations 
+              of the algorithm.
+            <p> The hardware that we have at our disposal is the WildChild board 
+              from Annapolis Microsystems. This board has a total of 9 FPGAs, 
+              denoted PE0 through PE8, each with a small 512k (PE0) or 256k (PE1-PE8) 
+              local memory, all connected in a systolic array. Additionally, PE0, 
+              PE1, and PE8 all have bidirectional FIFOs.
+            <p> More detailed information is available through the following links: 
+            <ul>
+              <li> <a
+	href="Seminar/index.html"
+	target="_top">Presentation on Adaptive Computing for NASA Applications</a> 
+              </li>
+              <li> <a href="docs/sbrn98.pdf">Implementation of a Probabilistic 
+                Neural Network for Multi-spectral Image Classification on an FPGA 
+                Based Custom Computing Machine</a> (PDF) Written by Marco A. Figueiredo 
+                and Clay Gloster of NASA Goddard Space Flight Center </li>
+              <li> S.R. Chettri, R. F. Cromp, M. Birmingham, Design of neural 
+                networks for classification of remotely sensed imagery. Telematics 
+                and Informatics, Vol. 9, No 3, pp 145-156, 1992. </li>
+              <li> S. R. Chettri and R. F. Cromp, Probabilistic neural netwrok 
+                architecture for high-speed classification of remotely sensed 
+                imagery. Telematics and Informatics, Vol 10, No 4, pp 187-198, 
+                1993. </li>
+            </ul>
+            <h4>Cloud Cover Mask</h4>
+            <p> Another interesting problem that seems to lend itself to adaptive 
+              computing is the generation of a what is called a cloud cover mask 
+              from raw image maps. 
+            <p> A lower-level processing step than Multispectral Image Classification 
+              is this cloud cover mask generation. It is considered lower-level 
+              because it operates on all pieces of data that are downlinked from 
+              the MODIS instrument. Instead of distilling the data into human-usable 
+              form as in the case of Multispectral image Classification, cloud 
+              cover mask generation <i>adds</i> to the data set, setting a confidence 
+              flag for each image pixel that indicates the level of certainty 
+              that there is a cloud obscuring this pixel. 
+            <p> Since this algorithm is applied to each and every pixel in the 
+              data set, it needs to follow some restrictions: 
+            <ul>
+              <li>Near real-time 
+              <li>Low output data volume 
+              <li>Simplicity 
+            </ul>
+            <p> To illustrate the difficulty and hint at the approach the algorithm 
+              needs to take, I show an example of a multispectral image that is 
+              partially obstructed by cloud. 
+            <p> <img src="images/cloudinput.gif"> 
+            <p> These three images are of the same coordinates at the same time, 
+              but in different spectrums. What we are looking at is called a subvisual 
+              contrail. The left panel is the 0.66um (micro-meter) channel. Notice, 
+              you can't see the cloud at all. The right panel is the 11um channel, 
+              where dark is cold and light is warm. Here you can see the contrail, 
+              but it would be difficult to fully define its extent. The center 
+              panel is the 1.88um channel, and here it is clear that there is 
+              a contrail and where it is. With all three panels, we can come up 
+              with a relatively good cloud cover mask. A different result for 
+              a cloud cover mask is shown below, in the center panel, where white 
+              represents most confident cloud covering and green is most confident 
+              clear sky. 
+            <p> <img src="images/cloudresults.GIF"> 
+            <p> Thus, the algorithm's approach is to run a particular group of 
+              thresholding tests for each of the channels available, and then 
+              determine a final cloud mask from a weighted combination of the 
+              outputs from the individual tests. 
+            <p> This algorithm lends itself well to an adaptive engine. The tests 
+              for cloud cover are very simple thresholding tests that can be done 
+              in parallel. Additionally, with enough hardware, multiple pixels 
+              can be operated on simultaneously, further increasing performance. 
+            <p> Currently, I am obtaining data sets and example code from several 
+              sources including Universities and NASA scientists. 
+            <p> More information can be found at the following links: 
+            <ul>
+              <li> <a
+	href="Seminar/index.html"
+	target="_top">Presentation on Adaptive Computing for NASA Applications</a> 
+              </li>
+              <li><a href="docs/atbd_mod06.pdf">Algorithm Theoretical Basis Document</a> 
+                describing Cloud Cover Mask Generation
+            </ul>
+            <!-- #EndEditable --> </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#333399">
+  <tr bgcolor="#333366"> 
+    <td><img src="../../images/spacer.gif" width="1" height="1"><br>
+    </td>
+  </tr>
+  <tr bgcolor="#CCCCCC"> 
+    <td> 
+      <p align="right">::[ <a href="../../index.html">start</a> | <a href="../index.html">research</a> 
+        | <a href="../../personal/index.html">personal</a> | <a href="../../contact/index.html">contact</a> 
+        ]::</p>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

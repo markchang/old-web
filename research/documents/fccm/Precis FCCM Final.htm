@@ -1,0 +1,1685 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./Precis%20FCCM%20Final_files/filelist.xml">
+<link rel=Edit-Time-Data href="./Precis%20FCCM%20Final_files/editdata.mso">
+<link rel=OLE-Object-Data href="./Precis%20FCCM%20Final_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Précis: A Design-Time Precision Analysis Tool</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Mark L. Chang</o:Author>
+  <o:LastAuthor>Mark L. Chang</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>2185</o:TotalTime>
+  <o:LastPrinted>2002-04-20T21:42:00Z</o:LastPrinted>
+  <o:Created>2002-05-14T05:08:00Z</o:Created>
+  <o:LastSaved>2002-05-14T05:08:00Z</o:LastSaved>
+  <o:Pages>10</o:Pages>
+  <o:Words>6284</o:Words>
+  <o:Characters>35822</o:Characters>
+  <o:Company>Changtech</o:Company>
+  <o:Lines>298</o:Lines>
+  <o:Paragraphs>71</o:Paragraphs>
+  <o:CharactersWithSpaces>43991</o:CharactersWithSpaces>
+  <o:Version>9.4402</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="64" DLLVersion="131077"
+   NLCheck="1">1</w:ActiveWritingStyle>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536902279 -2147483648 8 0 511 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:12.25pt;
+	mso-pagination:none;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:.3in;
+	text-align:justify;
+	text-indent:-.3in;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	mso-list:l0 level1 lfo1;
+	tab-stops:list .3in;
+	font-size:12.0pt;
+	mso-bidi-font-size:16.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-family:Arial;
+	mso-font-kerning:16.0pt;}
+h2
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:.4in;
+	text-align:justify;
+	text-indent:-.4in;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	mso-list:l0 level2 lfo1;
+	tab-stops:list .4in;
+	font-size:11.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-family:Arial;
+	mso-bidi-font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-align:justify;
+	text-indent:-.5in;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	mso-list:l0 level3 lfo1;
+	tab-stops:list .5in;
+	font-size:13.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-family:Arial;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.6in;
+	text-align:justify;
+	text-indent:-.6in;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	mso-list:l0 level4 lfo1;
+	tab-stops:list .6in;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+h5
+	{mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.7in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-indent:-.7in;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	mso-list:l0 level5 lfo1;
+	tab-stops:list .7in;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";}
+h6
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.8in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-.8in;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	mso-list:l0 level6 lfo1;
+	tab-stops:list .8in;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;
+	font-style:italic;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.9in;
+	text-align:justify;
+	text-indent:-.9in;
+	mso-pagination:none;
+	mso-outline-level:7;
+	mso-list:l0 level7 lfo1;
+	tab-stops:list .9in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-align:justify;
+	text-indent:-1.0in;
+	mso-pagination:none;
+	mso-outline-level:8;
+	mso-list:l0 level8 lfo1;
+	tab-stops:list 1.0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.1in;
+	text-align:justify;
+	text-indent:-1.1in;
+	mso-pagination:none;
+	mso-outline-level:9;
+	mso-list:l0 level9 lfo1;
+	tab-stops:list 1.25in;
+	font-size:11.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{margin-top:1.0gd;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:12.25pt;
+	mso-pagination:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:12.25pt;
+	mso-pagination:none;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:12.25pt;
+	mso-pagination:none;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	text-indent:12.25pt;
+	mso-pagination:none;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Helvetica;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:bold;}
+p.MsoTof, li.MsoTof, div.MsoTof
+	{mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-20.0pt;
+	mso-pagination:none;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+span.MsoEndnoteReference
+	{vertical-align:super;}
+p.MsoEndnoteText, li.MsoEndnoteText, div.MsoEndnoteText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:12.25pt;
+	mso-pagination:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:12.25pt;
+	mso-pagination:none;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	mso-pagination:none;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:12.25pt;
+	mso-pagination:none;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:blue;}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:12.25pt;
+	mso-pagination:none;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:red;}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:12.25pt;
+	mso-pagination:none;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBlockText, li.MsoBlockText, div.MsoBlockText
+	{margin-top:0in;
+	margin-right:.5in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:12.25pt;
+	mso-pagination:none;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:12.25pt;
+	mso-pagination:none;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+tt
+	{mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+p.pseudocode, li.pseudocode, div.pseudocode
+	{mso-style-name:pseudocode;
+	mso-style-parent:"Plain Text";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:12.25pt;
+	mso-pagination:lines-together;
+	page-break-after:avoid;
+	font-size:8.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in .75in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-even-footer:url("./Precis%20FCCM%20Final_files/header.htm") ef1;
+	mso-footer:url("./Precis%20FCCM%20Final_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+@page Section2
+	{size:8.5in 11.0in;
+	margin:1.0in .9in 1.0in .75in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-columns:2 even 23.05pt;
+	mso-title-page:yes;
+	mso-even-footer:url("./Precis%20FCCM%20Final_files/header.htm") ef1;
+	mso-footer:url("./Precis%20FCCM%20Final_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section2
+	{page:Section2;}
+@page Section3
+	{size:8.5in 11.0in;
+	margin:1.0in .9in 1.0in .75in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-columns:2 even 23.05pt;
+	mso-title-page:yes;
+	mso-even-footer:url("./Precis%20FCCM%20Final_files/header.htm") ef1;
+	mso-footer:url("./Precis%20FCCM%20Final_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section3
+	{page:Section3;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:1729262567;
+	mso-list-template-ids:1567773516;}
+@list l0:level1
+	{mso-level-style-link:"Heading 1";
+	mso-level-tab-stop:.3in;
+	mso-level-number-position:left;
+	margin-left:.3in;
+	text-indent:-.3in;}
+@list l0:level2
+	{mso-level-style-link:"Heading 2";
+	mso-level-text:"%1\.%2\.";
+	mso-level-tab-stop:.4in;
+	mso-level-number-position:left;
+	margin-left:.4in;
+	text-indent:-.4in;}
+@list l0:level3
+	{mso-level-style-link:"Heading 3";
+	mso-level-text:"%1\.%2\.%3\.";
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	margin-left:.5in;
+	text-indent:-.5in;}
+@list l0:level4
+	{mso-level-style-link:"Heading 4";
+	mso-level-text:"%1\.%2\.%3\.%4\.";
+	mso-level-tab-stop:.6in;
+	mso-level-number-position:left;
+	margin-left:.6in;
+	text-indent:-.6in;}
+@list l0:level5
+	{mso-level-style-link:"Heading 5";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
+	mso-level-tab-stop:.7in;
+	mso-level-number-position:left;
+	margin-left:.7in;
+	text-indent:-.7in;}
+@list l0:level6
+	{mso-level-style-link:"Heading 6";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
+	mso-level-tab-stop:.8in;
+	mso-level-number-position:left;
+	margin-left:.8in;
+	text-indent:-.8in;}
+@list l0:level7
+	{mso-level-style-link:"Heading 7";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
+	mso-level-tab-stop:.9in;
+	mso-level-number-position:left;
+	margin-left:.9in;
+	text-indent:-.9in;}
+@list l0:level8
+	{mso-level-style-link:"Heading 8";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-1.0in;}
+@list l0:level9
+	{mso-level-style-link:"Heading 9";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.1in;
+	text-indent:-1.1in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050" fill="f" stroke="f">
+  <v:fill on="f"/>
+  <v:stroke on="f"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:14.0pt;mso-bidi-font-size:12.0pt'>Précis: A Design-Time
+Precision Analysis Tool<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:12.0pt'><br>
+Mark L. Chang and Scott Hauck<br>
+<i>Department of Electrical Engineering<br>
+University of Washington, Seattle, WA<br>
+{mchang,hauck}@ee.washington.edu</i><br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</div>
+
+<span style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:auto;
+mso-break-type:section-break'>
+</span>
+
+<div class=Section2>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:12.0pt'>Abstract<o:p></o:p></span></b></p>
+
+<p class=MsoBlockText style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:0in;margin-bottom:.0001pt'>Currently, few tools exist to aid
+the FPGA developer in translating an algorithm designed for a
+general-purpose-processor into one that is precision-optimized for FPGAs. This
+task requires extensive knowledge of both the algorithm and the target
+hardware. We present a design-time tool, Précis, which assists the developer in
+analyzing the precision requirements of algorithms specified in MATLAB. Through
+the combined use of simulation, user input, and program analysis, we
+demonstrate a methodology for precision analysis that can aid the developer in
+focusing their manual precision optimization efforts.</p>
+
+<p class=MsoBlockText style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:0in;margin-bottom:.0001pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h1><![if !supportLists]>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Introduction</h1>
+
+<p class=MsoNormal>One of the most difficult tasks in implementing an algorithm
+in an FPGA-like substrate is dealing with precision issues. Typical
+general-purpose processor concepts such as <i>word size</i> and <i>data type</i>
+are no longer valid in the FPGA world, which is dominated by finer-grained
+computational structures, such as look-up tables. Instead, the designer must
+use and implement bit-precise data paths.</p>
+
+<p class=MsoNormal>More specifically, in a general-purpose processor, algorithm
+designers can typically choose from a predefined set of variable types that
+have a fixed word length. Examples of these predefined types are the <span
+style='font-family:"Courier New"'>C</span> data types such as <span
+style='font-family:"Courier New"'>char</span>, <span style='font-family:"Courier New"'>int</span>,
+<span style='font-family:"Courier New"'>float</span>, <span style='font-family:
+"Courier New"'>double</span>. These data types correspond to specific memory
+storage sizes, and subsequently, into different ways of handling operations
+upon these memory locations within the microprocessor. Much of the work of
+padding, word-boundary alignment, and operation selection is hidden from the
+programmer by compilers and assemblers, which make the use of one data type
+equally easy as another.</p>
+
+<p class=MsoNormal>In contrast, an FPGA does not have predefined data widths
+for its data path. Instead, designers must provide all the structures necessary
+to handle operations on different data widths and types. Therefore, it is
+paramount that FPGA designers implement their algorithms such that they utilize
+resources efficiently and accurately. Too many bits allocated to a particular
+operation is wasteful, while too few can result in erroneous output.</p>
+
+<p class=MsoNormal>The difficulty is in the translation of an initial algorithm
+into one that is precision-optimized for FPGAs. This task requires extensive
+knowledge of both the algorithm and the target hardware. Unfortunately, there
+are few tools that aid the would-be FPGA developer in this translation. In this
+paper, we discuss our work in filling that gap by introducing a
+developer-oriented tool for the design-time analysis of the impact of precision
+on algorithm implementation.</p>
+
+<h1><![if !supportLists]>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Background</h1>
+
+<p class=MsoNormal style='margin-top:12.0pt'>Currently, the typical tool flow
+for development of an FPGA-targeted algorithm is as shown in <span
+style='mso-field-code:"REF _Ref535780971 \\h &#1; \\* MERGEFORMAT"'>Figure 1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003500330035003700380030003900370031000000</w:data>
+</xml><![endif]--></span>.</p>
+
+<p class=MsoNormal align=center style='margin-top:12.0pt;text-align:center;
+page-break-after:avoid'><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:207pt;
+ height:122.25pt' o:allowoverlap="f">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image001.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=276 height=163
+src="./Precis%20FCCM%20Final_files/image002.gif" v:shapes="_x0000_i1025"><![endif]></p>
+
+<p class=MsoCaption><a name="_Ref535780971">Figure <span style='mso-field-code:
+"SEQ Figure \\* ARABIC"'>1</span></a>. Typical tool flow for implementing a
+high level language specified algorithm on an FPGA.</p>
+
+<p class=MsoBodyTextIndent2>At the head of the development chain is the
+algorithm. Often, the algorithm under consideration has been implemented in
+some high-level language, such as MATLAB, C, or Java, targeted to run on a
+general purpose processor, such as a workstation or desktop personal computer.
+The most compelling reason to utilize a high level language running on a
+workstation is that it provides infinite flexibility and a comfortable, rich
+environment in which to rapidly prototype algorithms.<span style="mso-spacerun:
+yes">  </span>Of course, the reason one would convert this algorithm into a
+hardware implementation is to gain considerable advantages in terms of speed,
+size, and power.</p>
+
+<p class=MsoNormal>This tool flow requires the developer to first convert a
+software prototyped algorithm into a hardware description. From this hardware
+description language (HDL) specification, various stages and intermediate tools
+are used to perform simulation and generate target bitstreams, which are then
+executed on reconfigurable logic. As mentioned earlier, one of the more
+difficult steps in implementing the algorithm in hardware is highlighted in <span
+style='mso-field-code:"REF _Ref535780971 \\h &#1; \\* MERGEFORMAT"'>Figure 1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003500330035003700380030003900370031000000</w:data>
+</xml><![endif]--></span> with a dashed arrow – the conversion from a
+high-level software language, such as C, Java, or MATLAB, into an HDL
+description.</p>
+
+<p class=MsoNormal>A simple conversion without precision analysis would most
+likely yield an unreasonably large hardware implementation. For example, by
+blindly choosing a fixed 32-bit data path throughout the system, the developer
+may encounter two problems: wasted area and incorrect results. The former
+arises when the actual data the algorithm operates upon does not require the
+full 32-bit data path. In this case, much of the area occupied by the oversized
+data path could be pruned. There are several benefits to area reduction of a
+hardware implementation: reduced power consumption, reduced critical path
+delay, and the increased probability of parallelism by freeing up more room on
+the device to perform other operations simultaneously. On the other hand, the
+latter case occurs when the algorithm actually requires more precision for some
+data sets than the 32-bit data path provides. In this case, the results
+obtained from the algorithm could potentially be incorrect due to unchecked
+overflow or underflow conditions.</p>
+
+<p class=MsoNormal>Therefore, within the HDL description, it is important that
+the developer determine more accurate bounds on the data path. Typically, this
+involves running a software implementation of the algorithm with representative
+data sets and performing manual fixed-point analysis. At the very least, this
+requires the re-engineering of the software implementation to record the ranges
+of variables throughout the algorithm. From these results, the developer could
+infer candidate bit-widths for their hardware implementation. Even so, these
+methods are tedious and often error-prone.</p>
+
+<p class=MsoNormal>Unfortunately, while many of the other stages of hardware
+development have well-developed tools to help automate difficult tasks, few
+tools can automate HDL generation from a processor-oriented higher level
+language specification. And while there are C-to-Verilog[1] and C-to-VHDL[2]
+tools in existence, they do not offer such “designer aids” that would help with
+precision analysis of existing algorithms implemented in a high level language.</p>
+
+<h1><![if !supportLists]>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Précis</h1>
+
+<p class=MsoNormal>In order to fill this void in hardware development tools, we
+are developing <i>Précis</i>, a design-time precision analysis tool. Précis
+utilizes MATLAB as an input specification for algorithms and is designed to
+interact with the developer in order to assist them in making the best choices
+regarding data path precision. Currently, Précis aids the developer by
+providing a constraint propagation engine, simulation support, range finding
+capabilities, and performing precision slack analysis.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1026" type="#_x0000_t75" style='width:210pt;height:129.75pt'
+ o:allowoverlap="f">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image003.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=280 height=173
+src="./Precis%20FCCM%20Final_files/image004.gif" v:shapes="_x0000_i1026"><![endif]></p>
+
+<p class=MsoCaption><a name="_Ref535785837">Figure <span style='mso-field-code:
+"SEQ Figure \\* ARABIC"'>2</span></a>. Précis’ role in the tool chain.</p>
+
+<p class=MsoNormal>Précis is designed to complement the existing tool flow in
+the manner shown in <span style='mso-field-code:"REF _Ref535785837 \\h &#1; \\* MERGEFORMAT"'>Figure
+2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003500330035003700380035003800330037000000</w:data>
+</xml><![endif]--></span>. Précis is not meant to be an HDL generator, a
+MATLAB-to-HDL converter, or an optimizing compiler of any sort. Instead, it is
+meant to provide a convenient way for the user to interact with the algorithm
+under consideration. Our goal is for the knowledgeable user, after interacting
+with our tool, to have a much clearer idea of the precision requirements of
+their data path. It is our belief that the developer of the algorithm, with
+suitable software assistance, can perform much better precision analysis and
+optimization than a fully automated tool could ever achieve. In the following
+sections, we describe in more detail the constituent parts of Précis.</p>
+
+<h2><![if !supportLists]>3.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>MATCH front-end</h2>
+
+<p class=MsoNormal>The front-end of Précis comes from Northwestern University
+in the form of a modified MATCH compiler[3,4]. The MATCH compiler understands a
+subset of the MATLAB language and can transform it into efficient
+implementations on FPGAs, DSPs, and embedded CPUs. It is used here primarily as
+a pre-processor to parse MATLAB codes. The MATCH compiler was chosen as the
+basis for the MATLAB code parsing because no official grammar is publicly
+available for MATLAB. We are not constrained to using the MATCH compiler,
+though, as our tool may be updated to accommodate an alternate MATLAB-aware
+parser.</p>
+
+<p class=MsoNormal>MATLAB was chosen as the target high level language because
+the researchers involved in this work also contribute to the MATCH project at
+Northwestern University. From this work, it has become clear that MATLAB is a
+strong favorite for algorithm prototyping and exploration, especially among
+scientists that might have little to no hardware design expertise. With the
+proliferation of reconfigurable co-processor boards capable of providing great
+speedups to many classes of algorithms, it would be advantageous to provide
+tools to help these same scientists target their MATLAB algorithms to FPGAs.
+Précis can be used both by developers prototyping in MATLAB before hand converting
+to an HDL, or to develop pragmas (designer hints) for MATCH’s automatic
+compilation.</p>
+
+<p class=MsoNormal>The MATCH compiler remains a work in progress and is
+currently being marketed by AccelChip[5]. For our purposes, we have modified
+the base MATCH compiler to generate a non-hierarchical (flattened)
+representation of parsed MATLAB code from its internal abstract syntax tree.
+This representation is then read into the main <i>Précis</i> tool for display
+and user interaction.</p>
+
+<h2><![if !supportLists]>3.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Précis application</h2>
+
+<p class=MsoNormal>The main Précis application is written in Java, in part, due
+to its relative platform independence and ease of graphical user interface
+creation. Précis takes the parsed MATLAB code output generated from the MATCH
+compiler and displays a GUI that formats the code into a tree-like representation
+of statements and expressions. An example of the GUI in operation is shown in <span
+style='mso-field-code:"REF _Ref536558340 \\h &#1; \\* MERGEFORMAT"'>Figure 3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003500330036003500350038003300340030000000</w:data>
+</xml><![endif]--></span>. The left half of the interface is the tree
+representation of the MATLAB code. The user may click on any node and, depending
+on the node type, receive more information in the right panel. The right panel
+displayed in the figure is an example of the entry dialog that allows the user
+to specify fixed-point precision parameters, such as range and type of
+truncation. With this graphical display the user can then perform the various
+tasks described in the following sections.</p>
+
+<p class=MsoNormal align=center style='margin-top:12.0pt;text-align:center;
+text-indent:0in;page-break-after:avoid'><!--[if gte vml 1]><v:shape id="_x0000_i1027"
+ type="#_x0000_t75" style='width:211.5pt;height:145.5pt' o:allowoverlap="f">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image005.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=282 height=194
+src="./Precis%20FCCM%20Final_files/image006.jpg" v:shapes="_x0000_i1027"><![endif]></p>
+
+<p class=MsoCaption><a name="_Ref536558340">Figure <span style='mso-field-code:
+"SEQ Figure \\* ARABIC"'>3</span></a>. Screen capture of the Précis GUI.</p>
+
+<h2><![if !supportLists]>3.3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Propagation engine</h2>
+
+<p class=MsoNormal>A core component of the Précis tool is a constraint
+propagation engine. The propagation engine simulates the effects of using
+fixed-point numbers and fixed-point math in hardware. This is done by allowing
+the user to (optionally) constrain variables to a specific precision by
+specifying the bit positions of the most significant bit (MSB) and least
+significant bit (LSB). Variables that are not manually constrained begin with a
+default width of 64 bits. Typically, a user should be able to provide
+constraints easily for at least the circuit inputs and outputs.</p>
+
+<p class=MsoNormal>The propagation engine traverses the expression tree and
+determines the resultant ranges of each operator expression from its child
+expressions. This is done by implementing a set of rules governing the change
+in resultant range that depend upon the input operand(s) range(s) and the type
+of operation being performed. For example, in the statement <span
+style='font-family:"Courier New"'>a=b+c</span>, if <span style='font-family:
+"Courier New"'>b</span> and <span style='font-family:"Courier New"'>c</span>
+are both constrained by the user to a range of <span style='font-family:"Courier New"'>2^15</span>
+to <span style='font-family:"Courier New"'>2^0</span>, 16 bits, the resulting
+output range of <span style='font-family:"Courier New"'>a</span> would have a
+range of <span style='font-family:"Courier New"'>2^16</span> to <span
+style='font-family:"Courier New"'>2^0</span>, 17 bits, as an addition conservatively
+requires one additional high order bit for the result in the case of a
+carry-out from the highest order bit. Similar rules apply for all supported
+operations.</p>
+
+<p class=MsoNormal>The propagation engine works in this fashion across all
+statements of the program, recursively computing the precision for all
+expressions in the program. This form of propagation is often referred to as
+value-range propagation. One shortcoming of the currently implemented
+propagation engine is that it does not handle loop carried variables or
+conditional branches. This is to be rectified in later revisions of the tool. A
+more complete study of propagation and its effects upon hardware synthesis can
+be found in [6]. We plan to continue development of our own propagation tool to
+a similar extent in the near future.</p>
+
+<p class=MsoNormal>An example of forward and backward propagation is depicted
+in <span style='mso-field-code:"REF _Ref535966608 \\h &#1; \\* MERGEFORMAT"'>Figure
+4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003500330035003900360036003600300038000000</w:data>
+</xml><![endif]--></span></p>
+
+<p class=MsoBodyText3 align=center style='margin-top:12.0pt;text-align:center;
+page-break-after:avoid'><span style='color:windowtext'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1028" type="#_x0000_t75" style='width:218.25pt;height:70.5pt'
+ o:allowoverlap="f">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image007.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=291 height=94
+src="./Precis%20FCCM%20Final_files/image008.gif" v:shapes="_x0000_i1028"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoCaption><a name="_Ref535966608">Figure <span style='mso-field-code:
+"SEQ Figure \\* ARABIC"'>4</span></a>. Simple propagation example.</p>
+
+<p class=MsoNormal>In this trivial example, assume the user sets all input
+values (a, b, c) to utilize the bits [15,0], i.e. have a range from <span
+style='font-family:"Courier New"'>2^16-1</span> to <span style='font-family:
+"Courier New"'>0</span>. Forward propagation would result in <span
+style='font-family:"Courier New"'>x</span> having a bit range of [16, 0] and <span
+style='font-family:"Courier New"'>c</span> having a range of [31, 0]. If, after
+further manual analysis, the user notes that the output from these statements
+should be constrained to a range of [10, 0], backwards propagation following
+forward propagation will constrain the inputs (<span style='font-family:"Courier New"'>c</span>
+and <span style='font-family:"Courier New"'>x</span>) of the multiplication to
+[10, 0] as well. Propagating yet further, this constrains the input variables <span
+style='font-family:"Courier New"'>a</span> and <span style='font-family:"Courier New"'>b</span>
+to the range [10, 0] as well. Obviously, these are very conservative
+propagation values. Knowing strict values for the variables would increase our
+accuracy, as can be shown in [6].</p>
+
+<p class=MsoNormal>The propagation engine can be used to get a quick estimate
+of the growth rate of variables through the algorithm. This is done by
+constraining the precision of input variables and a few operators and
+performing the propagation. This will allow the user to see a conservative
+estimate of how the input bit width affects the size of operations down stream.</p>
+
+<p class=MsoNormal>While the propagation engine will provide some information
+as to the effects of fixed-point operations on the resultant data, it is at
+best a conservative estimate. It would be appropriate to consider the bit
+widths determined from the propagation engine to be worst-case results, or in
+other words, an upper bound. This upper bound will become useful in further
+analysis phases of Précis.</p>
+
+<h2><![if !supportLists]>3.4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Simulation support</h2>
+
+<p class=MsoNormal>As previously mentioned, a typical step in precision
+analysis is the actual running of the algorithm in a fixed-point environment.
+Précis can automatically generate annotated MATLAB code to aid in fixed-point
+simulation of the user’s algorithm. The user simply selects variables to
+constrain and requests that MATLAB simulation code be generated. The code
+generated by the tool includes calls to MATLAB helper functions that we
+developed to simulate a fixed-point environment. The simulation flow is shown
+in <span style='mso-field-code:"REF _Ref535822454 \\h &#1; \\* MERGEFORMAT"'>Figure
+5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003500330035003800320032003400350034000000</w:data>
+</xml><![endif]--></span>.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:0in'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1029" type="#_x0000_t75" style='width:228.75pt;height:31.5pt'
+ o:allowoverlap="f">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image009.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=305 height=42
+src="./Precis%20FCCM%20Final_files/image010.gif" v:shapes="_x0000_i1029"><![endif]></p>
+
+<p class=MsoCaption><a name="_Ref535822454">Figure <span style='mso-field-code:
+"SEQ Figure \\* ARABIC"'>5</span></a>. Code generation for simulation.</p>
+
+<p class=MsoNormal>In particular, a MATLAB support routine, “<span
+style='font-family:"Courier New"'>fixp</span>” was developed to simulate a
+fixed-point environment. Its declaration is <span style='font-family:"Courier New"'>fixp(x,m,n,lmode,rmode)</span>,
+where ‘<span style='font-family:"Courier New"'>x</span>’ denotes the signal to
+be truncated to ‘<span style='font-family:"Courier New"'>(m-n+1)</span>’ bits in
+width. Specifically, ‘<span style='font-family:"Courier New"'>m</span>’ denotes
+the MSB bit position and ‘<span style='font-family:"Courier New"'>n</span>’ the
+LSB bit position, inclusively, with negative values representing positions to
+the right of the decimal point. The remaining two parameters, ‘<span
+style='font-family:"Courier New"'>lmode</span>’ and ‘<span style='font-family:
+"Courier New"'>rmode</span>’ specify the method desired to deal with overflow
+at the MSB and LSB portions of the variable, respectively. These modes
+correspond to different methods of hardware implementation. Possible choices
+for ‘<span style='font-family:"Courier New"'>lmode</span>’ are <span
+style='font-family:"Courier New"'>sat</span> and <span style='font-family:"Courier New"'>trunc</span>—saturation
+to <span style='font-family:"Courier New"'>2^(MSB+1)-1</span> and truncation of
+all bits above the MSB position, respectively. For the LSB side of the
+variable, there are four modes, <span style='font-family:"Courier New"'>round</span>,
+<span style='font-family:"Courier New"'>trunc</span>, <span style='font-family:
+"Courier New"'>ceil</span>, and <span style='font-family:"Courier New"'>floor</span>.
+<span style='font-family:"Courier New"'>Round</span> rounds the result to the
+nearest integer, <span style='font-family:"Courier New"'>trunc</span> truncates
+all bits below the LSB position, <span style='font-family:"Courier New"'>ceil</span>
+rounds up to the next integer level, and <span style='font-family:"Courier New"'>floor</span>
+rounds down to the next lower integer level. These modes correspond exactly to
+the MATLAB functions with the exception of <span style='font-family:"Courier New"'>trunc</span>,
+and thus behave as documented by Mathworks. <span style='font-family:"Courier New"'>Trunc</span>
+is accomplished through the modulo operation. An example of output generated
+for simulation is shown in <span style='mso-field-code:"REF _Ref535970272  \\* MERGEFORMAT"'>Figure
+6</span>.</p>
+
+<p class=MsoCaption style='page-break-after:avoid'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1030" type="#_x0000_t75" style='width:275.25pt;height:68.25pt'
+ o:allowoverlap="f">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image011.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=367 height=91
+src="./Precis%20FCCM%20Final_files/image012.gif" v:shapes="_x0000_i1030"><![endif]></p>
+
+<p class=MsoCaption><a name="_Ref535970272"></a><a name="_Ref535970297"><span
+style='mso-bookmark:_Ref535970272'>Figure <span style='mso-field-code:"SEQ Figure \\* ARABIC"'>6</span></span>.
+Sample output generated for simulation</a>, with the range of a variable
+constrained.<b style='mso-bidi-font-weight:normal'><o:p></o:p></b></p>
+
+<p class=MsoNormal>After the user has constrained the variables of interest and
+indicated the mechanism by which to control overflow of bits beyond the
+constrained precision, Précis can generate annotated MATLAB. The user can then
+run the generated MATLAB code with real data sets. The purpose of these
+simulations is to determine the effects of constraining variables on the
+correctness of the implementation. Not only might the eventual output be
+erroneous, but the algorithm may also fail to operate entirely due to the
+effects of precision constraints.</p>
+
+<p class=MsoNormal>If the user finds the algorithm’s output to be acceptable,
+they might consider constraining additional key variables, thereby further
+reducing the eventual size of the hardware circuit. On the other hand, if the
+output generates unusable results, the user knows then that their constraints
+were too aggressive and that they should increase the precision of some of the
+constrained variables. Note that it is typically not sufficient to merely test
+whether the fixed precision results are identical to the unconstrained
+precision results, since this is too restrictive. In situations such as image
+processing, lossy compression, and speech processing, users may be willing to
+trade some result quality for a more efficient hardware implementation. Précis,
+by being a designer assistance tool, allows the designer to create their own
+“goodness” function, and make this tradeoff as they see fit. With the Précis
+environment, this iterative development cycle is shortened, as the fixed-point
+simulation code can be quickly generated.</p>
+
+<h2><![if !supportLists]>3.5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Range finding</h2>
+
+<p class=MsoNormal>While the simulation support described above is very useful
+on its own for fixed-point simulation, it is only truly useful if the user can
+accurately identify the variables that they feel can be constrained. If the
+user does not really have an idea of where to begin, one place to start is
+utilizing the Précis range finding capability. The development cycle utilizing
+range finding is shown in <span style='mso-field-code:"REF _Ref535830235 \\h &#1; \\* MERGEFORMAT"'>Figure
+7<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003500330035003800330030003200330035000000</w:data>
+</xml><![endif]--></span>.</p>
+
+<p class=MsoNormal align=center style='margin-top:12.0pt;text-align:center;
+text-indent:0in;page-break-after:avoid'><!--[if gte vml 1]><v:shape id="_x0000_i1031"
+ type="#_x0000_t75" style='width:204pt;height:74.25pt' o:allowoverlap="f">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image013.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=272 height=99
+src="./Precis%20FCCM%20Final_files/image014.gif" v:shapes="_x0000_i1031"><![endif]></p>
+
+<p class=MsoCaption><a name="_Ref535830235">Figure <span style='mso-field-code:
+"SEQ Figure \\* ARABIC"'>7</span></a>. Development cycle for range finding
+analysis.</p>
+
+<p class=MsoNormal>After the MATLAB code is parsed into the tool, the user can
+select variables they are interested in monitoring. Variables are targeted for
+range analysis and annotated MATLAB is generated, much like the simulation code
+is generated in the previous section. Instead of fixed-point simulation,
+though, Précis annotates the code with another MATLAB support routine that
+monitors the range of the values that the variables under question take on.</p>
+
+<p class=MsoNormal>This support routine, ‘<span style='font-family:"Courier New"'>rangefind</span>’,
+monitors the maximum and minimum values attained by the variables. The
+annotated MATLAB is run with some sample data sets to gather range information
+on the variables under consideration. The user can then save these values in
+data files that can be fed back into Précis with another routine, ‘<span
+style='font-family:"Courier New"'>saverangefind</span>’. Example range finding
+output is shown in <span style='mso-field-code:"REF _Ref535970498  \\* MERGEFORMAT"'>Figure
+8</span>.</p>
+
+<p class=MsoNormal align=center style='margin-top:12.0pt;text-align:center;
+page-break-after:avoid'><!--[if gte vml 1]><v:shape id="_x0000_i1032" type="#_x0000_t75"
+ style='width:219.75pt;height:90pt' o:allowoverlap="f">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image015.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=293 height=120
+src="./Precis%20FCCM%20Final_files/image016.gif" v:shapes="_x0000_i1032"><![endif]></p>
+
+<p class=MsoCaption><a name="_Ref535970498">Figure <span style='mso-field-code:
+"SEQ Figure \\* ARABIC"'>8</span></a>. Sample range finding output.</p>
+
+<p class=MsoNormal>The user then loads the resultant range values discovered by
+<span style='font-family:"Courier New"'>rangefind</span> back into the Précis
+tool and (optionally) constrains the variables. The user now has an idea of
+what precision each variable requires for the sample data. Propagation can now
+be performed to determine the effect these precisions have on the rest of the
+system. Another useful step that the user can perform is to constrain the
+variables under question even further and perform a simulation to see how much
+error it introduces into the output. The results from this range finding
+method, however, are data set dependent. If the user is not careful to use
+representative data sets, the final hardware implementation could still
+generate erroneous results if the data sets were significantly different in
+precision requirements, even on the same algorithm.</p>
+
+<p class=MsoNormal>For this reason we will consider range-gathered precision
+information to be somewhat of a lower bound. Given that the precisions obtained
+from propagation are conservative estimates, or an upper bound, manipulating
+the difference between these two bounds leads us to another method of precision
+analysis—slack analysis.</p>
+
+<h1><![if !supportLists]>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Slack analysis</h1>
+
+<p class=MsoNormal>One of the goals of this tool is to provide the user with
+“hints” as to where the developer’s manual precision analysis and hardware
+tuning efforts should be focused. Ultimately, it would be extremely helpful for
+the developer to be given a list of “tuning points” in decreasing order of
+potential overall reduction of circuit size. This way, the developer could
+start a hardware implementation using more generic data path precision and iteratively
+optimize code sections that would give them the most benefit to meet
+constraints, such as time, cost, area, performance, or power. We believe this
+type of “tuning list” would give a developer a head start on precision analysis
+and put them on the right path of development faster than non-automated
+techniques.</p>
+
+<p class=MsoNormal>As mentioned earlier, if the user performs range finding
+analysis and propagation analysis on the same set of variables, the tool would
+obtain what would amount to a lower bound from range analysis and an upper
+bound from propagation. We consider the range analysis a lower bound because it
+is the result of true data sets. While other data sets may require even lower
+amounts of precision, we know we need <i>at least</i> the ranges gathered from
+the range analysis. Further testing with other data sets may show that some
+variables would require more precision. Thus, if we implement the design with
+the precision found, we might encounter errors on output, thus the premise that
+this is a lower bound.</p>
+
+<p class=MsoNormal>On the other hand, propagation analysis is very
+conservative. For example, in the statement <span style='font-family:"Courier New"'>a=b+c</span>,
+where <span style='font-family:"Courier New"'>b</span> and <span
+style='font-family:"Courier New"'>c</span> have been constrained to be 16 bits
+wide by the user, the resultant bit width of <span style='font-family:"Courier New"'>a</span>
+may be <i style='mso-bidi-font-style:normal'>up to</i><span style='mso-bidi-font-style:
+italic'> 17 bits due to the addition. But in reality, both </span><span
+style='font-family:"Courier New";mso-bidi-font-style:italic'>b</span><span
+style='mso-bidi-font-style:italic'> and </span><span style='font-family:"Courier New";
+mso-bidi-font-style:italic'>c</span><span style='mso-bidi-font-style:italic'>
+may be well within the limits of 16 bits and an addition might never overflow
+into the 17<sup>th</sup> bit position. For example, if </span><span
+style='font-family:"Courier New";mso-bidi-font-style:italic'>c=</span><span
+style='font-family:Symbol;mso-ascii-font-family:"Courier New";mso-hansi-font-family:
+"Courier New";mso-bidi-font-family:"Courier New";mso-char-type:symbol;
+mso-symbol-font-family:Symbol;mso-bidi-font-style:italic'><span
+style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>l</span></span><span
+style='font-family:"Courier New";mso-bidi-font-style:italic'>-b</span><span
+style='mso-bidi-font-style:italic'>, the range of values </span><span
+style='font-family:"Courier New";mso-bidi-font-style:italic'>a</span><span
+style='mso-bidi-font-style:italic'> could ever take on is governed by </span><span
+style='font-family:Symbol;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-char-type:symbol;mso-symbol-font-family:Symbol;
+mso-bidi-font-style:italic'><span style='mso-char-type:symbol;mso-symbol-font-family:
+Symbol'>l</span></span><span style='mso-bidi-font-style:italic'>. To a person
+investigating section of code, this seems very obvious when </span><span
+style='font-family:"Courier New";mso-bidi-font-style:italic'>c</span><span
+style='mso-bidi-font-style:italic'> is substituted into </span><span
+style='font-family:"Courier New";mso-bidi-font-style:italic'>a=b+c</span><span
+style='mso-bidi-font-style:italic'>, but these types of more “macroscopic”
+constraints in algorithms can be difficult or impossible to find automatically.
+It is because of this that we can consider propagated range information to be
+an upper bound.<o:p></o:p></span></p>
+
+<p class=MsoNormal>Given a lower and upper bound on the bit width of a
+variable, we can consider the difference between these two bounds to be the
+slack. The actual precision requirement is most likely to lie between these two
+bounds. Manipulating the precision of nodes with slack can net gains in
+precision system-wide, as changes in any single node may impact many other
+nodes within the circuit. The reduction in precision requirements and the
+resultant improvements in area, power, and performance can be considered gain.
+Through careful analysis of the slack at a node, we can calculate how much gain
+can be achieved by manipulating the precision between these two bounds.
+Additionally, by performing this analysis independently for each node with
+slack, we can generate an ordered list of “tuning points” that the user should
+consider.</p>
+
+<p class=MsoNormal>For this paper, we consider the reduction of the area
+requirement of a circuit to be gain. In order to compute the gain of a node
+with respect to area, power and performance, we need to develop basic hardware
+models to capture the effect of precision changes upon these parameters. One
+simple implementation that we have utilized is to provide simple weighting
+parameters for different operator types. Thus, for example, if an adder has an
+area model of <i>x</i>, it indicates that as the precision decreases by one
+bit, the area reduces linearly and the gain increases linearly. In contrast, a
+multiplier has an area model of <i>x^2</i>, indicating that the area reduction
+and gain achieved are proportional to the square of the word size. Intuitively,
+this would give a higher overall gain value for bit reduction of a multiplier
+than of an adder. Using these parameters, our approach can more effectively
+choose the nodes with the most possible gain to suggest to the user. We detail
+our methodology in the next section.</p>
+
+<h2><![if !supportLists]>4.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Performing slack analysis</h2>
+
+<p class=MsoNormal>The goal of slack analysis is to identify which nodes, when
+constrained by the user, are likely to have the greatest impact upon the
+overall circuit area. While we do not believe it is realistic to expect users
+to constrain all variables, most users would be able to consider how to
+constrain a few “controlling” values in the circuit.</p>
+
+<p class=MsoNormal>Our method seeks to efficiently use designer time by guiding
+them to the next important variables to consider for constraining. Précis can
+also provide a stopping criterion for the user: we can measure the maximum
+possible benefit from future constraints by constraining all variables to their
+lower bounds. The user can then decide to stop further investigation when the
+difference between the current and “lower bound” areas is no longer worth
+further optimization.</p>
+
+<p class=MsoNormal>Our methodology is straightforward. For each node that has
+slack, we set the precision to the range-find value, the lower bound. Then, we
+propagate the impact of that change over all nodes and calculate the overall
+gain for the change, system-wide. We record this value as the effective gain as
+a result of modifying that node. We then reset all nodes and repeat for the
+remaining nodes that have slack. We then order the resultant list of gain
+values in decreasing order and present this information to the user in a dialog
+window. The user then can see which nodes to change to get the highest gain and
+in what order. It is then up to the designer to consider these nodes and
+determine which, if any, should actually be more tightly constrained.</p>
+
+<p class=MsoNormal>To further illustrate this analysis method, refer to the
+pseudo-code shown below.</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><b><span
+style='font-size:9.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;font-style:
+normal'>Algorithm: Slack Analysis</span></b><tt><b><span style='font-size:9.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;font-style:normal'><br>
+</span></b></tt><tt><span style='font-size:9.0pt;mso-bidi-font-size:10.0pt;
+font-family:Arial;font-style:normal'>User Step #1: Constrain known variables<br>
+User Step #2: Perform propagation<br>
+User Step #3: Load range data for some set of variables ‘n’<br>
+<br>
+set list_of_gains to empty list<br>
+for each variable ‘m’ in ‘n’ <br>
+<span style="mso-spacerun: yes">  </span>set aggregate_gain = 0<br>
+<span style="mso-spacerun: yes">  </span>constrain range of ‘m’ to the range
+analysis value<br>
+<span style="mso-spacerun: yes">  </span>perform forward and reverse
+propagation over all variables<br>
+<span style="mso-spacerun: yes">  </span>for all variables<br>
+<span style="mso-spacerun: yes">    </span>if range of variable is narrower
+than range originally propagated in ‘User Step #2<br>
+<span style="mso-spacerun: yes">      </span>set aggregate_gain += old_area –
+new_area<br>
+<span style="mso-spacerun: yes">    </span>end<br>
+<span style="mso-spacerun: yes">  </span>next<br>
+<span style="mso-spacerun: yes">  </span>add (variable ‘m’ and aggregate_gain)
+to list_of_gains<br>
+<span style="mso-spacerun: yes">  </span>for all variables<br>
+<span style="mso-spacerun: yes">    </span>reset range of variable to range
+originally propagated in ‘User Step #2’<br>
+<span style="mso-spacerun: yes">  </span>next<br>
+next<br>
+<br>
+sort(list_of_gains) by decreasing aggregate_gain</span></tt><span
+style='font-size:9.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;font-style:
+normal'><o:p></o:p></span></p>
+
+<h1><![if !supportLists]>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Benchmarks</h1>
+
+<p class=MsoNormal>In order to determine the effectiveness of our slack
+analysis methodology, we allowed the tool to perform slack analysis with
+propagated and range-found range values. To gauge how effective the suggestions
+were, we constrained the variables the tool suggested in the order they were
+suggested to us, and calculated the resulting area. The area was determined utilizing
+the same area model discussed in previous sections, i.e. giving adders a linear
+area model while multipliers are assigned an area model proportional to the
+square of their input word size. We also determined an asymptotic lower bound
+to the area by implementing all suggestions simultaneously to determine how
+quickly our tool would converge upon the lower bound.</p>
+
+<h2><![if !supportLists]>5.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Wavelet Transform</h2>
+
+<p class=MsoNormal>The first benchmark we present is the wavelet transform. The
+wavelet transform is a form of image processing, primarily serving as a
+transformation prior to applying a compression scheme, such as SPIHT[8]. A
+typical discrete wavelet transform runs a high-pass filter and low-pass filter
+over the input image in one dimension. The results are down sampled by a factor
+of two, effectively spatially compressing the wavelet by a factor of two. The
+filtering is done in each dimension, vertically and horizontally for images.
+Each pass results in a new image composed of a high-pass and low-pass sub-band,
+each half the size of the original input stream. These sub-bands can be used to
+reconstruct the original image. </p>
+
+<p class=MsoNormal>This algorithm was hand-mapped to hardware as part of work
+done by Thomas Fry[8]. The hardware utilized was a WildStar FPGA board from
+Annapolis Microsystems consisting of three Xilinx Virtex 2000E FPGAs and 48
+MBytes of memory. Significant time was spent converting the floating-point
+source algorithm into a fixed-point representation by utilizing methodologies
+similar to those we present in this paper. The result was an implementation
+running at 56MHz, capable of compressing 8-bit images at a rate of
+800Mbits/sec. This represents a speedup of nearly 450 times as compared to a
+software implementation running on a Sun SPARCStation 5.</p>
+
+<p class=MsoNormal>The wavelet transform was implemented in MATLAB and passed
+into Précis. In total, 27 variables were selected to be constrained. These
+variables were then marked for range-finding analysis and annotated MATLAB code
+was generated. This code was then run in the MATLAB interpreter with a sample
+image file (Lena) to obtain range values for the selected variables. These
+values were then loaded into Précis to obtain a lower bound to be used during
+the slack analysis phase. The results of the slack analysis are shown in <span
+style='mso-field-code:"REF _Ref535982582 \\h &#1; \\* MERGEFORMAT"'>Figure 9<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003500330035003900380032003500380032000000</w:data>
+</xml><![endif]--></span>.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:0in;
+page-break-after:avoid'><!--[if gte vml 1]><v:shape id="_x0000_i1033" type="#_x0000_t75"
+ style='width:233.25pt;height:162pt' o:allowoverlap="f">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image017.emz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=311 height=216
+src="./Precis%20FCCM%20Final_files/image018.gif" v:shapes="_x0000_i1033"><![endif]></p>
+
+<p class=MsoCaption><a name="_Ref535982573"></a><a name="_Ref535982582"><span
+style='mso-bookmark:_Ref535982573'>Figure <span style='mso-field-code:"SEQ Figure \\* ARABIC"'>9</span></span></a><span
+style='mso-bookmark:_Ref535982573'>. Wavelet area vs. number of suggestions
+implemented.</span></p>
+
+<p class=MsoNormal>These results are normalized to the lower bound obtained by
+setting all variables to their lower bound constraints and computing the
+resulting area. This graph shows that between the upper bound and lower bound,
+there is a theoretical area difference of about three orders of magnitude. The
+slack analysis results suggested constraining the output image array, then the
+low and high pass filter coefficients, and then the results of the additions in
+the multiply-accumulate structure of the filtering operation. By taking the
+suggested moves in order and recomputing the order at each step, we were able
+to reach with ten percent of the lower bound area of the system in eleven
+moves. Perhaps more importantly, the tool was able to suggest a pattern of
+moves that would allow us to reach within a factor of three from the lower
+bound in just four moves. Finally, by about thirteen moves, the normalized area
+was within less than three percent of the lower bound, and further improvements
+were negligible. At this point a typical user may choose to stop optimizing the
+system.</p>
+
+<p class=MsoNormal>It is important to note that the area values obtained by
+Précis are simply calculated by reducing the range of a number of variables to
+their range-found lower bounds. This yields what could be considered the
+“best-case” solution when optimizing. In reality, though, one would add another
+step to the development cycle whereby upon choosing the variable for
+optimization as suggested by the tool, the developer would perform an
+intermediate simulation step to determine if, by lowering the precision
+requirements of that variable, any error would be introduced in the results.
+This step is made easier by the automatic generation of annotated simulation
+code for use in MATLAB. In many cases, there might be an intolerable amount of
+error introduced by utilizing the lower bound, in which case the user would
+choose an appropriate precision range, fix that value as a constraint upon that
+variable in Précis and continue utilizing the slack analysis phase to find the
+next variable for optimization. </p>
+
+<h2><![if !supportLists]>5.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Probabilistic Neural Network: PNN</h2>
+
+<p class=MsoNormal>Another benchmark we investigated was a multi-spectral
+image-processing algorithm designed for NASA satellite imagery that is similar
+to clustering analysis or image compression. More details can be found in [7].
+Briefly, each multi-spectral image pixel vector is compared to a set of
+“training pixels” or “weights” that are known to be representative of a
+particular class.<span style="mso-spacerun: yes">  </span>The probability that
+the pixel under test belongs to the class under consideration is given by the
+formula depicted in <!--[if supportFields]><span style='mso-element:field-begin'></span><span
+style="mso-spacerun: yes"> </span>REF _Ref536560490 \h <span
+style="mso-spacerun: yes"> </span>\* MERGEFORMAT <span style='mso-element:field-separator'></span><![endif]-->Equation
+1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003500330036003500360030003400390030000000</w:data>
+</xml><![endif]--><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]-->.</p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1034" type="#_x0000_t75" style='width:222pt;height:33.75pt'
+ o:allowoverlap="f">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image019.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=296 height=45
+src="./Precis%20FCCM%20Final_files/image020.gif" v:shapes="_x0000_i1034"><![endif]></p>
+
+<p class=MsoCaption style='page-break-after:avoid'><a name="_Ref536560490">Equation
+<span style='mso-field-code:"SEQ Equation \\* ARABIC"'>1</span></a>. The core
+PNN formula.</p>
+
+<p class=MsoNormal>Here, <sub><!--[if gte vml 1]><v:shape id="_x0000_i1035"
+ type="#_x0000_t75" style='width:14.25pt;height:15.75pt' o:ole="" fillcolor="window">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image021.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=19 height=21
+src="./Precis%20FCCM%20Final_files/image022.gif" v:shapes="_x0000_i1035"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1035"
+  DrawAspect="Content" ObjectID="_1082832894">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun: yes"> </span>is the pixel vector
+under test, <sub><!--[if gte vml 1]><v:shape id="_x0000_i1036" type="#_x0000_t75"
+ style='width:18pt;height:20.25pt' o:ole="" fillcolor="window">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image023.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=24 height=27
+src="./Precis%20FCCM%20Final_files/image024.gif" v:shapes="_x0000_i1036"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1036"
+  DrawAspect="Content" ObjectID="_1082832895">
+ </o:OLEObject>
+</xml><![endif]-->is the weight <sub><!--[if gte vml 1]><v:shape id="_x0000_i1037"
+ type="#_x0000_t75" style='width:6.75pt;height:12.75pt' o:ole="" fillcolor="window">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image025.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=9 height=17
+src="./Precis%20FCCM%20Final_files/image026.gif" v:shapes="_x0000_i1037"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1037"
+  DrawAspect="Content" ObjectID="_1082832896">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun: yes"> </span>of class<sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1038" type="#_x0000_t75" style='width:9.75pt;height:14.25pt'
+ o:ole="" fillcolor="window">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image027.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=13 height=19
+src="./Precis%20FCCM%20Final_files/image028.gif" v:shapes="_x0000_i1038"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1038"
+  DrawAspect="Content" ObjectID="_1082832897">
+ </o:OLEObject>
+</xml><![endif]-->, <sub><!--[if gte vml 1]><v:shape id="_x0000_i1039" type="#_x0000_t75"
+ style='width:11.25pt;height:14.25pt' o:ole="" fillcolor="window">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image029.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=15 height=19
+src="./Precis%20FCCM%20Final_files/image030.gif" v:shapes="_x0000_i1039"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1039"
+  DrawAspect="Content" ObjectID="_1082832898">
+ </o:OLEObject>
+</xml><![endif]-->is the number of spectral bands, <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1040" type="#_x0000_t75" style='width:9.75pt;height:14.25pt'
+ o:ole="" fillcolor="window">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image031.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=13 height=19
+src="./Precis%20FCCM%20Final_files/image032.gif" v:shapes="_x0000_i1040"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1040"
+  DrawAspect="Content" ObjectID="_1082832899">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun: yes"> </span>is the class under
+consideration, <sub><!--[if gte vml 1]><v:shape id="_x0000_i1041" type="#_x0000_t75"
+ style='width:12pt;height:11.25pt' o:ole="" fillcolor="window">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image033.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=16 height=15
+src="./Precis%20FCCM%20Final_files/image034.gif" v:shapes="_x0000_i1041"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1041"
+  DrawAspect="Content" ObjectID="_1082832900">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun: yes"> </span>is a data-dependent
+“smoothing” parameter, and <sub><!--[if gte vml 1]><v:shape id="_x0000_i1042"
+ type="#_x0000_t75" style='width:14.25pt;height:18pt' o:ole="" fillcolor="window">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image035.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=19 height=24
+src="./Precis%20FCCM%20Final_files/image036.gif" v:shapes="_x0000_i1042"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1042"
+  DrawAspect="Content" ObjectID="_1082832901">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun: yes"> </span>is the number of
+weights in class <sub><!--[if gte vml 1]><v:shape id="_x0000_i1043" type="#_x0000_t75"
+ style='width:9.75pt;height:14.25pt' o:ole="" fillcolor="window">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image037.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=13 height=19
+src="./Precis%20FCCM%20Final_files/image038.gif" v:shapes="_x0000_i1043"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1043"
+  DrawAspect="Content" ObjectID="_1082832902">
+ </o:OLEObject>
+</xml><![endif]-->.<span style="mso-spacerun: yes">  </span>This formula
+represents the probability that pixel vector <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1044" type="#_x0000_t75" style='width:14.25pt;height:15.75pt'
+ o:ole="" fillcolor="window">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image039.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=19 height=21
+src="./Precis%20FCCM%20Final_files/image040.gif" v:shapes="_x0000_i1044"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1044"
+  DrawAspect="Content" ObjectID="_1082832903">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun: yes"> </span>belongs to the class <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1045" type="#_x0000_t75" style='width:15pt;height:18pt' o:ole=""
+ fillcolor="window">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image041.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=20 height=24
+src="./Precis%20FCCM%20Final_files/image042.gif" v:shapes="_x0000_i1045"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1045"
+  DrawAspect="Content" ObjectID="_1082832904">
+ </o:OLEObject>
+</xml><![endif]-->.<span style="mso-spacerun: yes">  </span>This comparison is
+then made for all classes and the class with the highest probability indicates
+the closest match.</p>
+
+<p class=MsoNormal>This algorithm was manually implemented on a WildChild board
+and described in [7]. The WildChild board from Annapolis Microsystems consists
+of eight Xilinx 4010E FPGAs, a single Xilinx 4028EX FPGA, and 5MBytes of
+memory. Like the wavelet transform described earlier, significant time and
+effort was spent on variable range analysis, with particular attention being
+paid to the large multipliers and the exponentiation required by the algorithm.
+This implementation obtained speedups of 16 versus a software implementation on
+an HP workstation. </p>
+
+<p class=MsoNormal>The algorithm was implemented in MATLAB and passed into
+Précis. From here, twelve variables were selected for range finding analysis,
+annotated MATLAB was generated, range-analysis was performed, and slack
+analysis was run utilizing the derived lower and upper bounds.</p>
+
+<p class=MsoNormal>Again, all results were normalized to the lower bound area.
+As shown in <span style='mso-field-code:"REF _Ref536562620 \\h &#1; \\* MERGEFORMAT"'>Figure
+10<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003500330036003500360032003600320030000000</w:data>
+</xml><![endif]--></span>, the tool behaved similarly to the wavelet benchmark
+in that it was able to reach within five percent of the lower bound within six
+moves, where after additional moves serve to make only minor improvements in
+area. However, with the PNN algorithm, we are able to demonstrate even further
+refinement of the slack analysis approach.</p>
+
+<p class=MsoNormal style='text-indent:0in;page-break-after:avoid'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:0in;
+page-break-after:avoid'><!--[if gte vml 1]><v:shape id="_x0000_i1046" type="#_x0000_t75"
+ style='width:225.75pt;height:161.25pt' o:allowoverlap="f">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image043.emz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=301 height=215
+src="./Precis%20FCCM%20Final_files/image044.gif" v:shapes="_x0000_i1046"><![endif]></p>
+
+<p class=MsoCaption><a name="_Ref536562620">Figure <span style='mso-field-code:
+"SEQ Figure \\* ARABIC"'>10</span></a>. PNN area vs. number of suggestions
+implemented utilizing only range-analysis-discovered values.</p>
+
+<p class=MsoNormal>For a seasoned developer that has a deeper insight into the
+algorithm, or for one that already has an idea of how the algorithm would map
+to hardware, the range-analysis phase sometimes returns results that are
+sub-optimal. For example, the range-analysis of the PNN algorithm upon a
+typical dataset resulted in several variables being constrained to ranges such
+as [2^0,2^-25], [2^8,2^-135], [2^0,2^-208], and so on. This simply means that
+the range-finding phase discovered values that were extremely small and thus
+recorded the range as requiring many bits to the right of decimal point to
+capture all the precision information. The shortcoming of the automated
+range-analysis is that it has no means by which to determine at what precision
+values become too small to affect follow-on calculations, and therefore might
+be considered unimportant. With this in mind, the developer would typically
+restrict the variables to narrower ranges that preserve the correctness of the
+results while requiring fewer bits of precision.</p>
+
+<p class=MsoNormal>Précis provides the functionality to allow the user to make
+these decisions in its annotated MATLAB code generation. In this case, the user
+would choose a narrower precision range and a method by which to constrain the
+variable to that range consistent with how they will be implementing the
+operation in hardware—truncation, saturation, rounding, or any of the other
+methods presented in previous sections. Then, the developer would generate
+annotated MATLAB code for simulation purposes, and re-run the algorithm in
+MATLAB with typical data sets. This would allow the user to determine how
+narrow of a precision range would be tolerable, and subsequently constrain the
+variables in Précis accordingly. The user can perform this determination either
+during slack analysis, or prior to beginning slack analysis.</p>
+
+<p class=MsoNormal>There are two types of scenarios that may occur depend
+primarily on the experience level of the developer. With a developer that has
+not dealt with precision analysis and software to hardware mappings
+extensively, it may be that they wouldn’t notice the unreasonable range
+information obtained by the range-finding analysis phase until the variable was
+suggested for optimization by the tool. For this case, the user would perform
+an appropriate simulation of the variable at that stage of the slack analysis
+and obtain tighter bounds. On the other hand, for a more experienced hardware
+designer that has encountered precision analysis before, they might look
+closely at the range-finding results prior to running the slack analysis. In
+this case, they would most likely run simulations and find more reasonable
+precision ranges for the variables in question, and constrain them before even
+beginning the slack analysis phase.</p>
+
+<p class=MsoNormal>The results for these two scenarios are shown plotted
+together in <span style='mso-field-code:"REF _Ref536564936 \\h &#1; \\* MERGEFORMAT"'>Figure
+11<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003500330036003500360034003900330036000000</w:data>
+</xml><![endif]--></span>, normalized to the lowest bound among all three
+approaches. To differentiate the three methods, the first proposed method is
+shown as “simple”, and is the same method used to plot the results for the
+wavelet benchmark. The “user guided” method refers to fixing the variables
+during slack analysis. Finally, the “start constrained” method denotes fixing
+the variables in question prior to starting slack analysis.</p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:0in'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1047" type="#_x0000_t75" style='width:236.25pt;height:161.25pt'
+ o:allowoverlap="f">
+ <v:imagedata src="./Precis%20FCCM%20Final_files/image045.emz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=315 height=215
+src="./Precis%20FCCM%20Final_files/image046.gif" v:shapes="_x0000_i1047"><![endif]></p>
+
+<p class=MsoCaption><a name="_Ref536564936">Figure <span style='mso-field-code:
+"SEQ Figure \\* ARABIC"'>11</span></a>. PNN area with user-defined variable
+precision ranges. Moves that had variables constrained to more reasonable
+ranges are highlighted with arrows.</p>
+
+<p class=MsoNormal>At first glance, one can see that all three methods provide
+similar trends, approaching the lower bound within five to seven moves. This
+behavior is expected and is consistent with the results of the wavelet
+benchmark. However, one might expect that the start-constrained and user-guided
+methods would reach near the lower bound more quickly than the simple method.
+Instead, they take one or two additional moves to get near the lower bound
+compared to the simple method. This can be explained by understanding how the
+tool performs propagation across variables whose ranges are constrained by the
+user. By fixing the range of a variable, neither forward nor backward
+propagation will alter their precision ranges. In effect, we trust the user’s
+decision when they fix a variable’s precision range. The net effect is that any
+gains that might have been realized through back-propagation of smaller ranges
+will not be achieved if they must propagate through a variable whose range has
+been fixed. Finally, as the method used to compute the order of variables to
+constrain is greedy by nature, changing the order in which constraints are
+applied will alter the curve slightly.</p>
+
+<h1><![if !supportLists]>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Related work</h1>
+
+<p class=MsoNormal>While there have been several recent research efforts
+targeting precision analysis, none have approached it in such an interactive
+fashion. As mentioned in previous sections, Mark Stephenson and Jonathan Babb’s
+work developing the Bitwise compiler at MIT [6] is an excellent foundation work
+regarding precision propagation techniques. They have applied their techniques
+in the SUIF compiler infrastructure and are targeting the C language for
+silicon compilation.</p>
+
+<p class=MsoNormal>Anshuman Nayak’s work at Northwestern University [9] is very
+relevant to our own research, as it is based upon the same MATCH compiler
+framework as our own. This work utilizes a similar propagation engine within
+the MATCH compiler as optimization phases and attempts to perform all analysis,
+including error, automatically, generating RTL VHDL suitable for synthesis.</p>
+
+<p class=MsoNormal>Two other research efforts, one at the University of
+Southern California and one at Imperial College in London, approach the
+precision matter in an entirely different way. Kiran Bondalapati’s work on
+dynamic precision management of loop computations [10] concentrates on
+developing a formal methodology for analyzing the precision requirements of loop
+structures. Finally, George A. Constantinides, et. al. have developed a
+Synoptix-based system for the analysis and automated generation of DSP
+applications[11].</p>
+
+<h1><![if !supportLists]>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Conclusions</h1>
+
+<p class=MsoNormal>In this paper we have demonstrated the need for precision
+analysis tools in the development cycle of software to hardware mapping. To
+direct the developer’s efforts in hand-optimizing the precision of algorithms
+mapped to hardware, we have developed and demonstrated a tool, Précis, which
+allows the user to automate many tasks necessary for effective precision
+analysis. We have demonstrated how our tool can aid the developer in simulation
+of fixed-point math with automatic annotated MATLAB code generation. We have
+also developed MATLAB scripts that support range analysis of a user’s MATLAB
+code in order to deduce a theoretical lower bound to the precision of selected
+variables. We have also presented a framework for propagation of precision
+range information over a MATLAB program. Finally, we have described our
+methodology of slack analysis, and have shown how the suggestions provided by
+this methodology can be helpful in guiding the user in their manual precision
+optimization on real-world benchmarks. </p>
+
+<h1><![if !supportLists]>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Acknowledgements</h1>
+
+<p class=MsoNormal>This research was supported by contracts with NASA and
+DARPA, and a grant from NSF.<span style="mso-spacerun: yes">  </span>Scott
+Hauck was supported in part by an NSF CAREER award and a Sloan Research
+Fellowship.</p>
+
+<h1><![if !supportLists]>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>References</h1>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in'><span style='font-size:9.0pt;mso-bidi-font-size:12.0pt'>[1]<span
+style='mso-tab-count:1'>   </span>Synopsis CoCentric SystemC Compiler. http://www.synopsys.com/products/cocentric_systemC/cocentric_systemC_ds.html<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in'><span style='font-size:9.0pt;mso-bidi-font-size:12.0pt'>[2]<span
+style='mso-tab-count:1'>   </span>Celoxia Handel-C Compiler.
+http://www.celoxica.com/products/technical_papers/datasheets/DATHNC002_0.pdf<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in'><span style='font-size:9.0pt;mso-bidi-font-size:12.0pt'>[3]<span
+style='mso-tab-count:1'>   </span>P. Banerjee, N. Shenoy, A. Choudhary, S.
+Hauck, C. Bachmann, M. Chang, M. Haldar, P. Joisha, A. Jones, A. Kanhare, A.
+Nayak, S. Periyacheri, M. Walkden.<span style="mso-spacerun: yes">  </span>“<span
+style='mso-bidi-font-style:italic'>MATCH: A MATLAB Compiler for Configurable
+Computing Systems”</span>.<span style="mso-spacerun: yes">  </span>Technical
+report CPDC-TR-9908-013, submitted to IEEE Computer Magazine, August 1999.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in'><span style='font-size:9.0pt;mso-bidi-font-size:12.0pt'>[4]<span
+style='mso-tab-count:1'>   </span>P. Banerjee, A. Choudhary, S. Hauck, N.
+Shenoy.<span style="mso-spacerun: yes">  </span>“The MATCH Project
+Homepage”.<span style="mso-spacerun: yes"> 
+</span>http://www.ece.nwu.edu/cpdc/Match/Match.html (1 Sept. 1999).<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in'><span style='font-size:9.0pt;mso-bidi-font-size:12.0pt'>[5]<span
+style='mso-tab-count:1'>   </span>AccelChip, <a href="mailto:info@accelchip.com"><span
+style='color:windowtext'>info@accelchip.com</span></a>,
+http://www.accelchip.com.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in'><span style='font-size:9.0pt;mso-bidi-font-size:12.0pt'>[6]<span
+style='mso-tab-count:1'>   </span>Mark Stephenson.&nbsp; “Bitwise: Optimizing
+Bitwidths Using Data-Range Propagation”.&nbsp; Master's thesis.&nbsp;
+Massachusetts Institute of Technology.&nbsp; May 2000.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in'><span style='font-size:9.0pt;mso-bidi-font-size:12.0pt'>[7]<span
+style='mso-tab-count:1'>   </span>Mark L. Chang. “Adaptive Computing in NASA
+Multi-Spectral Image Processing”. Master’s Thesis<i>.</i> Northwestern
+University, Evanston, IL. December 1999. <o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in'><span style='font-size:9.0pt;mso-bidi-font-size:12.0pt'>[8]<span
+style='mso-tab-count:1'>   </span>Thomas W. Fry. “Hyperspectral Image
+Compression on Reconfigurable Platforms”. Master’s Thesis<i>.</i> University of
+Washington, Seattle, IL. May 2001.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:.5in;text-align:left;
+text-indent:-.25in'><span style='font-size:9.0pt;mso-bidi-font-size:12.0pt'>[9]<span
+style='mso-tab-count:1'>   </span>A. Nayak, M. Haldar, A. Choudhary, P.
+Banerjee, “Precision And Error Analysis Of MATLAB Applications During Automated
+Hardware Synthesis for FPGAs”, <em><span style='font-style:normal'>Proc. Design
+Automation and Test in Europe (DATE 2001)</span></em><i>, </i>Berlin, Germany.
+Mar. 2001.<o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent><span style='font-size:9.0pt;mso-bidi-font-size:
+12.0pt'>[10]<span style='mso-tab-count:1'> </span>Kiran Bondalapati and Viktor
+K. Prasanna, “Dynamic Precision Management for Loop Computations on
+Reconfigurable Architectures”, IEEE Symposium on Field-Programmable Custom
+Computing Machines, April 1999.<o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent><span style='font-size:9.0pt;mso-bidi-font-size:
+12.0pt'>[11]<span style='mso-tab-count:1'> </span>George A. Constantinides,
+Peter Y.K. Cheung, Wayne Luk, “The Multiple Wordlength Paradigm”, IEEE
+Symposium on Field-Programmable Custom Computing Machines, April 2001.<o:p></o:p></span></p>
+
+</div>
+
+<span style='font-size:9.0pt;mso-bidi-font-size:12.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:auto;
+mso-break-type:section-break'>
+</span>
+
+<div class=Section3>
+
+<p class=MsoBodyTextIndent><span style='font-size:9.0pt;mso-bidi-font-size:
+12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

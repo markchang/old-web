@@ -1,0 +1,161 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<link id=Main-File rel=Main-File href="../perturbation.htm">
+<link rel=Preview href=preview.wmf>
+<link rel=OLE-Object-Data href=oledata.mso>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Perturbation Analysis for Word-length Optimization</title>
+<meta name=Description content="27-May-03: Linearizing Systems">
+<link rel=Stylesheet href="master04_stylesheet.css">
+<![if !ppt]>
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:76% !important;}
+-->
+</style>
+<script src=script.js></script><script><!--
+gId="slide0006.htm"
+if( !IsNts() ) Redirect( "PPTSld", gId );
+//-->
+</script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><script for=window event=onload><!--
+if( !IsSldOrNts() ) return;
+if( MakeNotesVis() ) return;
+LoadSld( gId );
+MakeSldVis(0);
+//-->
+</script><![endif]><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="12"/>
+</o:shapelayout>
+</head>
+
+<body lang=EN-US style='margin:0px;background-color:black'
+onclick="DocumentOnClick()" onresize="_RSW()" onkeypress="_KPH()">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:755px;height:566px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#FFFFFF,#000000,#808080,#000000,#00CC99,#3333CC,#CCCCFF,#B2B2B2"
+ masterhref="master04.xml">
+ <p:shaperange href="master04.xml#_x0000_s5121"/><![if !ppt]><p:shaperange
+  href="master04.xml#_x0000_s5124"/><![if !vml]><img border=0
+ v:shapes="_x0000_s5124,_x0000_s5125" src="master04_image017.gif"
+ style='position:absolute;top:.88%;left:.52%;width:99.2%;height:98.58%'><![endif]><![endif]><p:shaperange
+  href="master04.xml#_x0000_m5122"/><v:shape id="_x0000_s12290" type="#_x0000_m5122"
+  style='position:absolute;left:54pt;top:30pt;width:612pt;height:54pt'
+  o:userdrawn="f">
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="title"/></v:shape><p:shaperange
+  href="master04.xml#_x0000_m5123"/><v:shape id="_x0000_s12291" type="#_x0000_m5123"
+  style='position:absolute;left:54pt;top:102pt;width:612pt;height:378pt'
+  o:userdrawn="f">
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="body" position="1"/></v:shape>
+ <div v:shape="_x0000_s12290" class=T style='position:absolute;top:6.71%;
+ left:8.47%;width:83.04%;height:7.59%'>Linearizing Systems</div>
+ <div v:shape="_x0000_s12291">
+ <div class=B style='position:absolute;top:19.78%;left:8.47%;width:83.04%;
+ height:5.12%'><span style='position:absolute;top:0%;left:4.62%;width:95.53%'><span
+ style='font-weight:normal'><span style='mso-special-format:bullet;color:#CC0066;
+ position:absolute;left:-4.84%'>•</span></span>Assumption:&#13;</span></div>
+ <div class=B1><span style='position:absolute;top:25.97%;left:16.68%;
+ width:83.04%'><span style='font-weight:normal'><span style='mso-special-format:
+ bullet;color:#CC0066;position:absolute;left:-3.82%'>•</span></span>Quantization
+ errors induced by rounding or truncation are </span><span style='position:
+ absolute;top:29.85%;left:16.68%;width:89.53%'>sufficiently small to not affect
+ the macroscopic behavior of the </span><span style='position:absolute;
+ top:33.92%;left:16.68%;width:74.96%'>system&#13;</span></div>
+ <div class=B1 style='position:absolute;top:38.69%;left:13.5%;width:78.14%;
+ height:3.88%'><span style='position:absolute;top:0%;left:4.06%;width:95.93%'><span
+ style='font-weight:normal;visibility:hidden'><span style='mso-special-format:
+ bullet;color:#CC0066;position:absolute;left:-4.24%'>•</span></span>&#13;</span></div>
+ <div class=B1 style='position:absolute;top:43.63%;left:13.5%;width:78.14%;
+ height:3.88%'><span style='position:absolute;top:0%;left:4.06%;width:95.93%'><span
+ style='font-weight:normal;visibility:hidden'><span style='mso-special-format:
+ bullet;color:#CC0066;position:absolute;left:-4.24%'>•</span></span>&#13;</span></div>
+ <div class=B1 style='position:absolute;top:48.4%;left:13.5%;width:78.14%;
+ height:3.88%'><span style='position:absolute;top:0%;left:4.06%;width:95.93%'><span
+ style='font-weight:normal;visibility:hidden'><span style='mso-special-format:
+ bullet;color:#CC0066;position:absolute;left:-4.24%'>•</span></span>&#13;</span></div>
+ <div class=B1 style='position:absolute;top:53.18%;left:13.5%;width:78.14%;
+ height:3.88%'><span style='position:absolute;top:0%;left:4.06%;width:95.93%'><span
+ style='font-weight:normal;visibility:hidden'><span style='mso-special-format:
+ bullet;color:#CC0066;position:absolute;left:-4.24%'>•</span></span>&#13;</span></div>
+ <div class=B1 style='position:absolute;top:57.95%;left:13.5%;width:78.14%;
+ height:3.88%'><span style='position:absolute;top:0%;left:4.06%;width:95.93%'><span
+ style='font-weight:normal;visibility:hidden'><span style='mso-special-format:
+ bullet;color:#CC0066;position:absolute;left:-4.24%'>•</span></span>&#13;</span></div>
+ <div class=B1 style='position:absolute;top:62.89%;left:13.5%;width:78.14%;
+ height:3.88%'><span style='position:absolute;top:0%;left:4.06%;width:95.93%'><span
+ style='font-weight:normal;visibility:hidden'><span style='mso-special-format:
+ bullet;color:#CC0066;position:absolute;left:-4.24%'>•</span></span>&#13;</span></div>
+ <div class=B><span style='position:absolute;top:68.02%;left:12.31%;width:91.39%'><span
+ style='font-weight:normal'><span style='mso-special-format:bullet;color:#CC0066;
+ position:absolute;left:-4.2%'>•</span></span>Thus, each non-linear component
+ can be locally </span><span style='position:absolute;top:73.32%;left:12.31%;
+ width:79.33%'>linearized&#13;</span></div>
+ <div class=B1 style='position:absolute;top:79.32%;left:13.5%;width:78.14%;
+ height:3.88%'><span style='position:absolute;top:0%;left:4.06%;width:95.93%'><span
+ style='font-weight:normal'><span style='mso-special-format:bullet;color:#CC0066;
+ position:absolute;left:-4.24%'>•</span></span>Replaced by its “small-signal
+ equivalent”&#13;</span></div>
+ <div class=B1 style='position:absolute;top:84.09%;left:13.5%;width:91.39%;
+ height:3.88%'><span style='position:absolute;top:0%;left:3.47%;width:96.66%'><span
+ style='font-weight:normal'><span style='mso-special-format:bullet;color:#CC0066;
+ position:absolute;left:-3.59%'>•</span></span>Now, output can be predicted as
+ a linear, time-varying system</span></div>
+ </div>
+ <v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75"
+  o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+  <v:stroke joinstyle="miter"/>
+  <v:formulas>
+   <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+   <v:f eqn="sum @0 1 0"/>
+   <v:f eqn="sum 0 0 @1"/>
+   <v:f eqn="prod @2 1 2"/>
+   <v:f eqn="prod @3 21600 pixelWidth"/>
+   <v:f eqn="prod @3 21600 pixelHeight"/>
+   <v:f eqn="sum @0 0 1"/>
+   <v:f eqn="prod @6 1 2"/>
+   <v:f eqn="prod @7 21600 pixelWidth"/>
+   <v:f eqn="sum @8 21600 0"/>
+   <v:f eqn="prod @7 21600 pixelHeight"/>
+   <v:f eqn="sum @10 21600 0"/>
+  </v:formulas>
+  <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+  <o:lock v:ext="edit" aspectratio="t"/>
+ </v:shapetype><v:shape id="_x0000_s12292" type="#_x0000_t75" style='position:absolute;
+  left:194.75pt;top:197.625pt;width:375.25pt;height:162.5pt'>
+  <v:imagedata src="slide0006_image024.wmz" o:title=""/>
+ </v:shape><o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_s12292"
+  DrawAspect="Content" ObjectID="12">
+  <p:oleclientdata subtype="equation" menuname="Equation"
+   clipboardname="Microsoft Equation 3.0"/></o:OLEObject>
+ <![if !vml]><img border=0 v:shapes="_x0000_s12292" src="slide0006_image025.gif"
+ style='position:absolute;top:36.57%;left:27.01%;width:52.05%;height:30.03%'><![endif]></p:slide></div>
+
+</body>
+
+</html>

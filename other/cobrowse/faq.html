@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/neat.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>CoBrowse</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../../css/neat.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="main">
+  <div id="menu">
+    <h1>Mark L. Chang </h1>
+    <p>
+	&#149; <a href="../../index.html">Home</a> <br>
+    &#149; <a href="../../research.html">Research</a> <br>
+    &#149; <a href="../../teaching.html">Teaching</a> <br>
+    &#149; <a href="../../other">Other</a></p>
+    <p>Our Labs <br>
+      &#149; <a href="http://acl.olin.edu/">Advanced Computing Lab</a>* <br>
+    &#149; <a href="http://embedded.olin.edu">Embedded Computing Lab</a></p>
+    <p>* Olin internal </p>
+  </div>
+  <a href="http://www.olin.edu"><img src="../../images/fwolin_small_nt.png" width="200" height="24" hspace="10" vspace="10" border="0" align="right"></a>
+  <!-- InstanceBeginEditable name="MainBody" --> 
+  <h1>CoBrowse FAQ </h1> 
+  <p><br> 
+    <img src="cobrowseb.png" width="100" height="100" align="right"><em>cobrowse<br> 
+    copyright (c) 2005 mark l. chang</em></p> 
+  <p>Q: <em><strong>How does this thing work?</strong></em> </p>
+  <p>A: Basically, one person drives (serves) and one any number of people ride along (clients). The server hosts a session and clients connect to the server. When the server navigates to a new site (by clicking on a link, entering a new URL in the navigation bar, or switching tabs), all the clients go to that site as well. There you have it, collaborative browsing (the really simply kind).</p>
+  <p>Q: <em><strong>Ok, how do I do get this thing going?</strong></em> </p>
+  <p>A: First, someone has to be the server. That person simpl clicks on the <em><strong>Serve</strong></em> button in the toolbar. Now, any number of clients can connect to this server by putting either the <strong>IP address</strong> or the <strong>host name</strong> of the server machine into the pull-down / text entry box and clicking the <em><strong>Connect</strong></em> button. It's that easy.</p>
+  <p>Q: <em><strong>What do the other buttons do?</strong></em></p>
+  <p>A: <em><strong>Copy hostname</strong></em> simply copies your computer's host name into your clipboard. The intention is to make it easy to send your friends your hostname when you are serving a CoBrowse session. Just start your server, click <em><strong>Copy hostname</strong></em>, and paste that into an email or instant message to your friends. The other buttons simply stop the client and server. Note that the <em><strong>Serve </strong></em>button turns into a <em><strong>Stop (0)</strong></em> button, where the number in parentheses indicates the current number connected clients. </p>
+  <p>Q: <em><strong>Whoa, it remembers servers!</strong></em></p>
+  <p>A: Yes. When you connect to a server as a client, it keeps that in the pull-down list so you can easily connect to that server again. </p>
+  <p>Q: <em><strong>Can I get a screen shot?</strong></em></p>
+  <p>A: Sure, I can do that. Check out the non-fuzzified spot in the picture.</p>
+  <p><img src="screenshot.png" width="549" height="119"> </p>
+  <p>Q: <em><strong>Can you give us more technical details?</strong></em></p>
+  <p>A: Yes. First, bust open the XPI and look at the source if you want the <em>real</em> details. In short, the server opens port 5000 on your computer and accepts TCP connections. Messages sent between server and client are simple ASCII messages that contain only the URL being navigated to, nothing else. And as of now, no access control checking goes on before a client is allowed to connect. That may be implemented later on. But for now, I wanted to keep things simple. </p>
+  <!-- InstanceEndEditable --></div>
+<br>
+</body>
+<!-- InstanceEnd --></html>

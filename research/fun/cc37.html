@@ -1,0 +1,64 @@
+    <FORM ACTION="https://sis.olin.edu/cgi-bin/faculty/classl.cgi" METHOD="POST">
+    <TABLE border=0 cellpadding=2 cellspacing=1>
+	<tr class="glbtableheader">
+	  <td colspan=3>&nbsp;</td>
+	</tr>
+
+	<tr class="glbdatadark">
+	    <td align=right class="glbfieldname">Course Number:</td>
+	    <td>
+		<INPUT NAME="crs_no" SIZE=14 MAXLENGTH=12 VALUE="CC37        ">
+                <!--
+                <! Add a ? button for browsing for courses >
+                <INPUT TYPE="submit" NAME="getcourse" VALUE=" ? ">
+		-->
+	    </td>
+	    <td>
+
+	    </td>
+	</tr>
+	<tr class="glbdatadark">
+	    <td align=right class="glbfieldname">Section:</td>
+	    <td>
+		<INPUT NAME="sec_no" SIZE=4 MAXLENGTH=2 VALUE="01">
+                <!--
+		<! Add a ? button for browsing the sections for the selected course>
+                <INPUT TYPE="submit" NAME="getsection" VALUE=" ? ">
+                -->
+	    </td>
+	    <td>
+	    </td>
+      <tr class="glbdatadark">
+	    <td align=right class="glbfieldname">Catalog:</td>
+	    <td><SELECT NAME="cat">
+
+	    <OPTION VALUE="UG03">
+	    UG03
+	    <OPTION SELECTED VALUE="UG04">
+	    UG04
+	</SELECT>
+	    <td>
+		<INPUT TYPE=hidden NAME="incl_reg" VALUE="Y">
+	    </td>
+	</tr>
+
+        <tr class="glbdatadark">
+	    <td class='glbdatadark' colspan=2></td>
+	    <td class="glbdatadark">
+	    </td>
+	</tr>
+	<tr>
+	    <td class="glbdatadark" colspan=2></td>
+	    <td class="glbdatadark">
+		<INPUT TYPE=hidden NAME="show_photo" VALUE="Y">
+	    </td>
+	</tr>
+
+	<tr>
+	    <td align=center colspan=3>
+		<INPUT TYPE="submit" NAME="command" VALUE="Submit Request">
+	    </td>
+	</tr>
+    </TABLE>
+    </FORM>
+

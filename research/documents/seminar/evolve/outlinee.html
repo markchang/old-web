@@ -1,0 +1,303 @@
+<HTML>
+<BODY >
+
+<P></P><A HREF="JavaScript:parent.ItemClicked(1, 0)"> Evolvable Hardware: Evolution in FPGAs </A><br><UL>
+Mark L. Chang
+</UL><UL>
+ACME Labs
+</UL><UL>
+October 27, 1999</UL></P>
+<P><UL>
+Adrian Thompson
+</UL><UL>
+School of Cognitive and Computing Sciences
+</UL><UL>
+University of Sussex, Brighton UK</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(2, 0)"> Evolution </A><br><UL>
+<LI>A theory that the various types of animals and plants have their origin in other preexisting types and that the distinguishable differences are due to modifications in successive generations</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(3, 0)"> Traditional Design </A><br><UL>
+<LI>Conventional digital design is just an abstraction for humans
+</UL><UL>
+<LI>Simplifies designs by allowing reality to be ignored
+<UL>
+<LI>Properties of real hardware are suppressed
+<LI>Analogue behavior of transistors reduced to ON/OFF switches
+<LI>Transients suppressed by using a synchronous design
+<LI>Modules are compartmentalized
+<LI>Communicate only on clock edges
+<LI>Transients are localized to modules and don’t influence other modules
+</UL></UL><UL>
+<LI>Spatial and dynamical behavior is constrained
+</UL><UL>
+<LI>In any design methodology, we can’t get far without help from abstraction!
+</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(4, 0)"> Why Evolvable Circuits? </A><br><UL>
+<LI>We can’t understand everything, so let Mother Nature do the tough stuff
+</UL><UL>
+<LI>Increase the search space by eliminating constraints
+</UL><UL>
+<LI>Let evolution organize the circuit spatially and dynamically	
+</UL><UL>
+<LI>There is a possibility for better solutions than in constrained designs
+</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(5, 0)"> Why “In Silicon” Evolution? </A><br><UL>
+<LI>Evolution normally takes place in software simulations
+<UL>
+<LI>Easy to manipulate
+<LI>Usually an Artificial Neural Network (ANN)--a constrained system
+<LI>Not too slow that we need to accelerate using hardware
+</UL></UL><UL>
+<LI>Evolution in hardware gives us unique opportunities
+<UL>
+<LI>Can exploit real-world physics that are often difficult or impossible to analyze or model in simulations--let’s us drop simplifying constraints.
+<LI>Physical components have a size, shape and location, which are critical in determining the interactions between them.  No longer artificial point-to-point interconnections as in simulations.
+<LI>Characteristics of the components and their interactions are not exactly predictable or constant over time.  Evolution must cope with this.</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(6, 0)"> Artificial Evolution Basics </A><br><UL>
+<LI>Chromosome
+<UL>
+<LI>Bit string that represents a possible solution
+</UL></UL><UL>
+<LI>Population
+<UL>
+<LI>Collection of chromosomes
+</UL></UL><UL>
+<LI>Fitness
+<UL>
+<LI>The goodness of the solution expressed by a particular chromosome
+</UL></UL><UL>
+<LI>Parent/Child (obvious)
+</UL><UL>
+<LI>Crossover
+<UL>
+<LI>A method of creating a child chromosome by taking sections from one parent or the other
+</UL></UL><UL>
+<LI>Mutation
+<UL>
+<LI>Random inversion of bits in a chromosome</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(7, 0)"> The Evolvable Hardware </A><br><UL>
+<LI>Xilinx XC6216 FPGA
+<UL>
+<LI>64x64 array of reconfigurable cells
+<LI>NEWS connectivity
+<LI>Functional block or route-through
+<LI>2-input Boolean / 3-input MUX
+<LI>No illegal configurations possible
+</UL></UL><UL>
+<LI>Only nearest neighbor connections used
+</UL><UL>
+<LI>Constrained to 10x10 corner 
+</UL><UL>
+<LI>One input and one output on IOBs
+</UL><UL>
+<LI>18 configuration bits per cell</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(8, 0)"> The Experiment </A><br><UL>
+<LI>Each cell has an 18-bit chromosome
+<UL>
+<LI>Grouped into a linear bit-string genotype 1800 bits long
+</UL></UL><UL>
+<LI>Evolve a circuit to discriminate between square waves of 1kHz and 10kHz
+<UL>
+<LI>Output +5V at one frequency, 0V at the other
+</UL></UL><UL>
+<LI>Genetic Algorithm (GA) parameters
+<UL>
+<LI>Population size = 50 (randomly generated)
+<LI>Elitism (single fittest individual survives)
+<LI>Fittest individual expected twice the offspring as the median-ranked individual
+<LI>Mutation rate = 2.7 mutations/genotype
+</UL></UL><UL>
+<LI>Configure and run on real hardware</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(9, 0)"> Fitness Evaluation </A><br><UL>
+<LI>Five 500ms bursts of 1kHz square wave, five 500ms bursts of 10kHz square wave (random order, no gap)
+</UL><UL>
+<LI>Reset integrator at beginning of each test tone
+</UL><UL>
+<LI>Integrate output voltage over each test tone duration</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(10, 0)"> Fitness Evaluation </A><br><UL>
+<LI>it	= integrator value at end of test tone t
+</UL><UL>
+<LI>S1	= set of five 1kHz test tones
+</UL><UL>
+<LI>S10	= set of five 10kHz test tones
+</UL><UL>
+<LI>
+</UL><UL>
+<LI>
+</UL><UL>
+<LI>
+</UL><UL>
+<LI>
+</UL><UL>
+<LI>Maximizes difference between the average output voltage during the two input test tones
+<UL>
+<LI>Constants determined such that circuits that directly map input to output get zero fitness
+</UL></UL><UL>
+<LI>
+</UL><UL>
+<LI>
+</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(11, 0)"> Results </A><br>
+<P></P><A HREF="JavaScript:parent.ItemClicked(12, 0)"> Caveats </A><br><UL>
+<LI>Analysis
+<UL>
+<LI>No clear functional decomposition 
+<LI>Long-term stability is hard to prove
+<LI>Possible that intermittent behavior has a long time-scale
+<LI>Unknown failure modes
+</UL></UL><UL>
+<LI>Application
+<UL>
+<LI>Must be insensitive to certain variations in implementation and environment
+<UL>
+<LI>Thermal drift
+<LI>Noise
+<LI>Aging effects at the semiconductor level
+<LI>Variations at the semiconductor level
+</UL></UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(13, 0)"> The Analyst’s Toolbox </A><br><UL>
+<LI>Probing and abnormal conditions
+<UL>
+<LI>manipulation of input signals, varying temperature or power supply voltage, replacing parts of the circuit with alternative or non-functional pieces
+</UL></UL><UL>
+<LI>Mathematical techniques/models
+</UL><UL>
+<LI>Simulation
+</UL><UL>
+<LI>Synthesis
+</UL><UL>
+<LI>Electromagnetic emissions
+</UL><UL>
+<LI>Evolutionary history
+</UL><UL>
+<LI>Population diversity
+</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(14, 0)"> Resulting Circuit </A><br><UL>
+Full evolved circuit</UL></P>
+<P><UL>
+Pruned circuit</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(15, 0)"> Functional Circuit </A><br><UL>
+<LI>Random “unused” cells were clamped to random constant values
+</UL><UL>
+<LI>Fitness was re-evaluated
+<UL>
+<LI>Cell unclamped if performance degraded
+<LI>Cell left clamped otherwise
+</UL></UL><UL>
+<LI>Iterated to build a maximal set of clamped cells without altering fitness
+</UL><UL>
+<LI>Grey cells cannot be clamped even though there is no path to the output!</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(16, 0)"> Circuit Diagram </A><br><UL>
+<LI>Within 20ns of an input ‘1’, gates in A and B switch to fixed states until input goes to ‘0’
+</UL><UL>
+<LI>Part C has 9ns inversion delay</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(17, 0)"> Circuit Behavior </A><br><UL>
+<LI>During pulse A and B parts are static within 20ns
+</UL><UL>
+<LI>Part C is also static (through observation), yet “knows” within 200ns of the end of the pulse, how long the pulse was
+</UL><UL>
+<LI>Short pulses keep output high, longer pulses change output low</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(18, 0)"> Analysis </A><br><UL>
+<LI>Probing
+<UL>
+<LI>Power consumption at quiescent levels during pulse
+<LI>Observed signals are in a stable state
+</UL></UL><UL>
+<LI>Simulation
+<UL>
+<LI>PSPICE simulation verified transient upon entering static state
+</UL></UL><UL>
+<LI>Synthesis
+<UL>
+<LI>Built circuit out of separate CMOS multiplexer chips--failed
+</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(19, 0)"> Analysis </A><br><UL>
+<LI>Evolutionary history
+</UL><UL>
+<LI>
+</UL><UL>
+<LI>
+</UL><UL>
+<LI>
+</UL><UL>
+<LI>
+</UL><UL>
+<LI>
+<UL>
+<LI>After pulse, output oscillates at one of two frequencies, depending on the length of the pulse (left: long, right: short)
+<LI>Bistable oscillations present in Part A of final circuit
+<LI>These oscillations are used by Parts B &C to derive a steady output according to the pulse width
+<LI>Maybe due to charging/discharging of unknown parasitic capacitance?</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(20, 0)"> Robustness </A><br><UL>
+<LI>Discriminate between &#0624.5kHz and &#0601.6kHz
+</UL><UL>
+<LI>Vary frequency from 31.25kHz to .625kHz
+</UL><UL>
+<LI>Vary temperature
+</UL><UL>
+<LI>
+</UL><UL>
+<LI>Can discriminate well at nominal temperature
+</UL><UL>
+<LI>Temperature has adverse effect on performance
+</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(21, 0)"> Evolving Robustness </A><br><UL>
+<LI>Can we evolve a circuit to work within a defined operational envelope?
+</UL><UL>
+<LI>The Experimental Operational Envelope 
+<UL>
+<LI>Use five FPGAs in similar configuration to last experiment
+<LI>Electronic surroundings
+<UL>
+<LI>Shielding, pin connectivity
+<LI>Circuit position
+<LI>FPGA fabrication variations (Yamaha vs. Seiko)
+<LI>FPGA Packaging
+<LI>Temperature (ambient, constant cold, constant hot, gradient)
+<LI>Power supply
+<LI>Output pin resistive loading</UL></UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(22, 0)"> Results </A><br><UL>
+<LI>Take generation 5000 population from previous experiment
+</UL><UL>
+<LI>Continue evolution with overall fitness now being the mean of the individual fitnesses measured on the five different FPGAs
+</UL><UL>
+<LI>This measures the population subject to new selection pressures
+</UL><UL>
+<LI>Trying to find a single individual scoring well in all conditions</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(23, 0)"> Conclusions </A><br><UL>
+<LI>Pros
+<UL>
+<LI>Evolved circuits can be much more compact and power-efficient than human-created circuits
+<LI>Intrinsic evolution allows us to explore and exploit physical dynamics of hardware without the need to understand the exact dynamic behavior
+<LI>Evolving circuits can be exposed to robustness parameters and can evolve tolerances and adaptability
+<LI>Evolution can take place without human intervention
+<LI>Evolved circuits can teach designers new tricks
+</UL></UL><UL>
+<LI>Cons
+<UL>
+<LI>Fitness function creation can be a non-trivial task
+<LI>Intrinsic fitness evaluation can be time consuming
+<LI>Very little understanding of fundamentals</UL></UL></P>
+<P>
+</BODY>
+</HTML>

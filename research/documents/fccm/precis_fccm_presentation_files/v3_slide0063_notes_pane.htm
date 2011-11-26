@@ -1,0 +1,92 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<link id=Main-File rel=Main-File href="../precis_fccm_presentation.htm">
+<link rel=Preview href=preview.wmf>
+
+<script>
+<!--
+if( window.name != "PPTNts" )
+  parent.location.href = "../precis_fccm_presentation.htm";
+//-->
+</script>
+</head>
+
+<body bgcolor=black text=white>
+
+<table border=0 width="100%">
+ <tr>
+  <td width=5 nowrap></td>
+  <td width="100%"></td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><font face="Times New Roman" size=3>What is
+  precision analysis?</font><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><font face="Times New Roman" size=3>Many of us have
+  had an algorithm that was originally conceived and implemented on a
+  general-purpose processor and wanted to implement it on a reconfigurable
+  architecture (FPGAs).</font><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><font face="Times New Roman" size=3>Many differences
+  between specifying an algorithm for the GPP vs. the FPGA. In GPPs, generally
+  precision analysis consists of choosing the proper data type for your
+  variable to simultaneously conserve memory and eliminate overflow errors. The
+  GPP itself operates at the word level, in memory (cache, main, registers, …),
+  and at the ALU level (adders, multipliers, …)</font><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><font face="Times New Roman" size=3>One of the
+  benefits of the FPGA is it’s ability to work at the bit level. We can, in the
+  HDL, describe a datapath that, perhaps, more closely matches the requirements
+  of the algorithm and data sets. Of course, for the “cup half empty” folks, we
+  can look at this another way and say that to fit more onto an FPGA, we have
+  to be frugal with the sizes of our operators (adders, multipliers, …), as
+  just a few 64x64 multipliers will fill up a reasonably-sized FPGA really
+  quickly. The more optimized we are with respect to the algorithm, the more
+  logic we can fit into the FPGA.</font><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><br>
+  </td>
+ </tr>
+ <tr>
+  <td colspan=1></td>
+  <td align=left colspan=1><font face="Times New Roman" size=3>So, we trim the
+  data paths to gain optimality yet maintain correctness.</font><br>
+  </td>
+ </tr>
+</table>
+
+</body>
+
+</html>

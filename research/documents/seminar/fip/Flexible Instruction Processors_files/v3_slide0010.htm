@@ -1,0 +1,255 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<link id=Main-File rel=Main-File
+href="../Flexible%20Instruction%20Processors.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Flexible Instruction Processors</title>
+<meta name=Description content="27-May-03: Implementation: JVM">
+<link rel=next href="v3_slide0011.htm">
+<![if !ppt]>
+<script>
+<!--
+function Update()
+{
+  if( window.name == "PPTSld" )
+    parent.SlideUpdated('v3_slide0010.htm');   
+  else
+    parent.location.href = "v3_document.htm";
+}
+
+function NoHref() {}
+//-->
+</script>
+<![endif]>
+</head>
+
+<body background="v3_master04_background.gif" bgcolor=white alink="#b2b2b2"
+link="#6f89f7" vlink="#cfdbfd" text="#40458c" topmargin=0 leftmargin=0
+onload="Update()">
+
+<table border=0 valign=top width=650 height=487 cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=50 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=5 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=11 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=85 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=221 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=208 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=15 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=34 height=0 nowrap><img src="v3_space.gif" border=0></td>
+ </tr>
+ <tr>
+  <td width=650 height=60 colspan=9></td>
+ </tr>
+ <tr>
+  <td width=50 height=40></td>
+  <td width=322 height=40 colspan=4>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=322 height=40><font face=Tahoma color="#660066" size=6>Implementation:
+    JVM</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=278 height=40 colspan=4></td>
+ </tr>
+ <tr>
+  <td width=650 height=36 colspan=9></td>
+ </tr>
+ <tr>
+  <td width=66 height=317 colspan=3></td>
+  <td width=563 height=317 colspan=5>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=21 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=4 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=8 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=20 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=1 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=11 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=16 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=1 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=90 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=20 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=12 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=42 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=96 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=132 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=12 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=8 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=34 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=9 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=2 height=0 nowrap><img src="v3_space.gif" border=0></td>
+    <td width=17 height=0 nowrap><img src="v3_space.gif" border=0></td>
+   </tr>
+   <tr>
+    <td width=25 height=6 colspan=2></td>
+    <td width=531 height=31 colspan=18 rowspan=3><font face=Tahoma size=5>Implemented
+    FIP-based Java Virtual Machine</font><br>
+    </td>
+    <td width=7 height=6></td>
+   </tr>
+   <tr>
+    <td width=21 height=21><img src=image004.gif border=0 width=20 height=20></td>
+    <td width=4 height=21></td>
+    <td width=7 height=21></td>
+   </tr>
+   <tr>
+    <td width=25 height=4 colspan=2></td>
+    <td width=7 height=4></td>
+   </tr>
+   <tr>
+    <td width=563 height=2 colspan=21></td>
+   </tr>
+   <tr>
+    <td width=33 height=27 colspan=3></td>
+    <td width=20 height=27><font face=Wingdings color="#40458c" size=1>n</font></td>
+    <td width=421 height=27 colspan=10><font face=Tahoma size=4>#1: segregated
+    resources that are shared</font><br>
+    </td>
+    <td width=89 height=27 colspan=7></td>
+   </tr>
+   <tr>
+    <td width=563 height=1 colspan=21></td>
+   </tr>
+   <tr>
+    <td width=65 height=23 colspan=6></td>
+    <td width=16 height=23><font face=Wingdings color="#6f89f7" size=3>w</font></td>
+    <td width=405 height=23 colspan=8><font face=Tahoma size=3>Good area
+    utilization and the expense of routing</font><br>
+    </td>
+    <td width=77 height=23 colspan=6></td>
+   </tr>
+   <tr>
+    <td width=81 height=19 colspan=7></td>
+    <td width=91 height=19 colspan=2><font face=Tahoma size=3>congestion</font><br>
+    </td>
+    <td width=391 height=19 colspan=12></td>
+   </tr>
+   <tr>
+    <td width=563 height=1 colspan=21></td>
+   </tr>
+   <tr>
+    <td width=33 height=27 colspan=3></td>
+    <td width=20 height=27><font face=Wingdings color="#40458c" size=1>n</font></td>
+    <td width=475 height=27 colspan=13><font face=Tahoma size=4>#2: two-stage
+    pipeline &amp; only shares stack and</font><br>
+    </td>
+    <td width=35 height=27 colspan=4></td>
+   </tr>
+   <tr>
+    <td width=53 height=24 colspan=4></td>
+    <td width=139 height=24 colspan=6><font face=Tahoma size=4>main memory</font><br>
+    </td>
+    <td width=371 height=24 colspan=11></td>
+   </tr>
+   <tr>
+    <td width=563 height=1 colspan=21></td>
+   </tr>
+   <tr>
+    <td width=33 height=27 colspan=3></td>
+    <td width=20 height=27><font face=Wingdings color="#40458c" size=1>n</font></td>
+    <td width=486 height=27 colspan=15><font face=Tahoma size=4>#3: deeper
+    pipelines for certain instructions and</font><br>
+    </td>
+    <td width=24 height=27 colspan=2></td>
+   </tr>
+   <tr>
+    <td width=53 height=24 colspan=4></td>
+    <td width=289 height=24 colspan=9><font face=Tahoma size=4>‘register’ style
+    improvements</font><br>
+    </td>
+    <td width=221 height=24 colspan=8></td>
+   </tr>
+   <tr>
+    <td width=563 height=1 colspan=21></td>
+   </tr>
+   <tr>
+    <td width=65 height=23 colspan=6></td>
+    <td width=16 height=23><font face=Wingdings color="#6f89f7" size=3>w</font></td>
+    <td width=456 height=23 colspan=11><font face=Tahoma size=3>Top-of-stack
+    registers are replicated – writes are done</font><br>
+    </td>
+    <td width=26 height=23 colspan=3></td>
+   </tr>
+   <tr>
+    <td width=81 height=19 colspan=7></td>
+    <td width=482 height=19 colspan=14><font face=Tahoma size=3>back to stack
+    directly, replicated registers updated during</font><br>
+    </td>
+   </tr>
+   <tr>
+    <td width=81 height=20 colspan=7></td>
+    <td width=123 height=20 colspan=4><font face=Tahoma size=3>the fetch cycle</font><br>
+    </td>
+    <td width=359 height=20 colspan=10></td>
+   </tr>
+   <tr>
+    <td width=563 height=1 colspan=21></td>
+   </tr>
+   <tr>
+    <td width=65 height=23 colspan=6></td>
+    <td width=16 height=23><font face=Wingdings color="#6f89f7" size=3>w</font></td>
+    <td width=413 height=23 colspan=9><font face=Tahoma size=3>Most
+    instructions have 4 stages, some 5-6 stages</font><br>
+    </td>
+    <td width=69 height=23 colspan=5></td>
+   </tr>
+   <tr>
+    <td width=65 height=23 colspan=6></td>
+    <td width=16 height=23><font face=Wingdings color="#6f89f7" size=3>w</font></td>
+    <td width=165 height=23 colspan=5><font face=Tahoma size=3>Routing is
+    pipelined</font><br>
+    </td>
+    <td width=317 height=23 colspan=9></td>
+   </tr>
+  </table>
+  </td>
+  <td width=21 height=317></td>
+ </tr>
+ <tr>
+  <td width=650 height=5 colspan=9></td>
+ </tr>
+ <tr>
+  <td width=55 height=16 colspan=2></td>
+  <td width=96 height=16 colspan=2>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=96 height=16><font face=Tahoma size=1>October 1, 2002</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=429 height=16 colspan=2></td>
+  <td width=15 height=16>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=15 height=16 align=right><font face=Tahoma size=1>10</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=55 height=16 colspan=2></td>
+ </tr>
+ <tr>
+  <td width=650 height=13 colspan=9></td>
+ </tr>
+</table>
+
+</body>
+
+</html>

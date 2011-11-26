@@ -1,0 +1,23 @@
+<ApplicationConfiguration>
+	<PageTitle>Carter Jaemin Chang</PageTitle>
+	<PageIntroduction>[strong]Pictures of the kid, otherwise known as Carter Jaemin Chang.[/strong]
+          Born November 1, 2006, 12:2pm. 7 pounds, 8 ounces, 20.5 inches tall. Mom, child, and dad are healthy and well.
+        [strong]Click on day0-1 below to get to pictures![/strong]</PageIntroduction>
+	<BrowseSubFolders>true</BrowseSubFolders>
+	<DateFormat>Y-m-d</DateFormat>
+	<DisplayHiddenFiles>false</DisplayHiddenFiles>
+	<FilesPerPage>10</FilesPerPage>
+	<FitImagesToPage>true</FitImagesToPage>
+	<HideFiles>thumbnailer.php,index.php,.htaccess</HideFiles>
+	<MaxFilesPerPage>60</MaxFilesPerPage>
+	<MaxThumbHeight>100</MaxThumbHeight>
+	<MaxThumbWidth>100</MaxThumbWidth>
+	<PluginHeight>500</PluginHeight>
+	<PluginWidth>500</PluginWidth>
+	<SortBy>Name</SortBy>
+	<SortDirection>asc</SortDirection>
+	<StyleUrl>_default.css</StyleUrl>
+	<ThumbnailerStyleUrl>_thumbnailer.css</ThumbnailerStyleUrl>
+	<UsePageIntroductionInSubFolders>true</UsePageIntroductionInSubFolders>
+	<UseThumbnails>false</UseThumbnails>
+</ApplicationConfiguration>

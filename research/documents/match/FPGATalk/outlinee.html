@@ -1,0 +1,152 @@
+<HTML>
+<BODY >
+
+<P></P><A HREF="JavaScript:parent.ItemClicked(1, 0)"> FPGA Basics </A><br><UL>
+The Xilinx XC6200 and the
+</UL><UL>
+H.O.T. Works Development System
+</UL><UL>
+
+</UL><UL>
+
+</UL><UL>
+
+</UL><UL>
+
+</UL><UL>
+11 February, 1998
+</UL><UL>
+Mark L. Chang &#060mchang@ece.nwu.edu&#062</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(2, 0)"> What is an FPGA? </A><br><UL>
+<LI>Field Programmable Gate Array
+</UL><UL>
+<LI>Fully programmable alternative to a customized chip
+</UL><UL>
+<LI>Used to implement functions in hardware
+</UL><UL>
+<LI>Also called a Reconfigurable Processing Unit (RPU)
+</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(3, 0)"> Reasons to use an FPGA </A><br><UL>
+<LI>Hardwired logic is very fast
+</UL><UL>
+<LI>Can interface to outside world
+<UL>
+<LI>Custom hardware/peripherals
+<LI>“Glue logic” to custom co/processors
+</UL></UL><UL>
+<LI>Can perform bit-level and systolic operations not suited for traditional CPU/MPU</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(4, 0)"> The Xilinx XC6200 RPU </A><br><UL>
+<LI>SRAM-based FPGA
+<UL>
+<LI>Fast, unlimited reconfiguration
+<LI>Dynamic and partially reconfigurable logic
+</UL></UL><UL>
+<LI>Microprocessor interface
+</UL><UL>
+<LI>Symmetrical, hierarchical and regular structure</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(5, 0)"> XC6200 Architecture </A><br><UL>
+<LI>Large array of simple, configurable cells (sea of gates)
+</UL><UL>
+<LI>Each cell:
+<UL>
+<LI>D-Type register
+<LI>Logic function
+<LI>Nearest-neighbor interconnection
+<LI>Grouped in 4x4 block</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(6, 0)"> XC6200 Architecture </A><br><UL>
+<LI>16 (4x4) neighbor-connected cells are grouped together to form a larger cellular array
+</UL><UL>
+<LI>Communication “lanes” available between neighboring 4x4 cell blocks</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(7, 0)"> XC6200 Architecture </A><br><UL>
+<LI>A 4x4 array of the previously shown 4x4 blocks forms a 16x16 block
+</UL><UL>
+<LI>Length 16 FastLANEs connect these larger arrays</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(8, 0)"> XC6200 Architecture </A><br><UL>
+<LI>A 4x4 array of the 16x16 blocks forms the central 64x64 cell array
+</UL><UL>
+<LI>Chip-Length FastLANEs connect
+</UL><UL>
+<LI>Central block surrounded by I/O pads</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(9, 0)"> XC6200 Routing </A><br><UL>
+<LI>Each level of hierarchy has its own associated routing resources
+<UL>
+<LI>Unit cells, 4x4, 16x16, 64x64 cell blocks
+</UL></UL><UL>
+<LI>Routing does not use a unit cell’s resources
+</UL><UL>
+<LI>Switches at the edge of the blocks provide for connections between the levels of interconnect</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(10, 0)"> XC6200 Unit Cell </A><br><UL>
+<LI>Each unit cell contains a computation unit:
+<UL>
+<LI>D-type register
+<LI>2-input logic function
+<LI>Nearest neighbor interconnection
+<LI>Individually programmable from host interface (uP)</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(11, 0)"> XC6200 Functional Unit </A><br><UL>
+<LI>Design based on the fact that any function of two Boolean variables can be computed by a 2:1 MUX.</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(12, 0)"> H.O.T. Works </A><br><UL>
+<LI>Development system based on the Xilinx XC6200-series RPU
+</UL><UL>
+<LI>Includes:
+<UL>
+<LI>H.O.T. Works Configurable Computer Board
+<LI>H.O.T. Works Development System Software</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(13, 0)"> H.O.T. Works Board </A><br><UL>
+<LI>Interfaces with a host system (Windows95-based PC) on PCI bus
+<UL>
+<LI>2MB SRAM (memory)
+<LI>XC6200 (RPU)
+<LI>PCI controller on XC4000 (FPGA)
+<LI>Expansion through Mezzanine connector</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(14, 0)"> Memory Access Modes </A><br>
+<P></P><A HREF="JavaScript:parent.ItemClicked(15, 0)"> H.O.T. Works Software </A><br><UL>
+<LI>Xilinx XACTStep
+<UL>
+<LI>Map, Place and Router for XC6200
+</UL></UL><UL>
+<LI>Velab
+<UL>
+<LI>Structural VHDL elaborator 
+</UL></UL><UL>
+<LI>WebScope
+<UL>
+<LI>Java-based debug tool
+</UL></UL><UL>
+<LI>H.O.T. Works Development System
+<UL>
+<LI>C++-based API for board interfacing</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(16, 0)"> Design Flow </A><br>
+<P></P><A HREF="JavaScript:parent.ItemClicked(17, 0)"> Run-Time Programming </A><br><UL>
+<LI>C++ support software is provided for low-level board interface and device configuration
+</UL><UL>
+<LI>Digital design is downloaded to the board at execution time
+</UL><UL>
+<LI>User-level routines must be written to conduct data input/output and control</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(18, 0)"> Conclusions </A><br><UL>
+<LI>Xilinx XC6200 provides a fast and inexpensive method to obtain great speedups in certain classes of algorithms
+</UL><UL>
+<LI>H.O.T. Works provides a useable development platform to go from structural VHDL to digital design, and a programmable run-time interface in C++.</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(19, 0)"> PPT Slide </A><br><UL>
+Addendum:
+</UL><UL>
+Cell logic function table
+</UL><UL>
+Refer to Slide 11</UL></P>
+<P>
+</BODY>

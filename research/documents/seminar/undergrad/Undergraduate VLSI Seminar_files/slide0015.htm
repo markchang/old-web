@@ -1,0 +1,435 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<link id=Main-File rel=Main-File href="../Undergraduate%20VLSI%20Seminar.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Undergraduate VLSI Seminar</title>
+<meta name=Description content="27-Feb-02: Standard Cells">
+<link rel=Stylesheet href="master04_stylesheet.css">
+<![if !ppt]>
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:107% !important;}
+-->
+</style>
+<script src=script.js></script><script><!--
+gId="slide0015.htm"
+if( !IsNts() ) Redirect( "PPTSld", gId );
+//-->
+</script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><script for=window event=onload><!--
+if( !IsSldOrNts() ) return;
+if( MakeNotesVis() ) return;
+LoadSld( gId );
+MakeSldVis(0);
+//-->
+</script><![endif]>
+</head>
+
+<body lang=EN-US style='margin:0px;background-color:black'
+onclick="DocumentOnClick()" onresize="_RSW()" onkeypress="_KPH()">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:534px;height:400px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#FFFFFF,#000000,#808080,#000000,#00CC99,#3333CC,#CCCCFF,#B2B2B2"
+ masterhref="master04.xml" href="slide0015.xml">
+ <p:shaperange href="master04.xml#_x0000_s5121"/><![if !ppt]><p:shaperange
+  href="master04.xml#_x0000_s5124"/><![if !vml]><img border=0
+ v:shapes="_x0000_s5124,_x0000_s5125" src="master04_image001.gif"
+ style='position:absolute;top:1.0%;left:.56%;width:99.25%;height:98.75%'><![endif]><![endif]><p:shaperange
+  href="master04.xml#_x0000_m5122"/><p:shaperange
+  href="master04.xml#_x0000_m5123"/><p:shaperange
+  href="slide0015.xml#_x0000_s19460"/><![if !vml]><img border=0
+ v:shapes="_x0000_s19460,_x0000_s19461,_x0000_s19462,_x0000_s19463,_x0000_s19464,_x0000_s19465,_x0000_s19466,_x0000_s19467,_x0000_s19468,_x0000_s19469,_x0000_s19470,_x0000_s19471,_x0000_s19472,_x0000_s19473,_x0000_s19474,_x0000_s19475,_x0000_s19476,_x0000_s19478,_x0000_s19479,_x0000_s19480,_x0000_s19481,_x0000_s19482,_x0000_s19483,_x0000_s19484,_x0000_s19485,_x0000_s19486,_x0000_s19487,_x0000_s19488,_x0000_s19489,_x0000_s19490,_x0000_s19491,_x0000_s19492,_x0000_s19493,_x0000_s19495,_x0000_s19496,_x0000_s19497,_x0000_s19498,_x0000_s19499,_x0000_s19500,_x0000_s19501,_x0000_s19502,_x0000_s19503,_x0000_s19504,_x0000_s19505,_x0000_s19506,_x0000_s19507,_x0000_s19509,_x0000_s19510,_x0000_s19511,_x0000_s19512,_x0000_s19513,_x0000_s19514,_x0000_s19515,_x0000_s19516,_x0000_s19517,_x0000_s19518,_x0000_s19519,_x0000_s19520,_x0000_s19521,_x0000_s19522,_x0000_s19523,_x0000_s19524,_x0000_s19525,_x0000_s19526,_x0000_s19527,_x0000_s19528,_x0000_s19529,_x0000_s19530,_x0000_s19531,_x0000_s19532,_x0000_s19533,_x0000_s19534,_x0000_s19535,_x0000_s19536,_x0000_s19537,_x0000_s19538,_x0000_s19539,_x0000_s19540,_x0000_s19541,_x0000_s19542,_x0000_s19543,_x0000_s19544,_x0000_s19545,_x0000_s19546,_x0000_s19547,_x0000_s19548,_x0000_s19549,_x0000_s19550,_x0000_s19551,_x0000_s19552,_x0000_s19553,_x0000_s19554,_x0000_s19555,_x0000_s19556,_x0000_s19557,_x0000_s19558,_x0000_s19559,_x0000_s19560,_x0000_s19561,_x0000_s19562,_x0000_s19563,_x0000_s19564,_x0000_s19565,_x0000_s19566,_x0000_s19567,_x0000_s19568,_x0000_s19569,_x0000_s19570,_x0000_s19571,_x0000_s19572,_x0000_s19573,_x0000_s19574,_x0000_s19575,_x0000_s19576,_x0000_s19577,_x0000_s19578,_x0000_s19579,_x0000_s19580,_x0000_s19581,_x0000_s19582,_x0000_s19583,_x0000_s19584,_x0000_s19585,_x0000_s19586,_x0000_s19587,_x0000_s19588,_x0000_s19589,_x0000_s19590,_x0000_s19591,_x0000_s19592,_x0000_s19593,_x0000_s19594,_x0000_s19595,_x0000_s19596,_x0000_s19597,_x0000_s19598,_x0000_s19599,_x0000_s19600,_x0000_s19601,_x0000_s19602,_x0000_s19603,_x0000_s19604,_x0000_s19605,_x0000_s19606,_x0000_s19607,_x0000_s19609,_x0000_s19610,_x0000_s19612,_x0000_s19613,_x0000_s19614,_x0000_s19615,_x0000_s19616,_x0000_s19617,_x0000_s19618,_x0000_s19619,_x0000_s19620,_x0000_s19621,_x0000_s19622,_x0000_s19623,_x0000_s19624,_x0000_s19625,_x0000_s19626,_x0000_s19627,_x0000_s19628,_x0000_s19629,_x0000_s19630,_x0000_s19631,_x0000_s19632,_x0000_s19633,_x0000_s19634,_x0000_s19635,_x0000_s19636,_x0000_s19637,_x0000_s19638,_x0000_s19639,_x0000_s19640,_x0000_s19641,_x0000_s19642,_x0000_s19643,_x0000_s19644,_x0000_s19645,_x0000_s19646,_x0000_s19647,_x0000_s19648,_x0000_s19649,_x0000_s19650,_x0000_s19651,_x0000_s19652,_x0000_s19653,_x0000_s19654,_x0000_s19655,_x0000_s19656,_x0000_s19657,_x0000_s19658,_x0000_s19659,_x0000_s19660,_x0000_s19661,_x0000_s19662,_x0000_s19663,_x0000_s19664,_x0000_s19665,_x0000_s19666,_x0000_s19667,_x0000_s19668,_x0000_s19669,_x0000_s19670,_x0000_s19671,_x0000_s19672,_x0000_s19673,_x0000_s19674,_x0000_s19675,_x0000_s19676,_x0000_s19677,_x0000_s19678,_x0000_s19679,_x0000_s19680,_x0000_s19681,_x0000_s19682,_x0000_s19683,_x0000_s19684,_x0000_s19685,_x0000_s19686,_x0000_s19687,_x0000_s19688,_x0000_s19689,_x0000_s19690,_x0000_s19691,_x0000_s19692,_x0000_s19693,_x0000_s19694,_x0000_s19695,_x0000_s19696,_x0000_s19697,_x0000_s19698,_x0000_s19699,_x0000_s19700,_x0000_s19701,_x0000_s19702,_x0000_s19703,_x0000_s19704,_x0000_s19705,_x0000_s19706,_x0000_s19707,_x0000_s19708,_x0000_s19709,_x0000_s19710,_x0000_s19711,_x0000_s19712,_x0000_s19713,_x0000_s19714,_x0000_s19715,_x0000_s19716,_x0000_s19717,_x0000_s19718,_x0000_s19719,_x0000_s19720,_x0000_s19721,_x0000_s19722,_x0000_s19723,_x0000_s19724,_x0000_s19725,_x0000_s19726,_x0000_s19727,_x0000_s19728,_x0000_s19729,_x0000_s19730,_x0000_s19731,_x0000_s19732,_x0000_s19733,_x0000_s19734,_x0000_s19735,_x0000_s19736,_x0000_s19737,_x0000_s19738,_x0000_s19739,_x0000_s19740,_x0000_s19741,_x0000_s19742,_x0000_s19743,_x0000_s19744,_x0000_s19745,_x0000_s19746,_x0000_s19747,_x0000_s19748,_x0000_s19750,_x0000_s19751,_x0000_s19752,_x0000_s19753,_x0000_s19755,_x0000_s19756,_x0000_s19757,_x0000_s19759,_x0000_s19760,_x0000_s19761,_x0000_s19763,_x0000_s19764,_x0000_s19766,_x0000_s19767"
+ src="slide0015_image011.gif" style='position:absolute;top:46.5%;left:17.79%;
+ width:70.41%;height:35.25%'><![endif]>
+ <div v:shape="_x0000_s19481" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='mso-line-spacing:"-95 0 0";position:absolute;top:46.75%;
+ left:54.3%;width:7.3%;height:2.25%'><span style='font-size:42%;color:black'>PWR</span></div>
+ </div>
+ <div v:shape="_x0000_s19482" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='mso-line-spacing:"-95 0 0";position:absolute;top:52.0%;
+ left:54.3%;width:7.3%;height:2.25%'><span style='font-size:42%;color:black'>GND</span></div>
+ </div>
+ <div v:shape="_x0000_s19483" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0"'><span
+ style='position:absolute;top:48.25%;left:57.67%;width:5.05%'><span
+ style='font-size:42%;color:black'>CELL<br>
+ </span></span><span
+ style='position:absolute;top:50.5%;left:57.67%;width:5.05%'><span
+ style='font-size:42%;color:black'>1</span></span></div>
+ </div>
+ <div v:shape="_x0000_s19484" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0"'><span
+ style='position:absolute;top:48.25%;left:62.35%;width:4.68%'><span
+ style='font-size:42%;color:black'>CELL<br>
+ </span></span><span
+ style='position:absolute;top:50.5%;left:62.35%;width:4.68%'><span
+ style='font-size:42%;color:black'>2</span></span></div>
+ </div>
+ <div v:shape="_x0000_s19487" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0"'><span
+ style='position:absolute;top:48.25%;left:66.1%;width:5.43%'><span
+ style='font-size:42%;color:black'>CELL<br>
+ </span></span><span
+ style='position:absolute;top:50.5%;left:66.1%;width:5.43%'><span
+ style='font-size:42%;color:black'>3</span></span></div>
+ </div>
+ <div v:shape="_x0000_s19489" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0"'><span
+ style='position:absolute;top:48.25%;left:70.78%;width:8.61%'><span
+ style='font-size:42%;color:black'>CELL<br>
+ </span></span><span
+ style='position:absolute;top:50.5%;left:70.78%;width:8.61%'><span
+ style='font-size:42%;color:black'>4</span></span></div>
+ </div>
+ <div v:shape="_x0000_s19492" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0"'><span
+ style='position:absolute;top:48.25%;left:79.02%;width:4.86%'><span
+ style='font-size:42%;color:black'>CELL<br>
+ </span></span><span
+ style='position:absolute;top:50.5%;left:79.02%;width:4.86%'><span
+ style='font-size:42%;color:black'>5</span></span></div>
+ </div>
+ <div v:shape="_x0000_s19493" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0"'><span
+ style='position:absolute;top:48.25%;left:83.33%;width:4.68%'><span
+ style='font-size:42%;color:black'>CELL<br>
+ </span></span><span
+ style='position:absolute;top:50.5%;left:83.33%;width:4.68%'><span
+ style='font-size:42%;color:black'>6</span></span></div>
+ </div>
+ <div v:shape="_x0000_s19495" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='mso-line-spacing:"-95 0 0";position:absolute;top:58.5%;
+ left:54.3%;width:7.3%;height:2.25%'><span style='font-size:42%;color:black'>PWR</span></div>
+ </div>
+ <div v:shape="_x0000_s19496" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='mso-line-spacing:"-95 0 0";position:absolute;top:63.5%;
+ left:54.3%;width:7.3%;height:2.25%'><span style='font-size:42%;color:black'>GND</span></div>
+ </div>
+ <div v:shape="_x0000_s19498" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0"'><span
+ style='position:absolute;top:60.0%;left:66.1%;width:5.05%'><span
+ style='font-size:42%;color:black'>CELL<br>
+ </span></span><span
+ style='position:absolute;top:62.25%;left:66.1%;width:5.05%'><span
+ style='font-size:42%;color:black'>8</span></span></div>
+ </div>
+ <div v:shape="_x0000_s19502" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0"'><span
+ style='position:absolute;top:60.0%;left:58.05%;width:8.61%'><span
+ style='font-size:42%;color:black'>CELL<br>
+ </span></span><span
+ style='position:absolute;top:62.25%;left:58.05%;width:8.61%'><span
+ style='font-size:42%;color:black'>7</span></span></div>
+ </div>
+ <div v:shape="_x0000_s19503" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0"'><span
+ style='position:absolute;top:60.0%;left:79.02%;width:8.61%'><span
+ style='font-size:42%;color:black'>CELL<br>
+ </span></span><span
+ style='position:absolute;top:62.25%;left:79.02%;width:8.61%'><span
+ style='font-size:42%;color:black'>10</span></span></div>
+ </div>
+ <div v:shape="_x0000_s19506" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0"'><span
+ style='position:absolute;top:60.0%;left:74.71%;width:5.05%'><span
+ style='font-size:42%;color:black'>CELL<br>
+ </span></span><span
+ style='position:absolute;top:62.25%;left:74.71%;width:5.05%'><span
+ style='font-size:42%;color:black'>9</span></span></div>
+ </div>
+ <div v:shape="_x0000_s19509" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0"'><span
+ style='position:absolute;top:73.75%;left:82.02%;width:5.61%'><span
+ style='font-size:42%;color:black'>CELL<br>
+ </span></span><span
+ style='position:absolute;top:76.0%;left:82.02%;width:5.61%'><span
+ style='font-size:42%;color:black'>16</span></span></div>
+ </div>
+ <div v:shape="_x0000_s19510" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0"'><span
+ style='position:absolute;top:73.75%;left:76.96%;width:5.05%'><span
+ style='font-size:42%;color:black'>CELL<br>
+ </span></span><span
+ style='position:absolute;top:76.0%;left:76.96%;width:5.05%'><span
+ style='font-size:42%;color:black'>15</span></span></div>
+ </div>
+ <div v:shape="_x0000_s19511" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0"'><span
+ style='position:absolute;top:73.75%;left:71.16%;width:5.99%'><span
+ style='font-size:42%;color:black'>CELL<br>
+ </span></span><span
+ style='position:absolute;top:76.0%;left:71.16%;width:5.99%'><span
+ style='font-size:42%;color:black'>14</span></span></div>
+ </div>
+ <div v:shape="_x0000_s19512" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='mso-line-spacing:"-95 0 0";position:absolute;top:72.5%;
+ left:54.3%;width:7.3%;height:2.25%'><span style='font-size:42%;color:black'>PWR</span></div>
+ </div>
+ <div v:shape="_x0000_s19513" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='mso-line-spacing:"-95 0 0";position:absolute;top:77.5%;
+ left:54.3%;width:7.3%;height:2.25%'><span style='font-size:42%;color:black'>GND</span></div>
+ </div>
+ <div v:shape="_x0000_s19517" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0"'><span
+ style='position:absolute;top:73.75%;left:57.86%;width:4.86%'><span
+ style='font-size:42%;color:black'>CELL<br>
+ </span></span><span
+ style='position:absolute;top:76.0%;left:57.86%;width:4.86%'><span
+ style='font-size:42%;color:black'>11</span></span></div>
+ </div>
+ <div v:shape="_x0000_s19518" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0"'><span
+ style='position:absolute;top:73.75%;left:62.35%;width:4.68%'><span
+ style='font-size:42%;color:black'>CELL<br>
+ </span></span><span
+ style='position:absolute;top:76.0%;left:62.35%;width:4.68%'><span
+ style='font-size:42%;color:black'>12</span></span></div>
+ </div>
+ <div v:shape="_x0000_s19521" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0"'><span
+ style='position:absolute;top:73.75%;left:66.66%;width:4.68%'><span
+ style='font-size:42%;color:black'>CELL<br>
+ </span></span><span
+ style='position:absolute;top:76.0%;left:66.66%;width:4.68%'><span
+ style='font-size:42%;color:black'>13</span></span></div>
+ </div>
+ <div v:shape="_x0000_s19607" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0";position:
+ absolute;top:50.75%;left:18.35%;width:25.09%;height:2.25%'><span
+ style='font-size:42%;color:black'>ROUTING</span></div>
+ </div>
+ <div v:shape="_x0000_s19609" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0";position:
+ absolute;top:52.75%;left:18.35%;width:25.09%;height:2.25%'><span
+ style='font-size:42%;color:black'>CELLS</span></div>
+ </div>
+ <div v:shape="_x0000_s19750" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0";position:
+ absolute;top:48.75%;left:18.35%;width:25.09%;height:2.25%'><span
+ style='font-size:42%;color:black'>CELLS</span></div>
+ </div>
+ <div v:shape="_x0000_s19752" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0";position:
+ absolute;top:55.75%;left:18.35%;width:25.09%;height:2.25%'><span
+ style='font-size:42%;color:black'>ROUTING</span></div>
+ </div>
+ <div v:shape="_x0000_s19753" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0";position:
+ absolute;top:62.25%;left:18.35%;width:25.09%;height:2.25%'><span
+ style='font-size:42%;color:black'>ROUTING</span></div>
+ </div>
+ <div v:shape="_x0000_s19755" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0";position:
+ absolute;top:65.75%;left:18.35%;width:25.09%;height:2.25%'><span
+ style='font-size:42%;color:black'>CELLS</span></div>
+ </div>
+ <div v:shape="_x0000_s19757" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0";position:
+ absolute;top:68.5%;left:18.35%;width:25.09%;height:2.25%'><span
+ style='font-size:42%;color:black'>ROUTING</span></div>
+ </div>
+ <div v:shape="_x0000_s19759" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0";position:
+ absolute;top:71.25%;left:18.35%;width:25.09%;height:2.25%'><span
+ style='font-size:42%;color:black'>CELLS</span></div>
+ </div>
+ <div v:shape="_x0000_s19761" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0";position:
+ absolute;top:73.25%;left:18.35%;width:25.09%;height:2.25%'><span
+ style='font-size:42%;color:black'>ROUTING</span></div>
+ </div>
+ <div v:shape="_x0000_s19763" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0";position:
+ absolute;top:58.75%;left:17.97%;width:25.09%;height:2.25%'><span
+ style='font-size:42%;color:black'>CELLS</span></div>
+ </div>
+ <div v:shape="_x0000_s19766" style='tab-interval:.9861in;tab-stops:.493in .9861in 1.4791in'>
+ <div class=O1 style='mso-margin-left-alt:284;mso-text-indent-alt:284'></div>
+ <div class=O2 style='mso-margin-left-alt:568;mso-text-indent-alt:568'></div>
+ <div class=O3 style='mso-margin-left-alt:852;mso-text-indent-alt:852'></div>
+ <div class=O4 style='mso-margin-left-alt:1137;mso-text-indent-alt:1137'></div>
+ <div class=O style='text-align:center;mso-line-spacing:"-95 0 0";position:
+ absolute;top:75.25%;left:17.97%;width:25.09%;height:2.25%'><span
+ style='font-size:42%;color:black'>CELLS</span></div>
+ </div>
+ <div v:shape="_x0000_s19770" class=T style='position:absolute;top:6.75%;
+ left:8.42%;width:83.14%;height:7.75%'>Standard Cells</div>
+ <div v:shape="_x0000_s19771">
+ <div class=B style='position:absolute;top:19.75%;left:8.42%;width:83.14%;
+ height:5.25%'><span style='position:absolute;top:0%;left:4.5%;width:95.49%'><span
+ style='font-weight:normal'><span style='mso-special-format:bullet;color:#CC0066;
+ position:absolute;left:-4.71%'>•</span></span>Use regular layout&#13;</span></div>
+ <div class=B style='position:absolute;top:26.25%;left:8.42%;width:83.14%;
+ height:5.25%'><span style='position:absolute;top:0%;left:4.5%;width:95.49%'><span
+ style='font-weight:normal'><span style='mso-special-format:bullet;color:#CC0066;
+ position:absolute;left:-4.71%'>•</span></span>Can automate the mapping
+ process, but&#13;</span></div>
+ <div class=B1 style='position:absolute;top:32.25%;left:13.48%;width:78.08%;
+ height:4.0%'><span style='position:absolute;top:0%;left:4.07%;width:96.16%'><span
+ style='font-weight:normal'><span style='mso-special-format:bullet;color:#CC0066;
+ position:absolute;left:-4.23%'>•</span></span>1) Takes weeks to fabricate&#13;</span></div>
+ <div class=B1 style='position:absolute;top:37.25%;left:13.48%;width:78.08%;
+ height:4.0%'><span style='position:absolute;top:0%;left:4.07%;width:96.16%'><span
+ style='font-weight:normal'><span style='mso-special-format:bullet;color:#CC0066;
+ position:absolute;left:-4.23%'>•</span></span>2) No economies of scale&#13;</span></div>
+ <div class=B style='position:absolute;top:42.25%;left:8.42%;width:83.14%;
+ height:5.25%'><span style='position:absolute;top:0%;left:4.5%;width:95.49%'><span
+ style='font-weight:normal;visibility:hidden'><span style='mso-special-format:
+ bullet;color:#CC0066;position:absolute;left:-4.71%'>•</span></span><span
+ style='mso-special-format:lastCR;display:none'>&#13;</span></span></div>
+ </div>
+</p:slide>
+</div>
+
+</body>
+
+</html>

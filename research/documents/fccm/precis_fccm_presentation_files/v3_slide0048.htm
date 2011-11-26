@@ -1,0 +1,432 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<link id=Main-File rel=Main-File href="../precis_fccm_presentation.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Precis: a design time precision analysis tool</title>
+<meta name=Description content="19-May-02: Wavelet Transform Structure">
+<link rel=next href="v3_slide0066.htm">
+<![if !ppt]>
+<script>
+<!--
+function Update()
+{
+  if( window.name == "PPTSld" )
+    parent.SlideUpdated('v3_slide0048.htm');   
+  else
+    parent.location.href = "v3_document.htm";
+}
+
+function NoHref() {}
+//-->
+</script>
+<![endif]>
+</head>
+
+<body background="v3_slide0048_background.gif" bgcolor=white alink="#3333cc"
+link="#ccccff" vlink="#b2b2b2" text=black topmargin=0 leftmargin=0
+onload="Update()">
+
+<table border=0 valign=top width=475 height=356 cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=29 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=24 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=1 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=4 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=4 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=1 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=5 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=7 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=17 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=4 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=7 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=24 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=5 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=6 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=1 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=11 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=1 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=2 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=8 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=1 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=13 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=8 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=20 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=4 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=7 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=1 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=11 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=2 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=8 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=1 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=14 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=7 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=12 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=8 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=4 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=7 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=1 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=11 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=2 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=8 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=1 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=14 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=7 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=2 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=5 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=2 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=15 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=60 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=5 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=38 height=0 nowrap><img src="v3_space.gif" border=0></td>
+  <td width=11 height=0 nowrap><img src="v3_space.gif" border=0></td>
+ </tr>
+ <tr>
+  <td width=475 height=24 colspan=52></td>
+ </tr>
+ <tr>
+  <td width=58 height=27 colspan=4></td>
+  <td width=359 height=27 colspan=44>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=359 height=27 align=center><font face=Arial color="#000099"
+    size=4><b>Wavelet Transform Structure</b></font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=58 height=27 colspan=4></td>
+ </tr>
+ <tr>
+  <td width=475 height=15 colspan=52></td>
+ </tr>
+ <tr>
+  <td width=29 height=9></td>
+  <td width=24 height=11 rowspan=2><img src="v3_slide0048_image054.gif"
+  border=0 width=24 height=11></td>
+  <td width=15 height=9 colspan=5></td>
+  <td width=24 height=11 colspan=2 rowspan=2><img
+  src="v3_slide0048_image055.gif" border=0 width=24 height=11></td>
+  <td width=4 height=9></td>
+  <td width=36 height=11 colspan=3 rowspan=2><img
+  src="v3_slide0048_image056.gif" border=0 width=36 height=11></td>
+  <td width=7 height=9 colspan=2></td>
+  <td width=36 height=11 colspan=6 rowspan=2><img
+  src="v3_slide0048_image057.gif" border=0 width=36 height=11></td>
+  <td width=8 height=9></td>
+  <td width=24 height=11 colspan=2 rowspan=2><img
+  src="v3_slide0048_image058.gif" border=0 width=24 height=11></td>
+  <td width=268 height=9 colspan=28></td>
+ </tr>
+ <tr>
+  <td width=29 height=2></td>
+  <td width=15 height=2 colspan=5></td>
+  <td width=4 height=2></td>
+  <td width=7 height=2 colspan=2></td>
+  <td width=8 height=2></td>
+  <td width=135 height=2 colspan=22></td>
+  <td width=80 height=19 colspan=3 rowspan=5>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=80 height=19 align=center><font face=Arial size=2>High Pass</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=53 height=2 colspan=3></td>
+ </tr>
+ <tr>
+  <td width=342 height=2 colspan=46></td>
+  <td width=53 height=2 colspan=3></td>
+ </tr>
+ <tr>
+  <td width=63 height=5 colspan=6></td>
+  <td width=12 height=16 colspan=2 rowspan=4><img
+  src="v3_slide0048_image059.gif" border=0 width=12 height=16></td>
+  <td width=63 height=5 colspan=6></td>
+  <td width=12 height=16 colspan=2 rowspan=4><img
+  src="v3_slide0048_image060.gif" border=0 width=12 height=16></td>
+  <td width=12 height=5 colspan=4></td>
+  <td width=45 height=46 colspan=4 rowspan=10><img
+  src="v3_slide0048_image061.gif" border=0 width=45 height=46></td>
+  <td width=135 height=5 colspan=22></td>
+  <td width=53 height=5 colspan=3></td>
+ </tr>
+ <tr>
+  <td width=63 height=3 colspan=6></td>
+  <td width=52 height=3 colspan=4></td>
+  <td width=11 height=19 colspan=2 rowspan=5>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=11 height=19 align=center><font face=Arial size=2>+</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=12 height=3 colspan=4></td>
+  <td width=135 height=3 colspan=22></td>
+  <td width=53 height=3 colspan=3></td>
+ </tr>
+ <tr>
+  <td width=54 height=7 colspan=3></td>
+  <td width=8 height=14 colspan=2 rowspan=3>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=8 height=14 align=center><font face=Arial size=1>x</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=1 height=7></td>
+  <td width=52 height=7 colspan=4></td>
+  <td width=12 height=7 colspan=4></td>
+  <td width=135 height=7 colspan=22></td>
+  <td width=53 height=7 colspan=3></td>
+ </tr>
+ <tr>
+  <td width=54 height=1 colspan=3></td>
+  <td width=1 height=1></td>
+  <td width=52 height=1 colspan=4></td>
+  <td width=12 height=1 colspan=4></td>
+  <td width=268 height=1 colspan=28></td>
+ </tr>
+ <tr>
+  <td width=54 height=6 colspan=3></td>
+  <td width=65 height=6 colspan=7></td>
+  <td width=24 height=6 colspan=6></td>
+  <td width=268 height=6 colspan=28></td>
+ </tr>
+ <tr>
+  <td width=127 height=2 colspan=12></td>
+  <td width=24 height=2 colspan=6></td>
+  <td width=268 height=2 colspan=28></td>
+ </tr>
+ <tr>
+  <td width=162 height=7 colspan=20></td>
+  <td width=268 height=7 colspan=28></td>
+ </tr>
+ <tr>
+  <td width=153 height=4 colspan=18></td>
+  <td width=8 height=14 rowspan=2>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=8 height=14 align=center><font face=Arial size=1>x</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=1 height=4></td>
+  <td width=268 height=4 colspan=28></td>
+ </tr>
+ <tr>
+  <td width=153 height=10 colspan=18></td>
+  <td width=1 height=10></td>
+  <td width=8 height=10 colspan=2></td>
+  <td width=36 height=11 colspan=5 rowspan=2><img
+  src="v3_slide0048_image062.gif" border=0 width=36 height=11></td>
+  <td width=7 height=10></td>
+  <td width=24 height=11 colspan=3 rowspan=2><img
+  src="v3_slide0048_image063.gif" border=0 width=24 height=11></td>
+  <td width=193 height=10 colspan=17></td>
+ </tr>
+ <tr>
+  <td width=162 height=1 colspan=20></td>
+  <td width=8 height=1 colspan=2></td>
+  <td width=7 height=1></td>
+  <td width=193 height=1 colspan=17></td>
+ </tr>
+ <tr>
+  <td width=475 height=1 colspan=52></td>
+ </tr>
+ <tr>
+  <td width=237 height=6 colspan=30></td>
+  <td width=45 height=46 colspan=5 rowspan=6><img
+  src="v3_slide0048_image064.gif" border=0 width=45 height=46></td>
+  <td width=193 height=6 colspan=17></td>
+ </tr>
+ <tr>
+  <td width=203 height=19 colspan=23></td>
+  <td width=11 height=19 colspan=2>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=11 height=19 align=center><font face=Arial size=2>+</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=23 height=19 colspan=5></td>
+  <td width=193 height=19 colspan=17></td>
+ </tr>
+ <tr>
+  <td width=237 height=5 colspan=30></td>
+  <td width=193 height=5 colspan=17></td>
+ </tr>
+ <tr>
+  <td width=92 height=2 colspan=9></td>
+  <td width=11 height=19 colspan=2 rowspan=5>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=11 height=19 align=center><font face=Arial size=2>+</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=134 height=2 colspan=19></td>
+  <td width=193 height=2 colspan=17></td>
+ </tr>
+ <tr>
+  <td width=92 height=3 colspan=9></td>
+  <td width=125 height=3 colspan=17></td>
+  <td width=8 height=14 rowspan=2>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=8 height=14 align=center><font face=Arial size=1>x</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=1 height=3></td>
+  <td width=193 height=3 colspan=17></td>
+ </tr>
+ <tr>
+  <td width=92 height=11 colspan=9></td>
+  <td width=125 height=11 colspan=17></td>
+  <td width=1 height=11></td>
+  <td width=8 height=11 colspan=2></td>
+  <td width=36 height=11 colspan=5><img src="v3_slide0048_image065.gif"
+  border=0 width=36 height=11></td>
+  <td width=7 height=11></td>
+  <td width=24 height=11 colspan=4><img src="v3_slide0048_image066.gif"
+  border=0 width=24 height=11></td>
+  <td width=118 height=11 colspan=5></td>
+ </tr>
+ <tr>
+  <td width=92 height=2 colspan=9></td>
+  <td width=372 height=2 colspan=41></td>
+ </tr>
+ <tr>
+  <td width=92 height=1 colspan=9></td>
+  <td width=186 height=1 colspan=25></td>
+  <td width=12 height=16 colspan=2 rowspan=3><img
+  src="v3_slide0048_image067.gif" border=0 width=12 height=16></td>
+  <td width=11 height=1 colspan=3></td>
+  <td width=28 height=40 colspan=4 rowspan=7><img
+  src="v3_slide0048_image068.gif" border=0 width=28 height=40></td>
+  <td width=135 height=1 colspan=7></td>
+ </tr>
+ <tr>
+  <td width=289 height=4 colspan=36></td>
+  <td width=11 height=4 colspan=3></td>
+  <td width=135 height=4 colspan=7></td>
+ </tr>
+ <tr>
+  <td width=278 height=11 colspan=34></td>
+  <td width=11 height=19 colspan=2 rowspan=2>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=11 height=19 align=center><font face=Arial size=2>+</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=11 height=11 colspan=3></td>
+  <td width=135 height=11 colspan=7></td>
+ </tr>
+ <tr>
+  <td width=278 height=8 colspan=34></td>
+  <td width=23 height=8 colspan=5></td>
+  <td width=135 height=8 colspan=7></td>
+ </tr>
+ <tr>
+  <td width=312 height=5 colspan=41></td>
+  <td width=135 height=5 colspan=7></td>
+ </tr>
+ <tr>
+  <td width=151 height=2 colspan=17></td>
+  <td width=11 height=19 colspan=3 rowspan=4>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=11 height=19 align=center><font face=Arial size=2>+</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=150 height=2 colspan=21></td>
+  <td width=135 height=2 colspan=7></td>
+ </tr>
+ <tr>
+  <td width=151 height=9 colspan=17></td>
+  <td width=141 height=9 colspan=19></td>
+  <td width=8 height=14 rowspan=2>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=8 height=14 align=center><font face=Arial size=1>x</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=1 height=9></td>
+  <td width=135 height=9 colspan=7></td>
+ </tr>
+ <tr>
+  <td width=151 height=5 colspan=17></td>
+  <td width=141 height=5 colspan=19></td>
+  <td width=164 height=5 colspan=12></td>
+ </tr>
+ <tr>
+  <td width=151 height=3 colspan=17></td>
+  <td width=313 height=3 colspan=32></td>
+ </tr>
+ <tr>
+  <td width=475 height=29 colspan=52></td>
+ </tr>
+ <tr>
+  <td width=226 height=19 colspan=27></td>
+  <td width=11 height=19 colspan=3>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=11 height=19 align=center><font face=Arial size=2>+</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=238 height=19 colspan=22></td>
+ </tr>
+ <tr>
+  <td width=475 height=14 colspan=52></td>
+ </tr>
+ <tr>
+  <td width=270 height=11 colspan=33></td>
+  <td width=65 height=11 colspan=11><img src="v3_slide0048_image069.gif"
+  border=0 width=65 height=11></td>
+  <td width=140 height=11 colspan=8></td>
+ </tr>
+ <tr>
+  <td width=475 height=48 colspan=52></td>
+ </tr>
+ <tr>
+  <td width=460 height=11 colspan=50></td>
+  <td width=11 height=11><img src="v3_master04_image070.gif" border=0 width=11
+  height=11></td>
+  <td width=4 height=11></td>
+ </tr>
+ <tr>
+  <td width=475 height=2 colspan=52></td>
+ </tr>
+</table>
+
+</body>
+
+</html>

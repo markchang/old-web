@@ -1,0 +1,449 @@
+<HTML>
+<BODY >
+
+<P></P><A HREF="JavaScript:parent.ItemClicked(1, 0)"> Photoshop Plug-ins with Reconfigurable Logic </A><br><UL>
+Implementing a Skeletonization algorithm on the VCC Hotworks Development System (Xilinx XC6200)
+</UL><UL>
+
+</UL><UL>
+Mark L. Chang &#060mchang@ece.nwu.edu&#062</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(2, 0)"> What are we trying to do? </A><br><UL>
+<LI>Create an Adobe Photoshop plug-in to perform Zhang-Suen skeletonization on bi-level images
+</UL><UL>
+<LI>Modify the plug-in to support calculations on reconfigurable logic (FPGA)</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(3, 0)"> The Software </A><br>
+<P></P><A HREF="JavaScript:parent.ItemClicked(4, 0)"> What is a Plug-In module? </A><br><UL>
+<LI>Software programs designed to extend the capabilities of Photoshop
+</UL><UL>
+<LI>Adobe provides a toolkit, Adobe Photoshop SDK, for plug-in development
+</UL><UL>
+<LI>Written primarily in C/C++ using Microsoft Visual Studio 97
+<UL>
+<LI>We are using the Filter plug-in module type</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(5, 0)"> How does a Plug-In work? </A><br><UL>
+<LI>Generally a “stateless” process
+</UL><UL>
+<LI>Plug-in host makes calls to the plug-in to perform specific tasks
+<UL>
+<LI>Initialization of flags and parameters (and possibly hardware devices)
+<LI>Calculate and allocate memory
+<LI>Show User Interface for user-tunable parameters
+<LI>Repeatedly filter portions of the image
+<LI>Clean up (if necessary)</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(6, 0)"> Plug-In Host?Plug-in communication </A><br><UL>
+<LI>All communication passes through a large data structure: the parameter block
+</UL><UL>
+<LI>The parameter block can contain persistent user-defined parameters
+</UL><UL>
+<LI>Some provided information:
+<UL>
+<LI>imageSize, planes, filterRect, inData, outData
+</UL></UL><UL>
+<LI>We supply:
+<UL>
+<LI>inRect, outRect</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(7, 0)"> Filtering a region </A><br><UL>
+<LI>Use pointers to memory regions to manipulate image data
+<UL>
+<LI>inRect / outRect
+</UL></UL><UL>
+<LI>Get pointers to next image rectangles [AdvanceStateProc()]
+</UL><UL>
+<LI>Final image should reside entirely in outRect memory buffer</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(8, 0)"> The Hardware </A><br><UL>
+<LI>Xilinx XC6200 RPU
+</UL><UL>
+<LI>VCC H.O.T. Works Development System</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(9, 0)"> What is an FPGA? </A><br><UL>
+<LI>Field Programmable Gate Array
+</UL><UL>
+<LI>Fully programmable alternative to a customized chip
+</UL><UL>
+<LI>Used to implement functions in hardware
+</UL><UL>
+<LI>Also called a Reconfigurable Processing Unit (RPU)
+</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(10, 0)"> Why use an FPGA? </A><br><UL>
+<LI>Hardwired logic is very fast
+</UL><UL>
+<LI>Can interface to outside world
+<UL>
+<LI>Custom hardware/peripherals
+<LI>“Glue logic” to custom co/processors
+</UL></UL><UL>
+<LI>Can perform bit-level and systolic operations not suited for traditional CPU/MPU</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(11, 0)"> XC6200 Architecture </A><br><UL>
+<LI>Large array of simple, configurable cells (sea of gates)
+</UL><UL>
+<LI>Each cell:
+<UL>
+<LI>D-Type register
+<LI>Logic function
+<LI>Nearest-neighbor interconnections
+<LI>Grouped in 4x4, 16x16, and 64x64 blocks</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(12, 0)"> XC6200 Routing </A><br><UL>
+<LI>Each level of hierarchy has its own associated routing resources
+<UL>
+<LI>Unit cells, 4x4, 16x16, 64x64 cell blocks
+</UL></UL><UL>
+<LI>Routing does not use a unit cell’s resources
+</UL><UL>
+<LI>Switches at the edge of the blocks provide for connections between the levels of interconnect</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(13, 0)"> XC6200 Functional Unit </A><br><UL>
+<LI>Design based on the fact that any function of two Boolean variables can be computed by a 2:1 MUX.</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(14, 0)"> H.O.T. Works </A><br><UL>
+<LI>Development system based on the Xilinx XC6200-series RPU
+</UL><UL>
+<LI>Includes:
+<UL>
+<LI>H.O.T. Works Configurable Computer Board
+<LI>H.O.T. Works Development System Software</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(15, 0)"> H.O.T. Works Board </A><br><UL>
+<LI>Interfaces with a host system (Windows95-based PC) on PCI bus
+<UL>
+<LI>2MB SRAM (memory)
+<LI>XC6200 (RPU)
+<LI>PCI controller on XC4000 (FPGA)
+<LI>Expansion through Mezzanine connector</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(16, 0)"> H.O.T. Works Software </A><br><UL>
+<LI>Xilinx XACTStep 6000
+<UL>
+<LI>Map, Place and Router for XC6200
+</UL></UL><UL>
+<LI>Velab
+<UL>
+<LI>Freeware structural VHDL elaborator 
+</UL></UL><UL>
+<LI>WebScope
+<UL>
+<LI>Java-based debugging tool
+</UL></UL><UL>
+<LI>H.O.T. Works Development System
+<UL>
+<LI>C++-based API for board interfacing</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(17, 0)"> Design Flow </A><br>
+<P></P><A HREF="JavaScript:parent.ItemClicked(18, 0)"> Run-Time Programming </A><br><UL>
+<LI>C++ support software is provided for low-level board interface and device configuration
+</UL><UL>
+<LI>Digital design is downloaded to the board at execution time
+</UL><UL>
+<LI>User-level routines must be written to conduct data input/output and control</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(19, 0)"> The Algorithm </A><br>
+<P></P><A HREF="JavaScript:parent.ItemClicked(20, 0)"> Generic Thinning </A><br><UL>
+<LI>Iteratively thins/skeletonizes a bi-level (1-bit) image, maintaining three properties:
+<UL>
+<LI>The skeleton should be a thinned region, one pixel wide
+<LI>The skeleton’s pixels should be near the center of a cross-section of the original region
+<LI>Skeletal pixels must be connected in a fashion preserving the original shape and direction</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(21, 0)"> Zhang-Suen (1984) Thinning </A><br><UL>
+<LI>Three basic rules to decide whether a pixel may be removed
+<UL>
+<LI>Neighbor count
+<LI>Crossing index
+<LI>Pass requirements
+</UL></UL><UL>
+<LI>All rules must be satisfied to erode the pixel in question</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(22, 0)"> Neighbor Count </A><br><UL>
+<LI>Can only delete a pixel if it has more than one and fewer than seven neighbors
+</UL><UL>
+<LI>Ensures that end points are not eroded and that pixels are eroded from the boundary of the region</UL></P>
+<P><UL>
+Can’t erode, too few neighbors</UL></P>
+<P><UL>
+Can’t erode, too many neighbors</UL></P>
+<P><UL>
+Erode OK three neighbors</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(23, 0)"> Crossing Index </A><br><UL>
+<LI>Can only delete a pixel if it is connected to only one other region
+</UL><UL>
+<LI>Ensures that the pixel in question is at an edge of a region rather than at an intersection of two regions</UL></P>
+<P><UL>
+Can’t delete, intersection of two regions</UL></P>
+<P><UL>
+Can’t erode, connects two regions</UL></P>
+<P><UL>
+Erode OK, one region</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(24, 0)"> Pass requirements </A><br><UL>
+<LI>Scanning top to bottom, left to right, we bias the selection of pixels to erode
+</UL><UL>
+<LI>Solution: make two passes, looking at different regions
+</UL><UL>
+<LI>Keeps thinned object “centered”</UL></P>
+<P><UL>
+Both dark grey are background OR either light grey are background</UL></P>
+<P><UL>
+Pass 1</UL></P>
+<P><UL>
+Pass 2</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(25, 0)"> Mapping to Hotworks </A><br>
+<P></P><A HREF="JavaScript:parent.ItemClicked(26, 0)"> Basic Blocks </A><br><UL>
+<LI>We want to implement on the FPGA:
+<UL>
+<LI>Neighbor count
+<LI>Crossing index
+<LI>Pass requirement
+</UL></UL><UL>
+<LI>Create simple logic blocks in VHDL to handle each test</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(27, 0)"> Neighbor Count </A><br><UL>
+0</UL></P>
+<P><UL>
+1</UL></P>
+<P><UL>
+2</UL></P>
+<P><UL>
+3</UL></P>
+<P><UL>
+7</UL></P>
+<P><UL>
+6</UL></P>
+<P><UL>
+5</UL></P>
+<P><UL>
+4</UL></P>
+<P><UL>
+Input order</UL></P>
+<P><UL>
++</UL></P>
+<P><UL>
++</UL></P>
+<P><UL>
++</UL></P>
+<P><UL>
+0</UL></P>
+<P><UL>
+1</UL></P>
+<P><UL>
+2</UL></P>
+<P><UL>
+3</UL></P>
+<P><UL>
+4</UL></P>
+<P><UL>
+5</UL></P>
+<P><UL>
+6</UL></P>
+<P><UL>
+7</UL></P>
+<P><UL>
+S0</UL></P>
+<P><UL>
+S1</UL></P>
+<P><UL>
+S2</UL></P>
+<P><UL>
+S3</UL></P>
+<P><UL>
+In</UL></P>
+<P><UL>
+Out</UL></P>
+<P><UL>
+NAY8TREE</UL></P>
+<P><UL>
+To NAY8LOGIC</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(28, 0)"> Neighbor Count </A><br><UL>
+Implements (S1 XOR S2) + (S0*!S1*S3) + (!S0*S1*!S3)</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(29, 0)"> Crossing Index </A><br><UL>
+0</UL></P>
+<P><UL>
+1</UL></P>
+<P><UL>
+2</UL></P>
+<P><UL>
+3</UL></P>
+<P><UL>
+7</UL></P>
+<P><UL>
+6</UL></P>
+<P><UL>
+5</UL></P>
+<P><UL>
+4</UL></P>
+<P><UL>
+Input order</UL></P>
+<P><UL>
+XOR3</UL></P>
+<P><UL>
+0</UL></P>
+<P><UL>
+1</UL></P>
+<P><UL>
+2</UL></P>
+<P><UL>
+In</UL></P>
+<P><UL>
+Out</UL></P>
+<P><UL>
+3</UL></P>
+<P><UL>
+XOR3</UL></P>
+<P><UL>
+4</UL></P>
+<P><UL>
+5</UL></P>
+<P><UL>
+6</UL></P>
+<P><UL>
+7</UL></P>
+<P><UL>
++</UL></P>
+<P><UL>
++</UL></P>
+<P><UL>
+X0</UL></P>
+<P><UL>
+X1</UL></P>
+<P><UL>
+X2</UL></P>
+<P><UL>
+3</UL></P>
+<P><UL>
+4</UL></P>
+<P><UL>
+XOR</UL></P>
+<P><UL>
++</UL></P>
+<P><UL>
+Looks for level changes between all pairs, 1 or 2 valid</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(30, 0)"> Pass Requirement </A><br><UL>
+3</UL></P>
+<P><UL>
+2</UL></P>
+<P><UL>
+1</UL></P>
+<P><UL>
+0</UL></P>
+<P><UL>
+Input order</UL></P>
+<P><UL>
+0</UL></P>
+<P><UL>
+1</UL></P>
+<P><UL>
+PASS</UL></P>
+<P><UL>
+OUT</UL></P>
+<P><UL>
+3</UL></P>
+<P><UL>
+0</UL></P>
+<P><UL>
+2</UL></P>
+<P><UL>
+1</UL></P>
+<P><UL>
+3</UL></P>
+<P><UL>
+0</UL></P>
+<P><UL>
+2</UL></P>
+<P><UL>
+1</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(31, 0)"> One “SKELSLICE” </A><br><UL>
+6</UL></P>
+<P><UL>
+7</UL></P>
+<P><UL>
+8</UL></P>
+<P><UL>
+5</UL></P>
+<P><UL>
+3</UL></P>
+<P><UL>
+0</UL></P>
+<P><UL>
+1</UL></P>
+<P><UL>
+2</UL></P>
+<P><UL>
+Input order</UL></P>
+<P><UL>
+4</UL></P>
+<P><UL>
+0:8</UL></P>
+<P><UL>
+ERODE</UL></P>
+<P><UL>
+“0”</UL></P>
+<P><UL>
+“CHANGE”</UL></P>
+<P><UL>
+“NEXTPIXEL”</UL></P>
+<P><UL>
+[4]</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(32, 0)"> 10-bit Skeletonizer </A><br><UL>
+Input Registers</UL></P>
+<P><UL>
+Output Registers</UL></P>
+<P><UL>
+CHANGE
+</UL><UL>
+Register</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(33, 0)"> Hardware Results </A><br><UL>
+<LI>On an XC6216 (64x64 cells):
+<UL>
+<LI>Limited to 8 computational bit-slices due to routing resource congestion
+<LI>Maximum delay = 70.12ns
+<LI>Maximum clock speed = 14MHz
+<LI>Input size is 30 bits
+<LI>Output size is 8 bits</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(34, 0)"> Software Results </A><br><UL>
+<LI>Adobe Photoshop SDK and HOTWorks SDK modified and merged by Douglas Wilson
+<UL>
+<LI>Created static objects to use HOTWorks board from within a plug-in module
+<LI>Created a template Visual Studio workspace
+</UL></UL><UL>
+<LI>Filter code: ~300 lines
+</UL><UL>
+<LI>FPGA interface code: ~100 lines</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(35, 0)"> Preliminary Performance Results </A><br><UL>
+<LI>Working software and hardware versions of Photoshop Plug-in completed
+</UL><UL>
+<LI>Speedups on large (&#0621K x 1K pixels) images: ~1.5-1.8
+<UL>
+<LI>Note: wall-clock time speedups</UL></UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(36, 0)"> Future Work </A><br><UL>
+<LI>Pipeline the computations on the FPGA
+</UL><UL>
+<LI>Optimize the layout to obtain higher densities and more bit-level parallelism
+</UL><UL>
+<LI>Utilize the on-board SRAM to amortize PCI transfer bottlenecks over larger block transfers
+</UL><UL>
+<LI>Interleave host PC and FPGA calculations to decrease idle time</UL></P>
+<P>
+<P></P><A HREF="JavaScript:parent.ItemClicked(37, 0)"> Conclusions </A><br><UL>
+<LI>Adobe Photoshop acceleration using reconfigurable logic is attainable using this development platform
+</UL><UL>
+<LI>VCC provides a useable set of tools to perform hardware design at the structural level</UL></P>
+<P>
+</BODY>

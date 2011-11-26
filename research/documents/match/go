@@ -1,0 +1,8 @@
+#!/bin/sh
+
+for i in `ls -l *htm | sed 's/.htm//' | cut -c 59-`
+do
+  echo ${i}
+  sed s/.htm/.html/g ${i}.htm > ${i}.html
+done
+
